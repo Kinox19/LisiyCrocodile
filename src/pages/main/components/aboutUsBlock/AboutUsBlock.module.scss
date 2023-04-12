@@ -1,0 +1,40 @@
+.block{
+    position: relative;
+    height: 1080px;
+}
+
+.title{
+    font-family: 'v_Mouth Breather BB';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 150px;
+    line-height: 155px;
+
+    color: #BEFF00;
+
+    margin-top: 130px;
+}
+
+.text{
+    width: 465px;
+    height: 210px; 
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 30px;
+
+    
+    margin-top: 70px;
+}
+
+.img{
+    top: 0;
+    right: -150px;
+    position: absolute;
+    z-index: -1;
+
+    width: 1113px;
+    height: 1080px;
+}

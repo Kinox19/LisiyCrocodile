@@ -1,0 +1,65 @@
+.footer{
+    background: rgba(190, 255, 0, 1);
+}
+
+.footer__wrapper{
+    padding-top: 35px;
+    padding-bottom: 35px;
+    display: flex;
+}
+
+.footer__connection{
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    gap: 15px;
+}
+
+.footer__connection__point{
+    font-family: 'Lato';
+    font-size: 25px;
+    font-weight: 300;
+    line-height: 30px;
+
+}
+
+.point__accent{
+    font-family: 'Lato';
+    font-size: 25px;
+    font-weight: 700;
+    line-height: 30px;
+}
+
+.footer__logo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 206px;
+    margin-right: 195px;
+    gap: 15px;
+}
+
+.logo__name{
+    font-family: 'Lato';
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 24px;
+    text-align: center;
+}
+
+
+.footer__navigation__list{
+    max-height: 150px;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    font-family: 'Lato';
+    font-size: 25px;
+    font-weight: 700;
+    line-height: 30px;
+    text-align: left;
+    gap: 15px;
+    flex-wrap: wrap;
+    column-gap: 74px;
+}
