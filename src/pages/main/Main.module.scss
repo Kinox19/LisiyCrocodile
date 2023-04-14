@@ -10,3 +10,43 @@
     color: #BEFF00;
 }
 
+.label{
+    font-family: Inter;
+    font-size: 40px;
+    font-weight: 300;
+    line-height: 48px;
+    text-align: left;
+    color: rgba(129, 136, 110, 1);
+}
+
+.title{
+    font-family: v_Mouth Breather BB;
+    font-size: 100px;
+    font-weight: 400;
+    line-height: 104px;
+    text-align: left;
+}
+
+.description{
+    font-family: Inter;
+    font-size: 25px;
+    font-weight: 400;
+    line-height: 30px;
+    text-align: left;
+}
+
+.button__play{
+    font-family: Inter;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 24px;
+    color: rgba(190, 255, 0, 1);
+    border: 3px solid rgba(190, 255, 0, 1);
+    background-color: transparent;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+    text-transform: uppercase;
+}

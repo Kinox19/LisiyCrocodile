@@ -1,0 +1,157 @@
+.main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.main__container{
+    width: 1600px;
+    color: #BEFF00;
+}
+
+.cover{
+    max-width: 100%;
+}
+
+.text__container{
+    margin-top: 130px;
+    margin-bottom: 130px;
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+}
+
+.label{
+    font-family: Inter;
+    font-size: 40px;
+    font-weight: 300;
+    line-height: 48px;
+    text-align: left;
+    color: rgba(129, 136, 110, 1);
+}
+
+.title{
+    font-family: v_Mouth Breather BB;
+    font-size: 100px;
+    font-weight: 400;
+    line-height: 104px;
+    text-align: left;
+}
+
+.description{
+    font-family: Inter;
+    font-size: 25px;
+    font-weight: 400;
+    line-height: 30px;
+    text-align: left;
+    max-width: 788px;
+}
+
+.button__play{
+    font-family: Inter;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 24px;
+    color: rgba(190, 255, 0, 1);
+    border: 3px solid rgba(190, 255, 0, 1);
+    background-color: transparent;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+    text-transform: uppercase;
+    height: 74px;
+    width: 230px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    cursor: pointer;
+}
+
+.tracks{
+    margin-top: 130px;
+    margin-bottom: 260px;
+}
+
+.track__wrapper{
+    box-sizing: border-box;
+    width: 100%;
+    height: 174px;
+    border-top: 2px solid #3A3A3A;
+    border-bottom: 1px solid #3A3A3A;
+    display: flex;
+    flex-direction: row;
+    padding: 35px 116px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.track__wrapper:last-of-type{
+    border-bottom: 2px solid #3A3A3A;
+}
+
+.control__play{
+    width: 76px;
+    height: 76px;
+}
+
+.track__cover{
+    width: 100px;
+    height: 100px;
+}
+
+.track__name{
+    font-family: Inter;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 36px;
+    text-align: left;
+}
+
+.track__artist{
+    font-family: Inter;
+    font-size: 25px;
+    font-weight: 400;
+    line-height: 30px;
+    text-align: left;
+    color: rgba(129, 136, 110, 1);
+}
+
+.track__time{
+    font-family: Inter;
+    font-size: 25px;
+    font-weight: 400;
+    line-height: 30px;
+    text-align: left;
+    color: rgba(129, 136, 110, 1);
+}
+
+.control__download{
+    width: 30px;
+    height: 40px;
+}
+
+.track__timeDownload{
+    display: flex;
+    gap: 58px;
+    align-items: center;
+}
+
+.track__textInfo{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-height: 414px;
+    align-items: start;
+    justify-content: center;
+}
+
+.leftSide{
+    display: flex;
+    gap: 35px;
+    align-items: center;
+}

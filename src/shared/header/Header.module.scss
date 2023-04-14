@@ -1,12 +1,25 @@
+.header__wrapper{
+    position: sticky;
+    top: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 151px;
+
+    background-color: black;
+    z-index: 100;
+}
+
 .header__container{
     display: flex;
     flex-direction: column;
     max-width: 1920px;
-    height: 151px;
+    
     justify-content: center;
     align-items: center;
-
-    
+    z-index: 101;
 }
 
 .logo__container{

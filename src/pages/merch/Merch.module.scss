@@ -1,0 +1,432 @@
+.main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main__container{
+    width: 1276px;
+
+    color: #BEFF00;
+}
+
+.title{
+    font-family: v_Mouth Breather BB;
+    font-size: 150px;
+    font-weight: 400;
+    line-height: 155px;
+    text-align: left;
+    max-width: 859px;
+    margin-top: 70px;
+}
+
+.product__selected{
+    display: flex;
+    flex-direction: row;
+    gap: 109px;
+    margin-top: 70px;
+}
+
+.controls__image{
+    display: flex;
+    gap: 70px
+}
+
+.controls__btn{
+    background-color: transparent;
+    outline: none;
+    border: none;
+}
+
+.product__image{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.product__nameBrand{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.product__imageDescription{
+    display: flex;
+    flex-direction: row;
+    margin-top: 35px;
+    max-width: 500px;
+}
+
+.product__name{
+    font-family: Inter;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 36px;
+    text-align: left;
+}
+
+.product__brand{
+    font-family: Inter;
+    font-size: 25px;
+    font-weight: 400;
+    line-height: 30px;
+    text-align: left;
+    сolor: rgba(129, 136, 110, 1);
+}
+
+.price{
+    font-family: Inter;
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 36px;
+    text-align: left;
+}
+
+
+
+
+.product__selected{
+    display: flex;
+    flex-direction: row;
+    border-bottom: 2px solid #3A3A3A;
+    padding-bottom: 130px;
+}
+
+.product__info{
+    display: flex;
+    flex-direction: column;
+}
+
+.descriptionTitle{
+    font-family: 'v_Mouth Breather BB';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 46px;
+    line-height: 48px;
+
+    color: #BEFF00;
+}
+
+.info__description{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 30px;
+    
+    color: #BEFF00;
+     
+    border-bottom: 1px solid #BEFF00;
+
+    margin-top: 35px;
+}
+
+.description{
+    padding-bottom: 15px;
+}
+
+.product__sizes{
+    display: flex;
+    flex-direction: row;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 30px;
+
+    color: #BEFF00;
+    
+    gap: 35px;
+
+    margin-top: 35px;
+}
+
+.selectSizetext{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 30px;
+
+    color: #81886E;
+}
+
+.sizes{
+    list-style: none;
+    text-decoration: none;
+
+    display: flex;
+    flex-direction: row;
+
+    column-gap: 51px;
+}
+
+.product__colors{
+    display: flex;
+    flex-direction: row;
+
+    gap: 35px;
+
+    margin-top: 35px;
+}
+
+.colorText{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 30px;
+
+    color: #81886E;
+}
+
+.colorsList{
+    list-style: none;
+    text-decoration: none;
+    gap: 15px;
+    display: flex;
+    flex-direction: row;
+}
+
+.colorGreen{
+    width: 24px;
+    height: 24px;
+    background: #BEFF00;
+    border-radius: 100px;
+    -webkit-border-radius: 100px;
+    -moz-border-radius: 100px;
+    -ms-border-radius: 100px;
+    -o-border-radius: 100px;
+}
+
+.colorWhite{
+    width: 24px;
+    height: 24px;
+
+    background: #D9D9D9;
+    border-radius: 100px;
+    -webkit-border-radius: 100px;
+    -moz-border-radius: 100px;
+    -ms-border-radius: 100px;
+    -o-border-radius: 100px;
+}
+
+.colorBlack{
+    width: 24px;
+    height: 24px;
+
+    background: #000000;
+    border-radius: 100px;
+    -webkit-border-radius: 100px;
+    -moz-border-radius: 100px;
+    -ms-border-radius: 100px;
+    -o-border-radius: 100px;
+
+    border: 1px solid #D9D9D9;
+}
+
+.colorGray{
+    width: 24px;
+    height: 24px;
+
+    background: #6A6F59;
+    border-radius: 100px;
+    -webkit-border-radius: 100px;
+    -moz-border-radius: 100px;
+    -ms-border-radius: 100px;
+    -o-border-radius: 100px;
+}
+
+.colorRed{
+    width: 24px;
+    height: 24px;
+
+    background: #FF645A;
+    border-radius: 100px;
+    -webkit-border-radius: 100px;
+    -moz-border-radius: 100px;
+    -ms-border-radius: 100px;
+    -o-border-radius: 100px;
+}
+
+.product__counter{
+    margin-top: 35px;
+
+    display: flex;
+    flex-direction: row;
+
+    gap: 35px;
+}
+
+.product__counter img{
+    display: flex;
+    align-self: center;
+}
+
+.quantityText{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 30px;
+
+    color: #81886E;
+}
+
+.counter{
+    display: flex;
+    flex-direction: row;
+
+    gap: 20px;
+
+    align-items: center;
+    justify-content: center;
+}
+
+
+.product__quantities{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 30px;
+
+    color: #81886E;
+}
+
+.quantityButton{
+    background-color: transparent;
+    border: none;
+    outline: none;
+
+    padding: 0;
+
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+
+    width: 19px;
+    height: 19px;
+}
+
+.minus{
+    width: 19px;
+    height: 19px;
+    cursor: pointer;
+}
+
+
+
+
+.button__addToCart{
+    height: 74px;
+    width: 359px;
+    border-radius: 15px;
+    text-transform: uppercase;
+    color: rgba(129, 136, 110, 1);
+    border: 2px solid rgba(58, 58, 58, 1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    font-family: Inter;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 24px;
+    text-align: left;
+    background-color: transparent;
+    margin-top: 35px;
+}
+
+.oferta{
+    display: flex;
+    gap: 21px;
+    margin-top: 130px;
+    margin-bottom: 260px;
+}
+
+.text__attention{
+    font-family: Inter;
+    font-size: 25px;
+    font-weight: 400;
+    line-height: 30px;
+    text-align: left;
+    color: rgba(129, 136, 110, 1);
+    max-width: 626px;
+}
+
+.button__oferta{
+    font-family: Inter;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 24px;
+    text-align: center;
+    height: 74px;
+    width: 323px;
+    border-radius: 15px;
+    text-transform: uppercase;
+    border: 3px solid rgba(190, 255, 0, 1);
+    background-color: transparent;
+    color: rgba(190, 255, 0, 1);
+    cursor: pointer;
+}
+
+.merch__block{
+    display: flex;
+    flex-direction: row;
+
+    flex-wrap: wrap;
+
+    column-gap: 52px;
+    row-gap: 70px;
+    margin-top: 35px;
+}
+
+.card__image{
+    width: 390px;
+    height: 390px;
+}
+
+.card__title{
+    font-family: Inter;
+    font-size: 25px;
+    font-weight: 700;
+    line-height: 30px;
+    text-align: left;
+}
+
+.card__brand{
+    font-family: Inter;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: left;
+    color: rgba(129, 136, 110, 1);
+}
+
+.card__price{
+    font-family: Inter;
+    font-size: 25px;
+    font-weight: 400;
+    line-height: 30px;
+    text-align: left;
+}
+
+.descriptionCard{
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    justify-content: space-between;
+}
+
+.card__nameBrand{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.descriptionCard{
+    margin-top: 35px;
+}

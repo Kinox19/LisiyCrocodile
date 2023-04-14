@@ -6,9 +6,33 @@ import AboutUsBlock from './components/aboutUsBlock/AboutUsBlock'
 import MusicBlock from './components/musicBlock/MusicBlock'
 import VideoBlock from './components/videoBlock/VideoBlock'
 import MerchBlock from './components/merchBlock/MerchBlock'
+import ScrollToTopButton from '../../shared/scrollTotopButton/ScrollToTopButton'
+import { useState, useEffect } from 'react'
 
 
 const Main = () => {
+  const [showScrollButton, setShowScrollButton] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.pageYOffset > 1500 ) {
+        setShowScrollButton(true);
+      } else {
+        setShowScrollButton(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
+
+
+
+
   return (
     <div className={s.main}>
         <div className={s.main__container}>
@@ -18,6 +42,7 @@ const Main = () => {
           <VideoBlock/>
           <MerchBlock/>
           <ContactsBlock/>
+          {showScrollButton && <ScrollToTopButton />}
         </div>
         
     </div>

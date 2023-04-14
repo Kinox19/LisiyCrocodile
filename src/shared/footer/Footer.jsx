@@ -20,15 +20,19 @@ const Footer = () => {
           <p className={s.logo__name}>© 2019–2023 Лысый Крокодил</p>
         </div>
 
-          <nav>
+          <nav className={s.nav}>
             <ul className={s.footer__navigation__list}>
-              <li>о нас</li>
-              <li>музыка</li>
-              <li>видео</li>
-              <li>мерч</li>
-              <li>корзина</li>
-              <li>контакты</li>
-              <li>оплата</li>
+              <li><a className={s.footer__link} href="/">о нас</a></li>
+              <li><a className={s.footer__link} href="/">музыка</a></li>
+              <li><a className={s.footer__link} href="/">видео</a></li>
+            </ul>
+            <ul className={s.footer__navigation__list}>
+              <li><a className={s.footer__link} href="/">мерч</a></li>
+              <li><a className={s.footer__link} href="/">корзина</a></li>
+              <li><a className={s.footer__link} href="/">контакты</a></li>
+            </ul>
+            <ul className={s.footer__navigation__list}>
+              <li><a className={s.footer__link} href="/">оплата</a></li>
             </ul>
           </nav>
 

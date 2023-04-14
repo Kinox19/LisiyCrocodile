@@ -1,8 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Open+Sans:wght@400;600;700&display=swap');
 @import url('../src/vendor/fonts.css');
 
+html{
+    box-sizing: border-box;
+}
 
 body{
+    margin: 0;
+    padding: 0;
     background-color: black;
 }
 
@@ -23,6 +28,11 @@ h3{
 }
 
 ul{
+    margin: 0;
+    padding: 0;
+}
+
+.App{
     margin: 0;
     padding: 0;
 }

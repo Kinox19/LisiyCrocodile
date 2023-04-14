@@ -2,7 +2,7 @@ import React from 'react'
 import s from './ContactsBlock.module.scss'
 import qrCode from '../../../../assets/Logos/qr.svg'
 import logo from '../../../../assets/Logos/logo_big.svg'
-import picBack from '../../../../assets/images/mainPage/backgorundContacts.png'
+import picBack from '../../../../assets/images/mainPage/bottomBlock.png'
 
 const ContactsBlock = () => {
   return (
@@ -13,7 +13,6 @@ const ContactsBlock = () => {
             <p className={s.text}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
         </div>
         <img className={s.picBack} src={picBack} alt=''></img>
-        <img className={s.logo} src={logo} alt=''></img>
     </div>
   )
 }
