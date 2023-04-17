@@ -7,82 +7,140 @@ import rigthBtn from '../../assets/Logos/IconRigth.svg'
 import plus from '../../assets/Logos/plus.svg'
 import minus from '../../assets/Logos/minus.svg'
 import products from '../main/components/merchBlock/Products'
-import ProductCard from '../main/components/merchBlock/productCard/ProductCard'
-import { useParams } from 'react-router-dom';
+import { AppContext } from '../../AppContext'
+import { useContext } from 'react'
+import { useEffect } from 'react'
+import { useState } from 'react'
 
 
 
 const Merch = () => {
 
-    const { productId } = useParams();
-    console.log(productId);
-    
+    const { selectedProductId, setSelectedProductId } = useContext(AppContext);
+    const [selectedProduct, setSelectedProduct] = useState(null);
+  
+    useEffect(() => {
+      // Retrieve the selected product ID and product from localStorage
+      const storedSelectedProductId = localStorage.getItem('selectedProductId');
+      const storedSelectedProduct = JSON.parse(localStorage.getItem('selectedProduct'));
+  
+      // Set the selected product ID and product in the context
+      if (storedSelectedProductId && storedSelectedProduct) {
+        setSelectedProductId(Number(storedSelectedProductId));
+        setSelectedProduct(storedSelectedProduct);
+      }
+    }, [setSelectedProductId]);
+  
+    useEffect(() => {
+      // Find the selected product based on the selected product ID
+      if (selectedProductId) {
+        const product = products.find((product) => product.id === selectedProductId);
+        setSelectedProduct(product);
+  
+        // Store the selected product in localStorage
+        localStorage.setItem('selectedProduct', JSON.stringify(product));
+      }
+    }, [selectedProductId]);
+  
+    const handleSelectProduct = (productId) => {
+      // Set the selected product ID and product in localStorage
+      const product = products.find((product) => product.id === productId);
+      localStorage.setItem('selectedProductId', productId.toString());
+      localStorage.setItem('selectedProduct', JSON.stringify(product));
+  
+      // Set the selected product ID in the context
+      setSelectedProductId(productId);
+    };
+
   return (
     <div className={s.main}>
         <div className={s.main__container}>
             <h1 className={s.title}>Мерч</h1>
-            {products.filter((product) => product.id === Number(productId)).map((product) => (
-            <div className={s.product__selected}>
-                <div className={s.product__image}>
-                    <div className={s.controls__image}>
-                        <button className={s.controls__btn}><img src={leftBtn} alt=''/></button>
-                        <img src={shirt} alt=''/>
-                        <button className={s.controls__btn}><img src={rigthBtn} alt=''/></button>
+            {selectedProduct && (
+  <div className={s.product__selected}>
+    <div className={s.product__image}>
+      <div className={s.controls__image}>
+        <button className={s.controls__btn}>
+          <img src={leftBtn} alt="" />
+        </button>
+        <img src={selectedProduct.image} alt="" />
+        <button className={s.controls__btn}>
+          <img src={rigthBtn} alt="" />
+        </button>
 
-                        <div className={s.product__imageDescription}>
-                        <div className={s.product__nameBrand}>
-                            <p className={s.product__name}>{product.title}</p>
-                            <p className={s.product__brand}>{product.brand}</p>
-                        </div>
-                        <div className={s.product__price}>
-                            <p className={s.price}>{new Intl.NumberFormat('ru-RU', {
-                                style: 'currency',
-                                currency: 'RUB',
-                                minimumFractionDigits: 0
-                            }).format(product.price)}</p>
-                        </div>
-                    </div>
-                    </div>
-                </div>
-                <div className={s.product__info}>
-                    <h3 className={s.descriptionTitle}>Описание товара</h3>
-                    <div className={s.info__description}>
-                        <p className={s.description}>{product.description}</p>
-                    </div>
-                    <div className={s.product__sizes}>
-                        <p className={s.selectSizetext}>Размер:</p>
-                        <ul className={s.sizes}>
-                            <li>S</li>
-                            <li>M</li>
-                            <li>L</li>
-                            <li>XL</li>
-                            <li>XLL</li>
-                        </ul>
-                    </div>
-                    <div className={s.product__colors}>
-                        <p className={s.colorText}>Цвет:</p>
-                            <ul className={s.colorsList}>
-                                <li><div className={s.colorGreen}></div></li>
-                                <li><div className={s.colorWhite}></div></li>
-                                <li><div className={s.colorBlack}></div></li>
-                                <li><div className={s.colorGray}></div></li>
-                                <li><div className={s.colorRed}></div></li>
-                            </ul>
-                    </div>
-                    <div className={s.product__counter}>
-                        <p className={s.quantityText}>Количество:</p>
-                        <div className={s.counter}>
-                          <button className={s.quantityButton}><img src={plus} alt='+'/></button>
-                          <p className={s.product__quantities}>1x</p>
-                          <div className={s.minus}>
-                            <button className={s.quantityButton}><img src={minus} alt='-'/></button>
-                          </div>
-                        </div>
-                    </div>
-                    <button className={s.button__addToCart}><img src={addToCart} alt=''/>Добавить в корзину</button>
-                </div>
-            </div>
-            ))}
+        <div className={s.product__imageDescription}>
+          <div className={s.product__nameBrand}>
+            <p className={s.product__name}>{selectedProduct.title}</p>
+            <p className={s.product__brand}>{selectedProduct.brand}</p>
+          </div>
+          <div className={s.product__price}>
+            <p className={s.price}>
+              {new Intl.NumberFormat("ru-RU", {
+                style: "currency",
+                currency: "RUB",
+                minimumFractionDigits: 0,
+              }).format(selectedProduct.price)}
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div className={s.product__info}>
+      <h3 className={s.descriptionTitle}>Описание товара</h3>
+      <div className={s.info__description}>
+        <p className={s.description}>{selectedProduct.description}</p>
+      </div>
+      <div className={s.product__sizes}>
+        <p className={s.selectSizetext}>Размер:</p>
+        <ul className={s.sizes}>
+          <li>S</li>
+          <li>M</li>
+          <li>L</li>
+          <li>XL</li>
+          <li>XLL</li>
+        </ul>
+      </div>
+      <div className={s.product__colors}>
+        <p className={s.colorText}>Цвет:</p>
+        <ul className={s.colorsList}>
+          <li>
+            <div className={s.colorGreen}></div>
+          </li>
+          <li>
+            <div className={s.colorWhite}></div>
+          </li>
+          <li>
+            <div className={s.colorBlack}></div>
+          </li>
+          <li>
+            <div className={s.colorGray}></div>
+          </li>
+          <li>
+            <div className={s.colorRed}></div>
+          </li>
+        </ul>
+      </div>
+      <div className={s.product__counter}>
+        <p className={s.quantityText}>Количество:</p>
+        <div className={s.counter}>
+          <button className={s.quantityButton}>
+            <img src={plus} alt="+" />
+          </button>
+          <p className={s.product__quantities}>1x</p>
+          <div className={s.minus}>
+            <button className={s.quantityButton}>
+              <img src={minus} alt="-" />
+            </button>
+          </div>
+        </div>
+      </div>
+      <button className={s.button__addToCart}>
+        <img src={addToCart} alt="" />
+        Добавить в корзину
+      </button>
+    </div>
+  </div>
+)}
 
             <div>
                 <ul className={s.merch__block}>
@@ -118,5 +176,6 @@ const Merch = () => {
     </div>
   )
 }
+
 
 export default Merch

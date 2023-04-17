@@ -5,6 +5,7 @@ import { useState } from 'react'
 import ProductCard from './productCard/ProductCard'
 import leftBtn from '../../../../assets/Logos/IconLeft.svg'
 import rigthBtn from '../../../../assets/Logos/IconRigth.svg'
+import { Link } from 'react-router-dom'
 
 const MerchBlock = () => {
 
@@ -26,10 +27,6 @@ const MerchBlock = () => {
     products[(position + 1) % products.length],
   ];
 
-  const handleClick = (id) => {
-    console.log(`Product ${id} clicked`);
-    // Do something with the clicked product id
-  };
 
   return (
     <div className={s.main}>
@@ -37,7 +34,7 @@ const MerchBlock = () => {
       <div className={s.merch__block}>
         <button className={s.buttonChange} onClick={handlePrevClick}><img src={leftBtn} alt=''/></button>
         {visibleProducts.map((product) => (
-          <ProductCard key={product.id} product={product} onClick={() => handleClick(product.id)} />
+          <ProductCard key={product.id} product={product}/>
         ))}
         <button className={s.buttonChange} onClick={handleNextClick}><img src={rigthBtn} alt=''/></button>
       </div>

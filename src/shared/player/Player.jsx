@@ -8,10 +8,12 @@ import trackNext from '../../assets/player/trackNext.svg'
 import trackPlay from '../../assets/player/trackPlay.svg'
 import trackPause from '../../assets/player/trackPause.svg'
 import volumeYes from '../../assets/player/volume.svg'
-import musFile from '../../assets/player/music/track1.mp3'
+import musFile from '../../assets/player/music/track2.mp3'
+import tracks from '../../pages/muz1/Muz1TrackList'
 
 
-const Player = () => {
+const Player = ({id}) => {
+    const track = tracks.find((track) => track.id === id);
 
     const [isPlaying, setIsPlaying] = useState(false);
     const [time, setTime] = useState({
@@ -25,7 +27,7 @@ const Player = () => {
 
     const [seconds, setSeconds] = useState();
 
-    const [play, { pause, duration, sound }] = useSound(musFile);
+    const [play, { pause, duration, sound }] = useSound(track.src);
 
     useEffect(() => {
       if (duration) {
@@ -76,12 +78,13 @@ const Player = () => {
 
 
   return (
+    <div className={s.main}>
         <div className={s.player__wrapper}>
             <div className={s.player__info}>
                 <img className={s.current__image} src={playerImg} alt=''/>
                 <div className={s.current__trackArtist}>
-                    <p className={s.current__track}>КОЛХОЗНИК-КОММУНИСТ</p>
-                    <p className={s.current__artist}>Лысый Крокодил</p>
+                    <p className={s.current__track}>{track.name}</p>
+                    <p className={s.current__artist}>{track.artist}</p>
                 </div>
             </div>
             <div className={s.player__controls}>
@@ -121,6 +124,7 @@ const Player = () => {
                 </input>
             </div>
         </div>
+    </div>
   )
 }
 

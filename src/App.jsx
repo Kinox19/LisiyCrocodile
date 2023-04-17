@@ -9,26 +9,33 @@ import Muz3 from "./pages/muz3/Muz3";
 import Muz4 from "./pages/muz4/Muz4";
 import Merch from "./pages/merch/Merch";
 import Player from "./shared/player/Player";
+import { AppContext, AppContextProvider } from "./AppContext";
 
 
 function App() {
+
   return (
+    
+    <AppContextProvider>
     <div className="App">
       <Header/>
-
+      
       <Routes>
-        <Route exact path="/home" element={<Main/>} />
+      
         <Route path="/oferta" element={<Oferta/>} />
         <Route path="/muz1" element={<Muz1/>} />
         <Route path="/muz2" element={<Muz2/>} />
         <Route path="/muz3" element={<Muz3/>} />
         <Route path="/muz4" element={<Muz4/>} />
+        
+        <Route exact path="/home" element={<Main/>} />
         <Route path="/merch" element={<Merch/>} />
+        
         <Route path="/kachaet" element={<Player/>} />
       </Routes>
-
       <Footer/>
     </div>
+    </AppContextProvider>
   );
 }
 
