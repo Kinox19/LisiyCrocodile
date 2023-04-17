@@ -1,3 +1,7 @@
+.music__block{
+    margin-top: 130px;
+}
+
 .title{
     font-family: v_Mouth Breather BB;
     font-size: 150px;
@@ -8,6 +12,27 @@
 
 .mus__link{
     max-width: 765px;
+    transition: 0.3s ease-in-out;
+    -webkit-transition: 0.3s ease-in-out;
+    -moz-transition: 0.3s ease-in-out;
+    -ms-transition: 0.3s ease-in-out;
+    -o-transition: 0.3s ease-in-out;
+    border: 2px solid rgba(58, 58, 58, 1);
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+}
+
+.mus__link:hover{
+    transition: 0.3s ease-in-out;
+    -webkit-transition: 0.3s ease-in-out;
+    -moz-transition: 0.3s ease-in-out;
+    -ms-transition: 0.3s ease-in-out;
+    -o-transition: 0.3s ease-in-out;
+    border: 2px solid rgba(190, 255, 0, 1);
+
 }
 
 .leftSide{

@@ -1,11 +1,38 @@
 .scrollToTopBtn{
-    position: fixed;
-    bottom: 200px;
-    right: 50px;
+    position: sticky;
+    bottom: 70px;
+    right: 162px;
     cursor: pointer;
 
     background-color: transparent;
 
     outline: none;
     border: none;
+}
+
+.svgHover{
+    display: none;
+    transition: 0.3s ease;
+    -webkit-transition: 0.3s ease;
+    -moz-transition: 0.3s ease;
+    -ms-transition: 0.3s ease;
+    -o-transition: 0.3s ease;
+}
+
+.scrollToTopBtn:hover .svgHover{
+    display: block;
+    transition: 0.3s ease;
+    -webkit-transition: 0.3s ease;
+    -moz-transition: 0.3s ease;
+    -ms-transition: 0.3s ease;
+    -o-transition: 0.3s ease;
+}
+
+.scrollToTopBtn:hover .svgDefault{
+    display: none;
+    transition: 0.3s ease;
+    -webkit-transition: 0.3s ease;
+    -moz-transition: 0.3s ease;
+    -ms-transition: 0.3s ease;
+    -o-transition: 0.3s ease;
 }

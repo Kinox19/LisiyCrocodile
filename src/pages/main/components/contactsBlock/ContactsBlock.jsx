@@ -6,7 +6,7 @@ import picBack from '../../../../assets/images/mainPage/bottomBlock.png'
 
 const ContactsBlock = () => {
   return (
-    <div className={s.block}>
+    <div className={s.block} id='contacts'>
         <h2 className={s.title}>Контакты</h2>
         <div className={s.qr__container}>
             <img className={s.qr__image} src={qrCode} alt=''></img>

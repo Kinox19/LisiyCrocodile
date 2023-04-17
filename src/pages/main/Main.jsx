@@ -8,9 +8,17 @@ import VideoBlock from './components/videoBlock/VideoBlock'
 import MerchBlock from './components/merchBlock/MerchBlock'
 import ScrollToTopButton from '../../shared/scrollTotopButton/ScrollToTopButton'
 import { useState, useEffect } from 'react'
+import { Link, animateScroll as scroll } from 'react-scroll';
 
 
 const Main = () => {
+
+  const links = [
+    { id: 'section1', label: 'Section 1' },
+    { id: 'section2', label: 'Section 2' },
+    { id: 'section3', label: 'Section 3' },
+  ];
+
   const [showScrollButton, setShowScrollButton] = useState(false);
 
   useEffect(() => {
@@ -35,8 +43,9 @@ const Main = () => {
 
   return (
     <div className={s.main}>
+        <MainBlock/>
         <div className={s.main__container}>
-          <MainBlock/>
+
           <AboutUsBlock/>
           <MusicBlock/>
           <VideoBlock/>

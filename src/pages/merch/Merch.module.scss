@@ -28,15 +28,26 @@
 }
 
 .controls__image{
-    display: flex;
-    gap: 70px
+    display: grid;
+    grid-template-columns: 100px 500px 100px;
 }
 
 .controls__btn{
     background-color: transparent;
     outline: none;
     border: none;
+    padding: 0;
+    margin: 0;
 }
+
+.controls__btn:first-of-type{
+    justify-self: start;
+}
+
+.controls__btn:last-of-type{
+    justify-self: end;
+}
+
 
 .product__image{
     display: flex;
@@ -55,6 +66,8 @@
     flex-direction: row;
     margin-top: 35px;
     max-width: 500px;
+    grid-column: 2/-2;
+    justify-content: space-between;
 }
 
 .product__name{
@@ -71,7 +84,7 @@
     font-weight: 400;
     line-height: 30px;
     text-align: left;
-    сolor: rgba(129, 136, 110, 1);
+    color: rgba(129, 136, 110, 1);
 }
 
 .price{
@@ -429,4 +442,10 @@
 
 .descriptionCard{
     margin-top: 35px;
+}
+
+.card{
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }

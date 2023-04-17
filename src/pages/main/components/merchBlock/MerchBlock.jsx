@@ -26,13 +26,18 @@ const MerchBlock = () => {
     products[(position + 1) % products.length],
   ];
 
+  const handleClick = (id) => {
+    console.log(`Product ${id} clicked`);
+    // Do something with the clicked product id
+  };
+
   return (
     <div className={s.main}>
       <h2 className={s.title}>Мерч</h2>
       <div className={s.merch__block}>
         <button className={s.buttonChange} onClick={handlePrevClick}><img src={leftBtn} alt=''/></button>
         {visibleProducts.map((product) => (
-          <ProductCard key={product.id} product={product} />
+          <ProductCard key={product.id} product={product} onClick={() => handleClick(product.id)} />
         ))}
         <button className={s.buttonChange} onClick={handleNextClick}><img src={rigthBtn} alt=''/></button>
       </div>

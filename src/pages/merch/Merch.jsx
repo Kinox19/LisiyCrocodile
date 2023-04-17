@@ -8,34 +8,46 @@ import plus from '../../assets/Logos/plus.svg'
 import minus from '../../assets/Logos/minus.svg'
 import products from '../main/components/merchBlock/Products'
 import ProductCard from '../main/components/merchBlock/productCard/ProductCard'
+import { useParams } from 'react-router-dom';
+
+
 
 const Merch = () => {
+
+    const { productId } = useParams();
+    console.log(productId);
+    
   return (
     <div className={s.main}>
         <div className={s.main__container}>
             <h1 className={s.title}>Мерч</h1>
-
+            {products.filter((product) => product.id === Number(productId)).map((product) => (
             <div className={s.product__selected}>
                 <div className={s.product__image}>
                     <div className={s.controls__image}>
                         <button className={s.controls__btn}><img src={leftBtn} alt=''/></button>
                         <img src={shirt} alt=''/>
                         <button className={s.controls__btn}><img src={rigthBtn} alt=''/></button>
-                    </div>
-                    <div className={s.product__imageDescription}>
+
+                        <div className={s.product__imageDescription}>
                         <div className={s.product__nameBrand}>
-                            <p className={s.product__name}>Футболка</p>
-                            <p className={s.product__brand}>"Лысый крокодил"</p>
+                            <p className={s.product__name}>{product.title}</p>
+                            <p className={s.product__brand}>{product.brand}</p>
                         </div>
                         <div className={s.product__price}>
-                            <p className={s.price}>1 650 ₽</p>
+                            <p className={s.price}>{new Intl.NumberFormat('ru-RU', {
+                                style: 'currency',
+                                currency: 'RUB',
+                                minimumFractionDigits: 0
+                            }).format(product.price)}</p>
                         </div>
+                    </div>
                     </div>
                 </div>
                 <div className={s.product__info}>
                     <h3 className={s.descriptionTitle}>Описание товара</h3>
                     <div className={s.info__description}>
-                        <p className={s.description}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        <p className={s.description}>{product.description}</p>
                     </div>
                     <div className={s.product__sizes}>
                         <p className={s.selectSizetext}>Размер:</p>
@@ -70,10 +82,12 @@ const Merch = () => {
                     <button className={s.button__addToCart}><img src={addToCart} alt=''/>Добавить в корзину</button>
                 </div>
             </div>
+            ))}
+
             <div>
-                <div className={s.merch__block}>
+                <ul className={s.merch__block}>
                 {products.map((product) => (
-                <div className={s.card}>
+                <li className={s.card}>
                     <div>
                         <img className={s.card__image} src={product.image} alt={product.title}/>
                     </div>
@@ -92,9 +106,9 @@ const Merch = () => {
                             </p>
                         </div>
                     </div>
-                </div>
+                </li>
                 ))}
-                </div>
+                </ul>
             </div>
             <div className={s.oferta}>
                 <p className={s.text__attention}>Рыба. Тут о том, что оплата производится только при получении. Приглашение ознакомиться с условиями договора.</p>

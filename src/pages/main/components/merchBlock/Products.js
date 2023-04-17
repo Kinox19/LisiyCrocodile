@@ -1,7 +1,7 @@
 const products = [
     {   
         id: 1,
-        image: 'https://ae04.alicdn.com/kf/HTB13oYsRa6qK1RjSZFmq6x0PFXak.jpg',
+        image: 'https://i.ibb.co/6W1RVZD/shirt-Black.png',
         title: 'Комбинезоны',
         brand: '“Лысый крокодил”',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
@@ -9,15 +9,22 @@ const products = [
     },
     {
         id: 2,
-        image: 'https://ae04.alicdn.com/kf/S8c0ba2228e1b4ab49dab41c40bf2ffb65.jpeg',
+        image: 'https://i.ibb.co/6W1RVZD/shirt-Black.png',
         title: 'Футболки',
         brand: '“Лысый крокодил”',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-        price: '1650'
+        price: '1650',
+        sizes: {
+            S: 'S',
+            M: 'M',
+            L: 'L',
+            XL: 'XL',
+            XXL: 'XXL'
+        }
     },
     {
         id: 3,
-        image: 'https://ae04.alicdn.com/kf/Sbbb91cede638488d9e050fa6fef56e1as.jpg',
+        image: 'https://i.ibb.co/zNHDL3v/hudi-Black.png',
         title: 'Худи',
         brand: '“Лысый крокодил”',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
@@ -25,7 +32,7 @@ const products = [
     },
     {
         id: 4,
-        image: 'https://images.prom.ua/3513594904_w640_h640_3513594904.jpg',
+        image: 'https://i.ibb.co/6W1RVZD/shirt-Black.png',
         title: 'Кепки',
         brand: '“Лысый крокодил”',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
@@ -33,7 +40,7 @@ const products = [
     },
     {
         id: 5,
-        image: 'https://basket-02.wb.ru/vol144/part14403/14403951/images/big/1.jpg',
+        image: 'https://i.ibb.co/zNHDL3v/hudi-Black.png',
         title: 'Шоперы',
         brand: '“Лысый крокодил”',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
@@ -41,7 +48,7 @@ const products = [
     },
     {
         id: 6,
-        image: 'https://ae04.alicdn.com/kf/Sb95b674df306410992fdc81a040c3a1al.jpg_640x640.jpg',
+        image: 'https://i.ibb.co/6W1RVZD/shirt-Black.png',
         title: 'Кружки',
         brand: '“Лысый крокодил”',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',

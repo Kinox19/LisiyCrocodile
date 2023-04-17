@@ -3,7 +3,7 @@ import s from './VideoBlock.module.scss'
 
 const VideoBlock = () => {
   return (
-    <div className={s.container}>
+    <div className={s.container} id='video'>
       <div className={s.blockLeft}>
         <h2 className={s.title}>Видео</h2>
         <p className={s.text}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
