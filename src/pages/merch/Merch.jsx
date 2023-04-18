@@ -52,6 +52,18 @@ const Merch = () => {
       setSelectedProductId(productId);
     };
 
+    const [selectedSize, setSelectedSize] = useState('S');
+
+    const handleSizeClick = (size) => {
+      setSelectedSize(size);
+    };
+
+    const [activeColor, setActiveColor] = useState('black');
+
+    const handleColorClick = (color) => {
+      setActiveColor(color);
+    };
+
   return (
     <div className={s.main}>
         <div className={s.main__container}>
@@ -63,7 +75,7 @@ const Merch = () => {
         <button className={s.controls__btn}>
           <img src={leftBtn} alt="" />
         </button>
-        <img src={selectedProduct.image} alt="" />
+        <img className={s.selected__image} src={selectedProduct.image} alt="" />
         <button className={s.controls__btn}>
           <img src={rigthBtn} alt="" />
         </button>
@@ -93,30 +105,30 @@ const Merch = () => {
       <div className={s.product__sizes}>
         <p className={s.selectSizetext}>Размер:</p>
         <ul className={s.sizes}>
-          <li>S</li>
-          <li>M</li>
-          <li>L</li>
-          <li>XL</li>
-          <li>XLL</li>
+          <li><button className={`${s.size} ${selectedSize === 'S' ? s.selected__size : ''}`} onClick={() => handleSizeClick('S')}>S</button></li>
+          <li><button className={`${s.size} ${selectedSize === 'M' ? s.selected__size : ''}`} onClick={() => handleSizeClick('M')}>M</button></li>
+          <li><button className={`${s.size} ${selectedSize === 'L' ? s.selected__size : ''}`} onClick={() => handleSizeClick('L')}>L</button></li>
+          <li><button className={`${s.size} ${selectedSize === 'XL' ? s.selected__size : ''}`} onClick={() => handleSizeClick('XL')}>XL</button></li>
+          <li><button className={`${s.size} ${selectedSize === 'XXL' ? s.selected__size : ''}`} onClick={() => handleSizeClick('XXL')}>XXL</button></li>
         </ul>
       </div>
       <div className={s.product__colors}>
         <p className={s.colorText}>Цвет:</p>
         <ul className={s.colorsList}>
           <li>
-            <div className={s.colorGreen}></div>
+            <button className={`${s.color} ${activeColor === 'black' ? s.selected__color : ''}`} onClick={() => handleColorClick('black')}> <div className={s.colorBlack}></div></button>
           </li>
           <li>
-            <div className={s.colorWhite}></div>
+            <button className={`${s.color} ${activeColor === 'white' ? s.selected__color : ''}`} onClick={() => handleColorClick('white')}> <div className={s.colorWhite}></div></button>
           </li>
           <li>
-            <div className={s.colorBlack}></div>
+            <button className={`${s.color} ${activeColor === 'gray' ? s.selected__color : ''}`} onClick={() => handleColorClick('gray')}> <div className={s.colorGray}></div></button>
           </li>
           <li>
-            <div className={s.colorGray}></div>
+            <button className={`${s.color} ${activeColor === 'green' ? s.selected__color : ''}`} onClick={() => handleColorClick('green')}> <div className={s.colorGreen}></div></button>
           </li>
           <li>
-            <div className={s.colorRed}></div>
+            <button className={`${s.color} ${activeColor === 'red' ? s.selected__color : ''}`} onClick={() => handleColorClick('red')}> <div className={s.colorRed}></div></button>
           </li>
         </ul>
       </div>

@@ -40,6 +40,11 @@
     margin: 0;
 }
 
+
+.selected__image{
+    width: 500px;
+}
+
 .controls__btn:first-of-type{
     justify-self: start;
 }
@@ -150,7 +155,7 @@
 
     color: #BEFF00;
     
-    gap: 35px;
+    gap: 10px;
 
     margin-top: 35px;
 }
@@ -172,16 +177,18 @@
     display: flex;
     flex-direction: row;
 
-    column-gap: 51px;
+    column-gap: 4px;
 }
 
 .product__colors{
     display: flex;
     flex-direction: row;
 
-    gap: 35px;
+    gap: 30px;
 
     margin-top: 35px;
+
+    align-items: center;
 }
 
 .colorText{
@@ -197,7 +204,7 @@
 .colorsList{
     list-style: none;
     text-decoration: none;
-    gap: 15px;
+    gap: 9px;
     display: flex;
     flex-direction: row;
 }
@@ -338,8 +345,8 @@
     width: 359px;
     border-radius: 15px;
     text-transform: uppercase;
-    color: rgba(129, 136, 110, 1);
-    border: 2px solid rgba(58, 58, 58, 1);
+    color: rgba(190, 255, 0, 1);
+    border: 3px solid rgba(190, 255, 0, 1);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -351,6 +358,7 @@
     text-align: left;
     background-color: transparent;
     margin-top: 35px;
+    cursor: pointer;
 }
 
 .oferta{
@@ -448,4 +456,54 @@
     list-style: none;
     margin: 0;
     padding: 0;
+}
+
+.size{
+    font-family: Inter;
+    font-size: 25px;
+    font-weight: 400;
+    line-height: 30px;
+    color: rgba(190, 255, 0, 1);
+    background-color: transparent;
+    outline: none;
+    border: none;
+    width: 66px;
+    height: 36px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    cursor: pointer;
+}
+
+.size:hover{
+    border: 1px solid rgba(190, 255, 0, 1);
+}
+
+.selected__size{
+    font-family: Inter;
+    font-size: 25px;
+    font-weight: 700;
+    line-height: 30px;
+    border: 1px solid rgba(190, 255, 0, 1);
+}
+
+.color{
+    cursor: pointer;
+    background-color: transparent;
+    outline: none;
+    border: none;
+
+    padding: 6px;
+    border-radius: 100px;
+}
+
+// .selected__color{
+//     outline: 1px solid rgba(129, 136, 110, 1);
+// }
+
+
+.selected__color{
+    outline: 1px solid rgba(129, 136, 110, 1);
 }

@@ -8,7 +8,6 @@ import trackNext from '../../assets/player/trackNext.svg'
 import trackPlay from '../../assets/player/trackPlay.svg'
 import trackPause from '../../assets/player/trackPause.svg'
 import volumeYes from '../../assets/player/volume.svg'
-import musFile from '../../assets/player/music/track2.mp3'
 import tracks from '../../pages/muz1/Muz1TrackList'
 
 

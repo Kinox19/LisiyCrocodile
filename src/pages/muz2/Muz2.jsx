@@ -2,6 +2,7 @@ import React from 'react'
 import s from './Muz2.module.scss'
 import playIcon from '../../assets/Logos/playIcon.svg'
 import cover from '../../assets/images/mainPage/covers/cover_stroy2.png'
+import tracks from './Muz2TrackList'
 
 const Muz2 = () => {
   return (
@@ -17,10 +18,28 @@ const Muz2 = () => {
             </div>
 
             <div className={s.tracks}>
-                
-            </div>
+            {tracks.map((track) => (
+              <div key={track.id} className={s.track__wrapper}>
+                <div className={s.leftSide}>
+                  <button className={s.play} onClick={() => handleTrackClick(track.id)}>
+                    <img src={controls_play} className={s.control__play} alt='' />
+                  </button>
+                  <img src={coverTrack} className={s.track__cover} alt='' />
+                  <div className={s.track__textInfo}>
+                    <p className={s.track__name}>{track.name}</p>
+                    <p className={s.track__artist}>{track.artist}</p>
+                  </div>
+                </div>
+                <div className={s.track__timeDownload}>
+                  <p className={s.track__time}>{track.time}</p>
+                  <img src={controls_download} className={s.control__download} alt='' />
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
-    </div>
+      </div>
+      {id && <Player id={id} />}
     </div>
   )
 }
