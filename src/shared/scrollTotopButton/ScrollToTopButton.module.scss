@@ -1,7 +1,8 @@
 .scrollToTopBtn{
     position: sticky;
     bottom: 70px;
-    right: 162px;
+    margin-right: -100px;
+    float: right;
     cursor: pointer;
 
     background-color: transparent;

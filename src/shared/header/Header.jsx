@@ -22,7 +22,7 @@ const Header = () => {
   return (
     <header className={s.header__wrapper}>
       <div className={s.header__container}>
-        <a href='/main' className={s.header__containerLink}>
+        <a href='/home' className={s.header__containerLink}>
           <div className={s.logo__container}>
             <img className={s.logo} src={logo_header} alt=''/>
             <p className={s.logo__name}>лысый крокодил</p>
@@ -34,7 +34,7 @@ const Header = () => {
             {links.map((link) => (
               <li key={link.id} className={s.header__link}>
                 {link.to === '/' ? (
-                  <ScrollLink to={link.id} smooth={true} duration={500} offset={-100} onClick={() => handleClick(link)}>
+                  <ScrollLink to={link.id} smooth={true} duration={500} offset={1000} onClick={() => handleClick(link)}>
                     {link.label}
                   </ScrollLink>
                 ) : (

@@ -29,7 +29,7 @@ const MerchBlock = () => {
 
 
   return (
-    <div className={s.main}>
+    <div className={s.main} id='merch'>
       <h2 className={s.title}>Мерч</h2>
       <div className={s.merch__block}>
         <button className={s.buttonChange} onClick={handlePrevClick}><img src={leftBtn} alt=''/></button>
