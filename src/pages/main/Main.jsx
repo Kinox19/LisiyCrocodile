@@ -37,7 +37,9 @@ const Main = () => {
     };
   }, []);
 
-
+  useEffect(() => {
+    localStorage.clear();
+  }, []);
 
 
 

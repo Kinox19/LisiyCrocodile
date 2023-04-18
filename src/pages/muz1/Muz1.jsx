@@ -9,6 +9,7 @@ import coverTrack from '../../assets/trackList/track_cover_stroy.png';
 import Player from '../../shared/player/Player';
 
 const Muz1 = () => {
+  
   const [id, setTrackId] = useState(null);
 
   const handleTrackClick = (id) => {

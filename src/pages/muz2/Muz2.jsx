@@ -1,10 +1,22 @@
-import React from 'react'
+import React, { useState } from 'react';
 import s from './Muz2.module.scss'
 import playIcon from '../../assets/Logos/playIcon.svg'
 import cover from '../../assets/images/mainPage/covers/cover_stroy2.png'
 import tracks from './Muz2TrackList'
+import controls_download from '../../assets/trackList/controls_download.svg';
+import controls_play from '../../assets/trackList/controls_play.svg';
+import coverTrack from '../../assets/trackList/track_cover_stroy.png';
+import Player from '../../shared/player/Player';
 
 const Muz2 = () => {
+
+  const [id, setTrackId] = useState(null);
+
+  const handleTrackClick = (id) => {
+    setTrackId(id);
+    console.log(id)
+  };
+
   return (
     <div>
         <div className={s.main}>
@@ -41,7 +53,7 @@ const Muz2 = () => {
       </div>
       {id && <Player id={id} />}
     </div>
-  )
-}
+  );
+};
 
 export default Muz2

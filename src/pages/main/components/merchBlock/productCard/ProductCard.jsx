@@ -4,6 +4,7 @@ import buyIcon from '../../../../../assets/Logos/buy.svg';
 import { AppContext } from '../../../../../AppContext';
 import { useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { useLayoutEffect } from 'react';
 
 const ProductCard = ({ product }) => {
   const { setSelectedProductId } = useContext(AppContext);
@@ -13,6 +14,8 @@ const ProductCard = ({ product }) => {
     setSelectedProductId(product.id);
     navigate('/merch');
   };
+
+
 
   return (
     <div className={s.product__link} onClick={handleClick}>

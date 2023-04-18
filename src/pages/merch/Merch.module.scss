@@ -316,28 +316,29 @@
 }
 
 .quantityButton{
+    display: flex;
     background-color: transparent;
     border: none;
     outline: none;
-
     padding: 0;
-
     align-items: center;
     justify-content: center;
-
     cursor: pointer;
+    width: 31px;
+    height: 31px;
 
-    width: 19px;
-    height: 19px;
+    padding: 6px;
+    border-radius: 100px;
+    
+    -webkit-border-radius: 100px;
+    -moz-border-radius: 100px;
+    -ms-border-radius: 100px;
+    -o-border-radius: 100px;
 }
 
-.minus{
-    width: 19px;
-    height: 19px;
-    cursor: pointer;
+.quantityButton:hover{
+    border: 1px solid #BEFF00;
 }
-
-
 
 
 .button__addToCart{

@@ -8,7 +8,7 @@ import trackNext from '../../assets/player/trackNext.svg'
 import trackPlay from '../../assets/player/trackPlay.svg'
 import trackPause from '../../assets/player/trackPause.svg'
 import volumeYes from '../../assets/player/volume.svg'
-import tracks from '../../pages/muz1/Muz1TrackList'
+import tracks from '../../pages/muz2/Muz2TrackList'
 
 
 const Player = ({id}) => {

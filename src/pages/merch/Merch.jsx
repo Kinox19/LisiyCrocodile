@@ -1,7 +1,6 @@
 import React from 'react'
 import s from './Merch.module.scss'
 import addToCart from '../../assets/Logos/addToCart.svg'
-import shirt from '../../assets/images/merch/blackShirt.png'
 import leftBtn from '../../assets/Logos/IconLeft.svg'
 import rigthBtn from '../../assets/Logos/IconRigth.svg'
 import plus from '../../assets/Logos/plus.svg'
@@ -15,54 +14,85 @@ import { useState } from 'react'
 
 
 const Merch = () => {
+  const { selectedProductId, setSelectedProductId } = useContext(AppContext);
+  const [selectedProduct, setSelectedProduct] = useState(null);
+  const [selectedSize, setSelectedSize] = useState('S');
+  const [activeColor, setActiveColor] = useState('black');
+  const [quantity, setQuantity] = useState(1);
 
-    const { selectedProductId, setSelectedProductId } = useContext(AppContext);
-    const [selectedProduct, setSelectedProduct] = useState(null);
-  
-    useEffect(() => {
-      // Retrieve the selected product ID and product from localStorage
-      const storedSelectedProductId = localStorage.getItem('selectedProductId');
-      const storedSelectedProduct = JSON.parse(localStorage.getItem('selectedProduct'));
-  
-      // Set the selected product ID and product in the context
-      if (storedSelectedProductId && storedSelectedProduct) {
-        setSelectedProductId(Number(storedSelectedProductId));
-        setSelectedProduct(storedSelectedProduct);
-      }
-    }, [setSelectedProductId]);
-  
-    useEffect(() => {
-      // Find the selected product based on the selected product ID
-      if (selectedProductId) {
-        const product = products.find((product) => product.id === selectedProductId);
-        setSelectedProduct(product);
-  
-        // Store the selected product in localStorage
-        localStorage.setItem('selectedProduct', JSON.stringify(product));
-      }
-    }, [selectedProductId]);
-  
-    const handleSelectProduct = (productId) => {
-      // Set the selected product ID and product in localStorage
-      const product = products.find((product) => product.id === productId);
-      localStorage.setItem('selectedProductId', productId.toString());
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
+  useEffect(() => {
+    const storedSelectedProductId = localStorage.getItem('selectedProductId');
+    const storedSelectedProduct = JSON.parse(localStorage.getItem('selectedProduct'));
+
+    if (storedSelectedProductId && storedSelectedProduct) {
+      setSelectedProductId(Number(storedSelectedProductId));
+      setSelectedProduct(storedSelectedProduct);
+    }
+  }, [setSelectedProductId]);
+
+  useEffect(() => {
+    if (selectedProductId) {
+      const product = products.find((product) => product.id === selectedProductId);
+      setSelectedProduct(product);
+      localStorage.setItem('selectedProductId', selectedProductId);
       localStorage.setItem('selectedProduct', JSON.stringify(product));
-  
-      // Set the selected product ID in the context
-      setSelectedProductId(productId);
-    };
+    }
+  }, [selectedProductId]);
 
-    const [selectedSize, setSelectedSize] = useState('S');
+  useEffect(() => {
+    const storedSelectedSize = localStorage.getItem('selectedSize');
+    if (storedSelectedSize) {
+      setSelectedSize(storedSelectedSize);
+    }
+  }, []);
 
-    const handleSizeClick = (size) => {
-      setSelectedSize(size);
-    };
+  useEffect(() => {
+    localStorage.setItem('selectedSize', selectedSize);
+  }, [selectedSize]);
 
-    const [activeColor, setActiveColor] = useState('black');
+  useEffect(() => {
+    const storedActiveColor = localStorage.getItem('activeColor');
+    if (storedActiveColor) {
+      setActiveColor(storedActiveColor);
+    }
+  }, []);
 
-    const handleColorClick = (color) => {
-      setActiveColor(color);
-    };
+  useEffect(() => {
+    localStorage.setItem('activeColor', activeColor);
+  }, [activeColor]);
+
+  useEffect(() => {
+    const storedQuantity = localStorage.getItem('quantity');
+    if (storedQuantity) {
+      setQuantity(Number(storedQuantity));
+    }
+  }, []);
+
+  useEffect(() => {
+    localStorage.setItem('quantity', quantity);
+  }, [quantity]);
+
+  const handleSizeClick = (size) => {
+    setSelectedSize(size);
+  };
+
+  const handleColorClick = (color) => {
+    setActiveColor(color);
+  };
+
+  const handlePlusQuantityChange = () => {
+    const newQuantity = quantity + 1;
+    setQuantity(newQuantity);
+  };
+
+  const handleMinusQuantityChange = () => {
+    const newQuantity = quantity - 1 <= 0 ? 1 : quantity - 1;
+    setQuantity(newQuantity);
+  };
 
   return (
     <div className={s.main}>
@@ -132,20 +162,22 @@ const Merch = () => {
           </li>
         </ul>
       </div>
+
       <div className={s.product__counter}>
         <p className={s.quantityText}>Количество:</p>
         <div className={s.counter}>
-          <button className={s.quantityButton}>
+          <button className={s.quantityButton} onClick={handlePlusQuantityChange}>
             <img src={plus} alt="+" />
           </button>
-          <p className={s.product__quantities}>1x</p>
+          <p className={s.product__quantities}>{quantity}x</p>
           <div className={s.minus}>
-            <button className={s.quantityButton}>
+            <button className={s.quantityButton} onClick={handleMinusQuantityChange}>
               <img src={minus} alt="-" />
             </button>
           </div>
         </div>
       </div>
+
       <button className={s.button__addToCart}>
         <img src={addToCart} alt="" />
         Добавить в корзину
