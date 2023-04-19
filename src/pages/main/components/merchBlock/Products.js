@@ -1,19 +1,19 @@
 const products = [
-    {   
+    {
         id: 1,
         image: 'https://i.ibb.co/6W1RVZD/shirt-Black.png',
-        title: 'Комбинезоны',
+        title: 'Шапка',
         brand: '“Лысый крокодил”',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-        price: '5900'
+        price: 1500
     },
     {
         id: 2,
         image: 'https://i.ibb.co/6W1RVZD/shirt-Black.png',
-        title: 'Футболки',
+        title: 'Футболка',
         brand: '“Лысый крокодил”',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-        price: '1650',
+        price: 1850,
         sizes: {
             S: 'S',
             M: 'M',
@@ -28,31 +28,31 @@ const products = [
         title: 'Худи',
         brand: '“Лысый крокодил”',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-        price: '2750'
+        price: 2750
     },
     {
         id: 4,
         image: 'https://i.ibb.co/6W1RVZD/shirt-Black.png',
-        title: 'Кепки',
+        title: 'Кепка',
         brand: '“Лысый крокодил”',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-        price: 1300,
+        price: 1250,
     },
     {
         id: 5,
         image: 'https://i.ibb.co/zNHDL3v/hudi-Black.png',
-        title: 'Шоперы',
+        title: 'Шопер',
         brand: '“Лысый крокодил”',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-        price: '950'
+        price: 950
     },
     {
         id: 6,
         image: 'https://i.ibb.co/6W1RVZD/shirt-Black.png',
-        title: 'Кружки',
+        title: 'Кружка',
         brand: '“Лысый крокодил”',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-        price: '700'
+        price: 700
     }
 ]
 

@@ -96,3 +96,28 @@ a:hover{
     color: rgba(190, 255, 0, 1);
     cursor: pointer;
 }
+
+.cart__length{
+    background-color: rgba(190, 255, 0, 1);
+    padding: 0 4px;
+    border-radius: 100px;
+    -webkit-border-radius: 100px;
+    -moz-border-radius: 100px;
+    -ms-border-radius: 100px;
+    -o-border-radius: 100px;
+    position: absolute;
+    top: 13px;
+    right: -23px;
+}
+
+.cart__lengthNumber{
+    color: black;
+    font-family: Inter;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 15px;
+}
+
+nav{
+    position: relative;
+}

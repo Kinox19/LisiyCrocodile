@@ -1,7 +1,13 @@
 import React from 'react'
 import s from './Oferta.module.scss'
+import { useEffect } from 'react'
 
 const Oferta = () => {
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div className={s.main}>
         <div className={s.main__container}>

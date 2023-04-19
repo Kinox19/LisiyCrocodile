@@ -360,8 +360,40 @@
     background-color: transparent;
     margin-top: 35px;
     cursor: pointer;
+    transition: .3s ease-in-out;
+    -webkit-transition: .3s ease-in-out;
+    -moz-transition: .3s ease-in-out;
+    -ms-transition: .3s ease-in-out;
+    -o-transition: .3s ease-in-out;
 }
 
+.button__addToCart:hover{
+    color: #000000;
+    background-color: #BEFF00;
+    transition: .3s ease-in-out;
+    -webkit-transition: .3s ease-in-out;
+    -moz-transition: .3s ease-in-out;
+    -ms-transition: .3s ease-in-out;
+    -o-transition: .3s ease-in-out;
+    
+}
+
+path{ 
+    transition: .3s ease-in-out;
+    -webkit-transition: .3s ease-in-out;
+    -moz-transition: .3s ease-in-out;
+    -ms-transition: .3s ease-in-out;
+    -o-transition: .3s ease-in-out;
+}
+
+.button__addToCart:hover path{
+    fill: black;
+    transition: .3s ease-in-out;
+    -webkit-transition: .3s ease-in-out;
+    -moz-transition: .3s ease-in-out;
+    -ms-transition: .3s ease-in-out;
+    -o-transition: .3s ease-in-out;
+}
 .oferta{
     display: flex;
     gap: 21px;
@@ -508,3 +540,5 @@
 .selected__color{
     outline: 1px solid rgba(129, 136, 110, 1);
 }
+
+

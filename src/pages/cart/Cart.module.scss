@@ -1,0 +1,243 @@
+.main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    scroll-behavior: smooth;
+}
+
+.main__container{
+    width: 1600px;
+    color: #BEFF00;
+    margin-top: 70px;
+}
+
+.heading{
+    font-family: 'Bb';
+    font-size: 150px;
+    font-weight: 400;
+    line-height: 155px;
+    text-align: left;
+}
+
+.cart__output{
+    margin-top: 70px;
+    margin-bottom: 130px
+}
+
+.cart__item{
+    border-top: 1px solid rgba(58, 58, 58, 1);
+    border-bottom: 1px solid rgba(58, 58, 58, 1);
+    display: flex;
+    flex-direction: row;
+    padding: 36px 161px;
+    justify-content: space-between;
+}
+
+.item__info{
+    display: flex;
+    flex-direction: row;
+    gap: 172px;
+
+}
+
+.item__description{
+    display: flex;
+    flex-direction: row;
+    gap: 62px;
+}
+
+.item__image{
+    width: 100px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+.item__nameProperties{
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    align-self: center;
+}
+
+.item__properties{
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+
+
+.item__name{
+    font-family: Inter;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 36px;
+    text-align: left;
+}
+
+.item__size{
+    font-family: Inter;
+    font-size: 25px;
+    font-weight: 400;
+    line-height: 30px;
+    text-align: center;
+    color:rgba(129, 136, 110, 1);
+}
+
+.item__color{
+    height: 24px;
+    width: 24px;
+    background-color: rgba(255, 100, 90, 1);
+    border-radius: 100px;
+    -webkit-border-radius: 100px;
+    -moz-border-radius: 100px;
+    -ms-border-radius: 100px;
+    -o-border-radius: 100px;
+}
+
+.cart__item:first-of-type{
+    border-top: 2px solid rgba(58, 58, 58, 1);
+}
+
+.cart__item:last-of-type{
+    border-bottom: 2px solid rgba(58, 58, 58, 1);
+}
+
+.item__quantity{
+    display: flex;
+    gap: 20px;
+    align-self: center;
+}
+
+.product__quantities{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 30px;
+
+    color: #81886E;
+}
+
+.quantityButton{
+    display: flex;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    padding: 0;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    width: 31px;
+    height: 31px;
+
+    padding: 6px;
+    border-radius: 100px;
+
+    -webkit-border-radius: 100px;
+    -moz-border-radius: 100px;
+    -ms-border-radius: 100px;
+    -o-border-radius: 100px;
+}
+
+.quantityButton:hover{
+    border: 1px solid #BEFF00;
+}
+
+.item__priceDelete{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 164px;
+}
+
+.item__price{
+    font-family: Inter;
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 36px;
+    text-align: left;
+}
+
+.cart__makeOrder{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 262px;
+    gap: 91px;
+    align-items: end;
+}
+
+.proceed{
+    border: 3px solid rgba(190, 255, 0, 1);
+    background-color: transparent;
+    font-family: Inter;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 24px;
+    text-align: left;
+    text-transform: uppercase;
+    padding: 25px 50px;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+    color: rgba(190, 255, 0, 1);
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    -webkit-transition: 0.3s ease-in-out;
+    -moz-transition: 0.3s ease-in-out;
+    -ms-transition: 0.3s ease-in-out;
+    -o-transition: 0.3s ease-in-out;
+}
+
+.proceed:hover{
+    color: rgba(0, 0, 0, 1);
+    background-color: rgba(190, 255, 0, 1);
+    transition: 0.3s ease-in-out;
+    -webkit-transition: 0.3s ease-in-out;
+    -moz-transition: 0.3s ease-in-out;
+    -ms-transition: 0.3s ease-in-out;
+    -o-transition: 0.3s ease-in-out;
+}
+
+.order__price{
+    display: flex;
+    align-items: end;
+    gap: 35px;
+
+
+    align-items: baseline;
+}
+
+.order__text{
+    font-family: Inter;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: left;
+    color: rgba(129, 136, 110, 1);
+}
+
+.item__delete{
+    background-color: transparent;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
+.item__delete:hover path{
+    stroke: rgba(190, 255, 0, 1);
+}
+
+.finalPrice{
+    font-family: Inter;
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 36px;
+    text-align: center;
+}

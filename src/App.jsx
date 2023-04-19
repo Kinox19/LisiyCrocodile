@@ -9,14 +9,23 @@ import Muz3 from "./pages/muz3/Muz3";
 import Muz4 from "./pages/muz4/Muz4";
 import Merch from "./pages/merch/Merch";
 import Player from "./shared/player/Player";
-import { AppContext, AppContextProvider } from "./AppContext";
+import { AppContextProvider } from "./AppContext";
+import Cart from "./pages/cart/Cart";
+import NotFoundPage from "./pages/notFoundPage/NotFoundPage";
+import { useState } from "react";
 
 
 function App() {
 
+  const [cart, setCart] = useState([]);
+
+  const addToCart = (item) => {
+    setCart([...cart, item]);
+  };
+
   return (
     
-    <AppContextProvider>
+    <AppContextProvider value={{ cart, addToCart }}>
     <div className="App">
       <Header/>
       <Routes>
@@ -31,6 +40,8 @@ function App() {
         <Route path="/merch" element={<Merch/>} />
         
         <Route path="/kachaet" element={<Player/>} />
+        <Route path="/cart" element={<Cart/> } />
+        <Route path="/*" element={<NotFoundPage/>} />
       </Routes>
       <Footer/>
     </div>
