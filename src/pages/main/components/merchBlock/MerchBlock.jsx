@@ -1,6 +1,6 @@
 import React from 'react'
 import s from './MerchBlock.module.scss'
-import products from './Products'
+import products from '../../../../Products'
 import { useState } from 'react'
 import ProductCard from './productCard/ProductCard'
 import leftBtn from '../../../../assets/Logos/IconLeft.svg'

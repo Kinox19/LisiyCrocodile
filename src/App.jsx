@@ -9,23 +9,25 @@ import Muz3 from "./pages/muz3/Muz3";
 import Muz4 from "./pages/muz4/Muz4";
 import Merch from "./pages/merch/Merch";
 import Player from "./shared/player/Player";
-import { AppContextProvider } from "./AppContext";
 import Cart from "./pages/cart/Cart";
 import NotFoundPage from "./pages/notFoundPage/NotFoundPage";
-import { useState } from "react";
+import rootReducer from "./redux/reducers/reducers";
+import { legacy_createStore as createStore} from 'redux'
+import { Provider } from 'react-redux';
+// import { PersistGate } from "redux-persist/integration/react";
+
+// import {persistor} from '../src/redux/store/store'
+
 
 
 function App() {
 
-  const [cart, setCart] = useState([]);
-
-  const addToCart = (item) => {
-    setCart([...cart, item]);
-  };
+  const store = createStore(rootReducer);
 
   return (
     
-    <AppContextProvider value={{ cart, addToCart }}>
+    <Provider store={store}>
+      {/* <PersistGate loading={null} persistor={persistor}> */}
     <div className="App">
       <Header/>
       <Routes>
@@ -45,7 +47,8 @@ function App() {
       </Routes>
       <Footer/>
     </div>
-    </AppContextProvider>
+    {/* </PersistGate> */}
+    </Provider>
   );
 }
 

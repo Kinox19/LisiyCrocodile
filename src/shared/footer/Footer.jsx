@@ -16,7 +16,7 @@ const Footer = () => {
 
 
         <div className={s.footer__logo}>
-          <img className={s.logo} src={logo__footer}></img>
+          <img className={s.logo} src={logo__footer} alt=''></img>
           <p className={s.logo__name}>© 2019–2023 Лысый Крокодил</p>
         </div>
 

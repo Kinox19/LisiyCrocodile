@@ -3,8 +3,6 @@ import s from './Header.module.scss'
 import logo_header from '../../assets/Logos/logo_header.svg'
 import { Link as ScrollLink, animateScroll as scroll } from 'react-scroll';
 import { Link } from 'react-router-dom';
-import AppContext from '../../AppContext';
-import { useContext } from 'react';
 
 const Header = () => {
 
@@ -21,7 +19,6 @@ const Header = () => {
       window.location.href = link.to + '#' + link.id;
   };
 
-  const { cart } = useContext(AppContext);
 
   return (
     <header className={s.header__wrapper}>
@@ -49,9 +46,9 @@ const Header = () => {
               </li>
             ))}
           </ul>
-          {cart.length > 0 && (
+          {/* {cart.length > 0 && (
             <div className={s.cart__length}><span className={s.cart__lengthNumber}>{cart.length}</span></div>
-          )}
+          )} */}
         </nav>
       </div>
     </header>

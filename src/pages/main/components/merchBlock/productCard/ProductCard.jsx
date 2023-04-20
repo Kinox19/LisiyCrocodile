@@ -1,24 +1,20 @@
 import React from 'react';
 import s from './ProductCard.module.scss';
 import buyIcon from '../../../../../assets/Logos/buy.svg';
-import { AppContext } from '../../../../../AppContext';
-import { useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { useLayoutEffect } from 'react';
+import { selectProduct } from '../../../../../redux/actions/selectProduct';
+import { connect } from 'react-redux';
 
-const ProductCard = ({ product }) => {
-  const { setSelectedProductId } = useContext(AppContext);
+const ProductCard = ({ product, selectProduct }) => {
   const navigate = useNavigate();
 
-  const handleClick = () => {
-    setSelectedProductId(product.id);
+  const handleClick = (product) => {
+    selectProduct(product);
     navigate('/merch');
   };
-
-
-
+  
   return (
-    <div className={s.product__link} onClick={handleClick}>
+    <div className={s.product__link} onClick={() => handleClick(product)}>
       <div className={s.wrapper}>
         <img className={s.image} src={product.image} alt={product.title} />
         <div className={s.twoColumns}>
@@ -42,4 +38,10 @@ const ProductCard = ({ product }) => {
   );
 };
 
-export default ProductCard;
+const mapStateToProps = state => {
+  return {
+    products: state.products.products
+  };
+};
+
+export default connect(mapStateToProps, { selectProduct }) (ProductCard)

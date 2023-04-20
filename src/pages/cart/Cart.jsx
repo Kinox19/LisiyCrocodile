@@ -5,43 +5,40 @@ import minus from '../../assets/Logos/minus.svg'
 import { useState } from 'react'
 import image from '../../assets/images/cart/cart__preview1.png'
 import { useContext, useEffect } from 'react'
-import { AppContext } from '../../AppContext'
+import { connect } from 'react-redux'
 
-const Cart = () => {
-    const { cart } = useContext(AppContext);
-    const [quantity, setQuantity] = useState(1);
-    const [total, setTotal] = useState(0)
 
-    const handlePlusQuantityChange = () => {
-        const newQuantity = quantity + 1;
-        setQuantity(newQuantity);
-      };
+const Cart = ({cartItems}) => {
+    // const [quantity, setQuantity] = useState(1);
+    // const [total, setTotal] = useState(0)
+
+    // const handlePlusQuantityChange = () => {
+    //     const newQuantity = quantity + 1;
+    //     setQuantity(newQuantity);
+    //   };
     
-      const handleMinusQuantityChange = () => {
-        const newQuantity = quantity - 1 <= 0 ? 1 : quantity - 1;
-        setQuantity(newQuantity);
-      };
+    //   const handleMinusQuantityChange = () => {
+    //     const newQuantity = quantity - 1 <= 0 ? 1 : quantity - 1;
+    //     setQuantity(newQuantity);
+    //   };
 
-      function handleClearStorage() {
-        localStorage.clear();
-      }
 
-      useEffect(() => {
-        let summ = cart.reduce(
-          (total, { price }) =>  price + total,
-          0
-        );
+    //   useEffect(() => {
+    //     let summ = cart.reduce(
+    //       (total, { price }) =>  price + total,
+    //       0
+    //     );
     
-        setTotal(summ);
-      }, [cart]);
+    //     setTotal(summ);
+    //   }, [cart]);
 
   return (
     <div className={s.main}>
         <div className={s.main__container}>
             <h1 className={s.heading}>корзина</h1>
             <div className={s.cart__output}>
-            {cart.length > 0 ?(
-                cart.map((item) => (
+            {cartItems && cartItems.length ?(
+                cartItems.map((item) => (
                 <div key={item.id} className={s.cart__item}>
                     <div className={s.item__info}>
                         <div className={s.item__description}>
@@ -50,11 +47,11 @@ const Cart = () => {
                                 <p className={s.item__name}>{item.title}</p>
                                 <div className={s.item__properties}>
                                     <p className={s.item__size}>{item.size}</p>
-                                    <div className={s.item__color}></div>
+                                    <div className={s.item__color} style={{ backgroundColor: `${item.color}` }}>{item.color}</div>
                                 </div>
                             </div>
                         </div>
-                        <div className={s.item__quantity}>
+                        {/* <div className={s.item__quantity}>
                                 <button className={s.quantityButton} onClick={handlePlusQuantityChange}>
                                 <img src={plus} alt="+" />
                                 </button>
@@ -64,7 +61,7 @@ const Cart = () => {
                                 <img src={minus} alt="-" />
                                 </button>
                                 </div>
-                        </div>
+                        </div> */}
                     </div>
                     <div className={s.item__priceDelete}>
                         <p className={s.item__price}>
@@ -99,7 +96,7 @@ const Cart = () => {
             </div>
 
             <div className={s.cart__makeOrder}>
-                <button className={s.proceed} onClick={handleClearStorage}>Перейти к оформлению</button>
+                <button className={s.proceed}>Перейти к оформлению</button>
                 <div className={s.order__price}>
                     <p className={s.order__text}>Сумма заказа:</p>
                     <p className={s.finalPrice}>
@@ -107,7 +104,7 @@ const Cart = () => {
                             style: "currency",
                             currency: "RUB",
                             minimumFractionDigits: 0,
-                        }).format(total)}
+                        }).format(2)}
                     </p>
                 </div>
             </div>
@@ -116,4 +113,9 @@ const Cart = () => {
   )
 }
 
-export default Cart
+const mapStateToProps = state => {
+    return {
+      cartItems: state.products.cart
+    };
+  };
+  export default connect(mapStateToProps)(Cart);
