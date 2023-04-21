@@ -42,6 +42,7 @@
 }
 
 .item__description{
+    width: 400px;
     display: flex;
     flex-direction: row;
     gap: 62px;
@@ -92,6 +93,7 @@
     height: 24px;
     width: 24px;
     border-radius: 100px;
+    outline: 1px solid white;
     -webkit-border-radius: 100px;
     -moz-border-radius: 100px;
     -ms-border-radius: 100px;

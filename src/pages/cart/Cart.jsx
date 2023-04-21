@@ -6,31 +6,52 @@ import { useState } from 'react'
 import image from '../../assets/images/cart/cart__preview1.png'
 import { useContext, useEffect } from 'react'
 import { connect } from 'react-redux'
+import { useDispatch } from 'react-redux'
+import { selectQuantity } from '../../redux/actions/selectQuantity'
+import { useSelector } from 'react-redux'
+import { deleteItem } from '../../redux/actions/deleteItem'
+import { useNavigate } from 'react-router-dom'
+
 
 
 const Cart = ({cartItems}) => {
-    // const [quantity, setQuantity] = useState(1);
-    // const [total, setTotal] = useState(0)
 
-    // const handlePlusQuantityChange = () => {
-    //     const newQuantity = quantity + 1;
-    //     setQuantity(newQuantity);
-    //   };
+    const navigate = useNavigate();
+
+    const quantity = useSelector((state) => state.products.quantity);
+    const dispatch = useDispatch();
+
+    const [total, setTotal] = useState(null)
+  
+    const handlePlusQuantityChange = () => {
+      const newQuantity = quantity + 1;
+      dispatch(selectQuantity(newQuantity));
+    };
+    const handleMinusQuantityChange = () => {
+      const newQuantity = quantity - 1 <= 0 ? 1 : quantity - 1;
+      dispatch(selectQuantity(newQuantity));
+    };
     
-    //   const handleMinusQuantityChange = () => {
-    //     const newQuantity = quantity - 1 <= 0 ? 1 : quantity - 1;
-    //     setQuantity(newQuantity);
-    //   };
+    const handleItemDelete = (itemId) => {
+        const newCartItems = cartItems && Array.isArray(cartItems)
+          ? cartItems.filter(item => item.id !== itemId)
+          : [];
+        dispatch(deleteItem(itemId));
+      };
 
-
-    //   useEffect(() => {
-    //     let summ = cart.reduce(
-    //       (total, { price }) =>  price + total,
-    //       0
-    //     );
+      useEffect(() => {
+        let summ = cartItems.reduce(
+          (total, { price, quantity }) => quantity * price + total,
+          0
+        );
     
-    //     setTotal(summ);
-    //   }, [cart]);
+        setTotal(summ);
+      }, [cartItems]);
+
+
+      const handleProceed = () => {
+        navigate('/order', { state: { cartItems } })
+      }
 
   return (
     <div className={s.main}>
@@ -46,22 +67,26 @@ const Cart = ({cartItems}) => {
                             <div className={s.item__nameProperties}>
                                 <p className={s.item__name}>{item.title}</p>
                                 <div className={s.item__properties}>
-                                    <p className={s.item__size}>{item.size}</p>
-                                    <div className={s.item__color} style={{ backgroundColor: `${item.color}` }}>{item.color}</div>
+                                    {item.size && item.size.length ?(
+                                        <p className={s.item__size}>{item.size}</p>
+                                    ):(
+                                        <p style={{ display: 'none'  }}></p>
+                                    )}
+                                    <div className={s.item__color} style={{ backgroundColor: `${item.color}` }}></div>
                                 </div>
                             </div>
                         </div>
-                        {/* <div className={s.item__quantity}>
+                        <div className={s.item__quantity}>
                                 <button className={s.quantityButton} onClick={handlePlusQuantityChange}>
                                 <img src={plus} alt="+" />
                                 </button>
-                                <p className={s.product__quantities}>{quantity}x</p>
+                                <p className={s.product__quantities}>{item.quantity}x</p>
                                 <div className={s.minus}>
                                 <button className={s.quantityButton} onClick={handleMinusQuantityChange}>
                                 <img src={minus} alt="-" />
                                 </button>
                                 </div>
-                        </div> */}
+                        </div>
                     </div>
                     <div className={s.item__priceDelete}>
                         <p className={s.item__price}>
@@ -69,9 +94,9 @@ const Cart = ({cartItems}) => {
                                 style: "currency",
                                 currency: "RUB",
                                 minimumFractionDigits: 0,
-                            }).format(item.price)}
+                            }).format(item.price * item.quantity)}
                         </p>
-                        <button className={s.item__delete}>
+                        <button className={s.item__delete} onClick={() => handleItemDelete(item.id)}>
                             <svg width="30" height="36" viewBox="0 0 30 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g clip-path="url(#clip0_1126_1544)">
                             <path d="M23.2505 33.9926H6.75046C5.25046 33.9926 3.87549 32.6653 3.87549 30.94V6.25391H26.0005V30.94C26.0005 32.6653 24.7505 33.9926 23.2505 33.9926Z" stroke="#81886E" stroke-width="2.51131" stroke-miterlimit="10" stroke-linecap="round"/>
@@ -91,12 +116,12 @@ const Cart = ({cartItems}) => {
                 </div>
             ))
             ):(
-                <p>Тут ничего нет</p>
+                <p>Корзина пуста</p>
             )}
             </div>
 
             <div className={s.cart__makeOrder}>
-                <button className={s.proceed}>Перейти к оформлению</button>
+                <button className={s.proceed} onClick={handleProceed}>Перейти к оформлению</button>
                 <div className={s.order__price}>
                     <p className={s.order__text}>Сумма заказа:</p>
                     <p className={s.finalPrice}>
@@ -104,7 +129,7 @@ const Cart = ({cartItems}) => {
                             style: "currency",
                             currency: "RUB",
                             minimumFractionDigits: 0,
-                        }).format(2)}
+                        }).format(total)}
                     </p>
                 </div>
             </div>

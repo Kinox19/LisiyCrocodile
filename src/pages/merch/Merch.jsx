@@ -12,6 +12,7 @@ import { useDispatch } from 'react-redux'
 import { useSelector } from 'react-redux'
 import { connect } from 'react-redux'
 import { selectProduct } from '../../redux/actions/selectProduct';
+import { selectQuantity } from '../../redux/actions/selectQuantity';
 import { persistStore, persistReducer } from "redux-persist";
 import storage from "redux-persist/lib/storage";
 import rootReducer from '../../redux/reducers/reducers'
@@ -19,6 +20,7 @@ import { useNavigate } from 'react-router-dom'
 import {addToCart} from '../../redux/actions/addToCard'
 import { selectSize } from '../../redux/actions/selectSize'
 import { selectColor } from '../../redux/actions/selectColor'
+import { selectImage } from '../../redux/actions/selectImage'
 
 const persistConfig = {
   key: "root",
@@ -32,6 +34,8 @@ const Merch = () => {
   const selectedProduct = useSelector(state => state.products.selectedProduct);
   const selectedSize = useSelector(state => state.products.selectedSize);
   const selectedColor = useSelector(state => state.products.selectedColor);
+  const selectedQuantity = useSelector(state => state.products.selectedQuantity) || 1;
+  const selectedImage = useSelector(state => state.products.selectedImage);
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
@@ -62,14 +66,31 @@ const Merch = () => {
     window.scrollTo(0, 0);
   }, []);
 
+  useEffect(() => {
+    if (selectedProduct) {
+      setSelectedProductColor(selectedProduct.colors[0].value);
+      dispatch(selectColor(selectedProduct.colors[0].value));
+
+      setColorForImage('black');
+  
+      if (selectedProduct.sizes && selectedProduct.sizes.length > 0) {
+        setSelectedProductSize(selectedProduct.sizes[0]);
+        dispatch(selectSize(selectedProduct.sizes[0]));
+      }
+    }
+  }, [selectedProduct]);
+  
+
   //
   const handlePlusQuantityChange = () => {
     const newQuantity = quantity + 1;
     setQuantity(newQuantity);
+    dispatch(selectQuantity(quantity));
   };
   const handleMinusQuantityChange = () => {
     const newQuantity = quantity - 1 <= 0 ? 1 : quantity - 1;
     setQuantity(newQuantity);
+    dispatch(selectQuantity(quantity));
   };
   
   const handleAddToCart = () => {
@@ -78,12 +99,48 @@ const Merch = () => {
       title: selectedProduct.title,
       price: selectedProduct.price,
       size: selectedSize,
-      color: selectedColor
+      color: selectedColor,
+      quantity: quantity,
+      image: colorImage,
     };
+    console.log(colorImage);
     dispatch(addToCart(productToAdd));
     console.log(productToAdd)
     navigate('/cart');
   };
+
+  //работа над выбором цвета
+
+  const [selectedProductColor, setSelectedProductColor] = useState(null);
+  const [prevSelectedButton, setPrevSelectedButton] = useState(null);
+  const [selectedProductSize, setSelectedProductSize] = useState(null)
+  const [colorForImage, setColorForImage] = useState('black');
+  const colorImage = selectedProduct && selectedProduct.image && selectedProduct.image.find(href => href.includes(colorForImage.toLowerCase()));
+  // console.log(colorImage);
+  // console.log(colorForImage)
+
+  function handleColorClick(color, button) {
+    setColorForImage(color.color);
+    if (prevSelectedButton) {
+      prevSelectedButton.classList.remove(s.selectedColor);
+    }
+    button.classList.add(s.selectedColor);
+    setPrevSelectedButton(button);
+    setSelectedProductColor(color.value);
+    dispatch(selectColor(color.value));
+    dispatch(selectImage(colorImage));
+  }
+
+  function handleSizeClick(size, button) {
+    if (prevSelectedButton) {
+      prevSelectedButton.classList.remove(s.selectedSize);
+    }
+    button.classList.add(s.selectedSize);
+    setPrevSelectedButton(button);
+    setSelectedProductSize(size);
+    dispatch(selectSize(size));
+  }
+  //
 
   return (
     <div className={s.main}>
@@ -96,7 +153,7 @@ const Merch = () => {
         <button className={s.controls__btn}>
           <img src={leftBtn} alt="" />
         </button>
-        <img className={s.selected__image} src={selectedProduct.image} alt="" />
+        <img className={s.selected__image} src={colorImage} alt="" />
         <button className={s.controls__btn}>
           <img src={rigthBtn} alt="" />
         </button>
@@ -127,7 +184,13 @@ const Merch = () => {
         {selectedProduct && selectedProduct.sizes ?(
         <ul className={s.sizes}>
           {selectedProduct.sizes.map(size => (
-                <li><button className={s.size} key={size} value={size} onClick={e => dispatch(selectSize(e.target.value))}>{size}</button></li>
+                <li key={size}>
+                  <button
+                    className={`${s.size} ${selectedProductSize === size ? s.selected__size : ''}`}
+                    value={size}
+                    onClick={e => handleSizeClick(size, e.currentTarget)}
+                  >{size}</button>
+                </li>
               ))}
         </ul>
         ): ( <p className={s.sizeNotValid}>Размеры не доступны</p>
@@ -139,7 +202,16 @@ const Merch = () => {
         <p className={s.colorText}>Цвет:</p>
         <ul className={s.colorsList}>
           {selectedProduct.colors.map(color => (
-                <li><button className={s.color} key={color} value={color} onClick={e => dispatch(selectColor(e.target.value))}><div className={s.color} style={{ backgroundColor: color }}></div></button></li>
+              <li className={s.forFirstChild} key={color.value}>
+                <div className={s.Div}>
+                  <button
+                    className={`${s.color} ${selectedProductColor === color.value ? s.selected__color : ''}`}
+                    value={color.value}
+                    onClick={e => handleColorClick(color, e.target)}
+                    style={{ backgroundColor: color.value }}
+                  />
+                </div>
+              </li>
               ))}
         </ul>
       </div>
@@ -212,4 +284,5 @@ const mapStateToProps = state => {
     cart: state.products.cart
   };
 };
+
 export default connect(mapStateToProps, { selectProduct })(Merch);
