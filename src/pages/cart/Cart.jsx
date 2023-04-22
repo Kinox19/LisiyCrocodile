@@ -53,6 +53,9 @@ const Cart = ({cartItems}) => {
         navigate('/order', { state: { cartItems } })
       }
 
+
+      console.log(cartItems.length)
+
   return (
     <div className={s.main}>
         <div className={s.main__container}>
@@ -116,12 +119,16 @@ const Cart = ({cartItems}) => {
                 </div>
             ))
             ):(
-                <p>Корзина пуста</p>
+                <p className={s.empty__text}>Корзина пуста.</p>
             )}
             </div>
 
             <div className={s.cart__makeOrder}>
-                <button className={s.proceed} onClick={handleProceed}>Перейти к оформлению</button>
+                {cartItems && cartItems.length ?(
+                    <button className={s.proceed} onClick={handleProceed}>Перейти к оформлению</button>
+                ):(
+                    <button className={s.btn__disabled} disabled>Перейти к оформлению</button>
+                )}
                 <div className={s.order__price}>
                     <p className={s.order__text}>Сумма заказа:</p>
                     <p className={s.finalPrice}>

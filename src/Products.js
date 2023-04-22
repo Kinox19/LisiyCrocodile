@@ -29,11 +29,11 @@ const products = [
             
         ],
         image: [
-            "https://i.ibb.co/Smgyk6c/hat-black.png",
-            "https://i.ibb.co/ScTsmyj/hat-gray.png",
-            "https://i.ibb.co/kmC225p/hat-green.png",
-            "https://i.ibb.co/SQpr4kk/hat-pink.png",
-            "https://i.ibb.co/C70wvsM/hat-white.png"
+            "https://i.ibb.co/D1pyw0b/hat-black.png",
+            "https://i.ibb.co/XCC7ZxC/hat-gray.png",
+            "https://i.ibb.co/gv72s5S/hat-green.png",
+            "https://i.ibb.co/pJvNDcc/hat-pink.png",
+            "https://i.ibb.co/1qzZ94L/hat-white.png"
         ]
     },
     {
@@ -67,11 +67,11 @@ const products = [
         ],
         sizes: ['S', 'M', 'L', 'XL', 'XXL'],
         image: [
-            "https://i.ibb.co/wwrCsSj/shirt-black.png" ,
-            "https://i.ibb.co/rc9hz50/shirt-gray.png",
-            "https://i.ibb.co/zJWB4mX/shirt-green.png" ,
-            "https://i.ibb.co/v1524Wk/shirt-pink.png",
-            "https://i.ibb.co/QfK3Vt0/shirt-white.png"
+            "https://i.ibb.co/1nCMwc8/shirt-black.png" ,
+            "https://i.ibb.co/0hxL5yM/shirt-gray.png",
+            "https://i.ibb.co/HYcZ3SK/shirt-green.png" ,
+            "https://i.ibb.co/kV7RbKp/shirt-pink.png",
+            "https://i.ibb.co/sbBhLfX/shirt-white.png"
         ]
     },
     {
@@ -104,11 +104,11 @@ const products = [
         ],
         sizes: ['S', 'M', 'L', 'XL', 'XXL'],
         image: [
-            "https://i.ibb.co/Rj6KsTW/hoodie-black.png",
-            "https://i.ibb.co/Vp2fD5p/hoodie-gray.png",
-            "https://i.ibb.co/Qr7FXVB/hoodie-green.png",
-            "https://i.ibb.co/1MVSxCQ/hoodie-pink.png",
-            "https://i.ibb.co/GssTyLD/hoodie-white.png"
+            "https://i.ibb.co/MfNMY1Z/hoodie-black.png",
+            "https://i.ibb.co/71G4My7/hoodie-gray.png",
+            "https://i.ibb.co/N6ZRkQw/hoodie-green.png",
+            "https://i.ibb.co/7RRk8cT/hoodie-pink.png",
+            "https://i.ibb.co/PN1wJjP/hoodie-white.png"
         ]
     },
     {
@@ -133,9 +133,9 @@ const products = [
             
         ],
         image: [
-            "https://i.ibb.co/FqZThNN/cap-black.png",
-            "https://i.ibb.co/JR6J6RJ/cap-green.png",
-            "https://i.ibb.co/qdktxhF/cap-white.png",
+            "https://i.ibb.co/0VJkMbd/cap-black.png",
+            "https://i.ibb.co/TwbCyqj/cap-green.png",
+            "https://i.ibb.co/cLvVtD6/cap-white.png",
         ]
     },
     {
@@ -168,11 +168,11 @@ const products = [
             
         ],
         image: [
-            "https://i.ibb.co/tPf7zwZ/shopper-black.png",
-            "https://i.ibb.co/m9hFSPk/shopper-gray.png",
-            "https://i.ibb.co/C7bz48d/shopper-green.png" ,
-            "https://i.ibb.co/YPG2GCt/shopper-pink.png",
-            "https://i.ibb.co/7Q5qgBC/shopper-white.png"
+            "https://i.ibb.co/T2Tcf07/shopper-black.png",
+            "https://i.ibb.co/gRSG8ML/shopper-gray.png",
+            "https://i.ibb.co/QmsQ14T/shopper-green.png" ,
+            "https://i.ibb.co/PrKt2yM/shopper-pink.png",
+            "https://i.ibb.co/FJtzJ2W/shopper-white.png"
         ]
     },
     {
@@ -205,11 +205,11 @@ const products = [
             
         ],
         image: [
-            "https://i.ibb.co/Y81xTv9/cup-black.png",
-            "https://i.ibb.co/D7ftKfs/cup-gray.png",
-            "https://i.ibb.co/k403nyZ/cup-green.png",
-            "https://i.ibb.co/km9cLgQ/cup-pink.png",
-            "https://i.ibb.co/9Y2cygD/cup-white.png"
+            "https://i.ibb.co/mNgxsWx/cup-black.png",
+            "https://i.ibb.co/f4JsqMR/cup-gray.png",
+            "https://i.ibb.co/FzmmqGB/cup-green.png",
+            "https://i.ibb.co/1TWmrtQ/cup-pink.png",
+            "https://i.ibb.co/7YcCZfT/cup-white.png"
         ]
     }
 ]

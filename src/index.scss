@@ -6,10 +6,31 @@ html{
     scroll-behavior: smooth;
 }
 
+#music{
+    scroll-margin-top: 150px;
+}
+
+#video{
+    scroll-margin-top: 150px;
+}
+
+#about{
+    scroll-margin-top: 150px;
+}
+
+#merch{
+    scroll-margin-top: 150px;
+}
+
+#contacts{
+    scroll-margin-top: 150px;
+}
+
 body{
     margin: 0;
     padding: 0;
     background-color: black;
+    height: 100%;
 }
 
 h1{

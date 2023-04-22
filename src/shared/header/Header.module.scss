@@ -78,7 +78,6 @@
 }
 
 .header__link:hover{
-    border-bottom: solid 2px rgba(190, 255, 0, 1);
     color: rgba(190, 255, 0, 1);
     transition: 0.1s ease-in-out;
     -webkit-transition: 0.1s ease-in-out;
@@ -92,9 +91,11 @@ a{
     color: #81886E;
 }
 
-a:hover{
+.header__href:hover{
     color: rgba(190, 255, 0, 1);
     cursor: pointer;
+    border-bottom: solid 2px rgba(190, 255, 0, 1);
+    padding-bottom: 5px;
 }
 
 .cart__length{

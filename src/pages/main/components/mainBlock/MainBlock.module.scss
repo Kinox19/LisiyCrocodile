@@ -1,5 +1,5 @@
 .block{
-    width: 100%;
+    width: 1600px;
     height: 929px;
     position: relative;
     background-image: url(../../../../assets/images/mainPage/main1.png);
@@ -8,10 +8,16 @@
     background-size:auto;
     background-color: rgba(6, 6, 6, 1);
     color: rgba(190, 255, 0, 1);
+
+    display: flex;
+    align-items: flex-start;
 }
 
 .textInfo{
-    padding-left: 162px;
+    //padding-left: 162px;
+    display: flex;
+    flex-direction: column;
+    align-self: flex-start;
 }
 
 .heading{

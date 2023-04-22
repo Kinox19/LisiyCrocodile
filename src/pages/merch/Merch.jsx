@@ -106,7 +106,7 @@ const Merch = () => {
     console.log(colorImage);
     dispatch(addToCart(productToAdd));
     console.log(productToAdd)
-    navigate('/cart');
+    //navigate('/cart');
   };
 
   //работа над выбором цвета
@@ -193,7 +193,7 @@ const Merch = () => {
                 </li>
               ))}
         </ul>
-        ): ( <p className={s.sizeNotValid}>Размеры не доступны</p>
+        ): ( <p className={s.sizeNotValid}>—</p>
         )}
         
 

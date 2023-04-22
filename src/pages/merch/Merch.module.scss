@@ -11,7 +11,7 @@
 }
 
 .title{
-    font-family: v_Mouth Breather BB;
+    font-family: 'BB';
     font-size: 150px;
     font-weight: 400;
     line-height: 155px;
@@ -116,7 +116,7 @@
 }
 
 .descriptionTitle{
-    font-family: 'v_Mouth Breather BB';
+    font-family: 'BB';
     font-style: normal;
     font-weight: 400;
     font-size: 46px;
@@ -337,7 +337,7 @@ path{
     display: flex;
     gap: 21px;
     margin-top: 130px;
-    margin-bottom: 260px;
+    margin-bottom: 190px;
 }
 
 .text__attention{
@@ -364,6 +364,16 @@ path{
     background-color: transparent;
     color: rgba(190, 255, 0, 1);
     cursor: pointer;
+}
+
+.button__oferta:hover{
+    background-color: #BEFF00;
+    color: #000000;
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
 }
 
 .merch__block{
@@ -428,6 +438,20 @@ path{
     list-style: none;
     margin: 0;
     padding: 0;
+}
+.card:hover{
+    cursor: pointer;
+}
+
+.card:hover .card__image{
+    outline-offset: -3px;
+    outline: 3px solid rgba(190, 255, 0, 1);
+}
+
+.card:hover .card__price{
+    padding-bottom: 5px;
+    border-bottom: 3px solid rgba(190, 255, 0, 1);
+    
 }
 
 .size{
@@ -525,5 +549,6 @@ path{
     line-height: 30px;
     text-align: left;
 }
+
 
 

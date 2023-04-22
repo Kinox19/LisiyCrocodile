@@ -54,6 +54,8 @@
     caret-width: 2px;
 }
 
+
+
 input:valid {
     border: 2px solid #BEFF00;
   }
@@ -245,6 +247,31 @@ input:invalid{
     gap: 15px;
     cursor: pointer;
     color: rgba(58, 58, 58, 1);
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+}
+
+.button__submit_enabled{
+    margin-top: 70px;
+    width: 361px;
+    height: 74px;
+    background-color: rgba(0, 0, 0, 1);
+    border: 2px solid rgba(58, 58, 58, 1);
+    font-family: Inter;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 24px;
+    text-align: left;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    cursor: pointer;
+    color: rgba(190, 255, 0, 1);
     border-radius: 15px;
     -webkit-border-radius: 15px;
     -moz-border-radius: 15px;

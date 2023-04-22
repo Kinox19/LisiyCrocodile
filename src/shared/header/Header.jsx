@@ -1,10 +1,11 @@
 import React from 'react'
 import s from './Header.module.scss'
 import logo_header from '../../assets/Logos/logo_header.svg'
-import { Link as ScrollLink, animateScroll as scroll } from 'react-scroll';
-import { Link } from 'react-router-dom';
+import { useSelector } from 'react-redux'
 
 const Header = () => {
+
+  const cartItems = useSelector(state => state.products.cart);
 
   const links = [
     { id: 'about', label: 'о нас', to: '/home' },
@@ -14,11 +15,6 @@ const Header = () => {
     { id: 'contacts', label: 'контакты', to: '/home' },
     { id: 'cart', label: 'корзина', to: '/cart' },
   ];
-
-  const handleClick = (link) => {
-      window.location.href = link.to + '#' + link.id;
-  };
-
 
   return (
     <header className={s.header__wrapper}>
@@ -34,21 +30,13 @@ const Header = () => {
           <ul className={s.header__menu}>
             {links.map((link) => (
               <li key={link.id} className={s.header__link}>
-                {link.to === '/' ? (
-                  <ScrollLink to={link.id} smooth={true} duration={500} offset={1000} onClick={() => handleClick(link)}>
-                    {link.label}
-                  </ScrollLink>
-                ) : (
-                  <Link to={link.to} onClick={() => handleClick(link)}>
-                    {link.label}
-                  </Link>
-                )}
+                <a className={s.header__href} href={`${link.to}#${link.id}`}>{link.label}</a>
               </li>
             ))}
           </ul>
-          {/* {cart.length > 0 && (
-            <div className={s.cart__length}><span className={s.cart__lengthNumber}>{cart.length}</span></div>
-          )} */}
+          {cartItems.length > 0 && (
+            <div className={s.cart__length}><span className={s.cart__lengthNumber}>{cartItems.length}</span></div>
+          )}
         </nav>
       </div>
     </header>

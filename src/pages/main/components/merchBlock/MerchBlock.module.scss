@@ -3,7 +3,7 @@
 }
 
 .title{
-    font-family: v_Mouth Breather BB;
+    font-family: 'BB';
     font-size: 150px;
     font-weight: 400;
     line-height: 155px;
@@ -28,6 +28,11 @@
     border: none;
     cursor: pointer;
 }
+
+// .buttonChange:hover .btn__image{
+//     width: 55px;
+//     height: 80px;
+// }
 
 .buttonChange:first-of-type{
     margin-right: 35px;

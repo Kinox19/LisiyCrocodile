@@ -5,6 +5,8 @@
     justify-content: center;
     width: 100%;
     height: 190px;
+
+    margin-top: auto;
 }
 
 .footer__wrapper{
@@ -19,7 +21,7 @@
     display: flex;
     flex-direction: column;
     list-style: none;
-    gap: 15px;
+    gap: 10px;
 }
 
 .footer__connection__point{
@@ -27,7 +29,15 @@
     font-size: 25px;
     font-weight: 300;
     line-height: 30px;
+    padding-bottom: 4px;
 
+}
+
+.numbers:hover{
+    border-bottom: 1px solid rgba(0, 0, 0, 1);
+    padding-bottom: 5px;
+
+    cursor: pointer;
 }
 
 .point__accent{
@@ -40,10 +50,16 @@
 .footer__logo{
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-self: center;
     margin-left: 206px;
     margin-right: 195px;
     gap: 15px;
+}
+
+.logo{
+    width:120px;
+    height: 81px;
+    align-self: center;
 }
 
 .logo__name{
@@ -78,4 +94,18 @@
 .footer__link{
     text-decoration: none;
     color: #000;
+    padding-bottom: 5px;
+}
+
+.footer__link:hover{
+    border-bottom: 2px solid #000;
+}
+
+.bold{
+    font-weight: bold;
+}
+
+.tel{
+    text-decoration: none;
+    color: rgba(0, 0, 0, 1);
 }

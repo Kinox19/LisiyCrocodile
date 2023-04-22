@@ -32,7 +32,7 @@ const MerchBlock = () => {
     <div className={s.main} id='merch'>
       <h2 className={s.title}>Мерч</h2>
       <div className={s.merch__block}>
-        <button className={s.buttonChange} onClick={handlePrevClick}><img src={leftBtn} alt=''/></button>
+        <button className={s.buttonChange} onClick={handlePrevClick}><img className={s.btn__image} src={leftBtn} alt=''/></button>
         {visibleProducts.map((product) => (
           <ProductCard key={product.id} product={product}/>
         ))}
