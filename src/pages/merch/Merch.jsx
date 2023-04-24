@@ -178,6 +178,18 @@ const Merch = () => {
       <h3 className={s.descriptionTitle}>Описание товара</h3>
       <div className={s.info__description}>
         <p className={s.description}>{selectedProduct.description}</p>
+        {selectedProduct && selectedProduct.id && (
+          <ul className={s.attachmentsList}>
+            {selectedProduct.attachments.map((attachment) => (
+              <li className={s.attachment} key={attachment.value}>
+                <svg width="15" height="13" viewBox="0 0 15 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M14.7364 0.335966C15.0879 0.78392 15.0879 1.5102 14.7364 1.95815L6.3364 12.664C5.98492 13.112 5.41508 13.112 5.0636 12.664L0.263604 6.54639C-0.087868 6.09843 -0.087868 5.37216 0.263604 4.9242C0.615076 4.47625 1.18492 4.47625 1.5364 4.9242L5.7 10.2308L13.4636 0.335966C13.8151 -0.111989 14.3849 -0.111989 14.7364 0.335966Z" fill="#BEFF00"/>
+                </svg>
+                <span className={s.attachmentKey}>{attachment.attachment}</span><span className={s.attachmentValue}>{attachment.value}</span>
+              </li>
+            ))}
+          </ul>
+        )}
       </div>
       <div className={s.product__sizes}>
         <p className={s.selectSizetext}>Размер:</p>
@@ -195,8 +207,6 @@ const Merch = () => {
         </ul>
         ): ( <p className={s.sizeNotValid}>—</p>
         )}
-        
-
       </div>
       <div className={s.product__colors}>
         <p className={s.colorText}>Цвет:</p>
@@ -266,7 +276,7 @@ const Merch = () => {
                 </ul>
             </div>
             <div className={s.oferta}>
-                <p className={s.text__attention}>Рыба. Тут о том, что оплата производится только при получении. Приглашение ознакомиться с условиями договора.</p>
+                <p className={s.text__attention}>Перед оформлением заказа рекомендуем ознакомиться с договором об оплате.</p>
                 <Link to="/oferta"><button className={s.button__oferta}>Договор об оплате</button></Link>
             </div>
             {showScrollButton && <ScrollToTopButton />}

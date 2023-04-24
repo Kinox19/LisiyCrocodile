@@ -26,7 +26,7 @@ const Muz1 = () => {
             <p className={s.label}>Лысый крокодил / EP - demo</p>
             <h1 className={s.title}>стройматериалы</h1>
             <p className={s.description}>
-              Вы не поверите: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            2020 год – желание написать что-то стоящее и осмысленное, насколько это было возможно.
             </p>
             <button className={s.button__play}>
               <img src={playIcon} alt='' />

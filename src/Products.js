@@ -3,7 +3,21 @@ const products = [
         id: 'hat',
         title: 'Шапка',
         brand: '“Лысый крокодил”',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+        description: 'Шлем повелителя бесконечности. Надев нашу шапку вы обретаете:',
+        attachments: [
+            {
+                attachment: 'выносливость',
+                value: '+10'
+            },
+            {
+                attachment: 'ночное зрение',
+                value: '+15'
+            },
+            {
+                attachment: 'ловкость',
+                value: '+30'
+            },
+        ],
         price: 1500,
         colors: [
             {
@@ -40,7 +54,21 @@ const products = [
         id: 'shirt',
         title: 'Футболка',
         brand: '“Лысый крокодил”',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+        description: 'Доспех бога из 100% хлопка. Надев нашу футболку вы обретаете:',
+        attachments: [
+            {
+                attachment: 'бессмертие',
+                value: ''
+            },
+            {
+                attachment: 'левитация',
+                value: '+5'
+            },
+            {
+                attachment: 'огнеупорность',
+                value: '+15'
+            },
+        ],
         price: 1850,
         colors: [
             {
@@ -63,7 +91,6 @@ const products = [
                 color: 'Pink',
                 value: 'rgba(255, 100, 90, 1)',
             },
-            
         ],
         sizes: ['S', 'M', 'L', 'XL', 'XXL'],
         image: [
@@ -78,7 +105,21 @@ const products = [
         id: 'hoodie',
         title: 'Худи',
         brand: '“Лысый крокодил”',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+        description: 'Нагрудник императора человечества. Надев наш худи вы обретаете:',
+        attachments: [
+            {
+                attachment: 'базовый навык телепортации',
+                value: ''
+            },
+            {
+                attachment: 'управление временем',
+                value: '+15'
+            },
+            {
+                attachment: 'регенерация',
+                value: '+15'
+            },
+        ],
         price: 2750,
         colors: [
             {
@@ -115,7 +156,21 @@ const products = [
         id: 'cap',
         title: 'Кепка',
         brand: '“Лысый крокодил”',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+        description: 'Шляпа пророка-скитальца. Надев нашу кепку, вы обретаете:',
+        attachments: [
+            {
+                attachment: 'невидимость',
+                value: ''
+            },
+            {
+                attachment: 'телекинез',
+                value: '+30'
+            },
+            {
+                attachment: 'рентгеновское зрение',
+                value: '+35'
+            },
+        ],
         price: 1250,
         colors: [
             {
@@ -130,7 +185,6 @@ const products = [
                 color: 'Green',
                 value: 'rgba(190, 255, 0, 1)',
             },
-            
         ],
         image: [
             "https://i.ibb.co/0VJkMbd/cap-black.png",
@@ -142,7 +196,21 @@ const products = [
         id: 'shopper',
         title: 'Шопер',
         brand: '“Лысый крокодил”',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+        description: 'Сумка из прочной ткани. Надев наш шопер вы обретаете:',
+        attachments: [
+            {
+                attachment: 'заклинание нежети',
+                value: '+5'
+            },
+            {
+                attachment: 'знание ядерной физики',
+                value: '+5'
+            },
+            {
+                attachment: 'ясновидение',
+                value: '+15'
+            },
+        ],
         price: 950,
         colors: [
             {
@@ -165,7 +233,6 @@ const products = [
                 color: 'Pink',
                 value: 'rgba(255, 100, 90, 1)',
             },
-            
         ],
         image: [
             "https://i.ibb.co/T2Tcf07/shopper-black.png",
@@ -179,7 +246,21 @@ const products = [
         id: 'cup',
         title: 'Термокружка',
         brand: '“Лысый крокодил”',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+        description: 'Магический кубок из гномьей стали. Испив из нашей кружки вы обретаете:',
+        attachments: [
+            {
+                attachment: 'храбрость',
+                value: '+50'
+            },
+            {
+                attachment: 'интеллект',
+                value: '+50'
+            },
+            {
+                attachment: 'сила',
+                value: '+50'
+            },
+        ],
         price: 700,
         colors: [
             {
@@ -202,7 +283,6 @@ const products = [
                 color: 'Pink',
                 value: 'rgba(255, 100, 90, 1)',
             },
-            
         ],
         image: [
             "https://i.ibb.co/mNgxsWx/cup-black.png",

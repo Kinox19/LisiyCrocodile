@@ -137,10 +137,11 @@
     border-bottom: 1px solid #BEFF00;
 
     margin-top: 35px;
+    padding-bottom: 35px;
 }
 
 .description{
-    padding-bottom: 15px;
+    padding-bottom: 30px;
 }
 
 .product__sizes{
@@ -207,6 +208,38 @@
     gap: 15px;
     display: flex;
     flex-direction: row;
+}
+
+.attachmentsList{
+    list-style: none;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.attachment{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.attachmentKey{
+    font-family: Inter;
+    font-size: 25px;
+    font-weight: 400;
+    line-height: 30px;
+    text-align: left;
+    color: rgba(129, 136, 110, 1);
+}
+
+.attachmentValue{
+    font-family: Inter;
+    font-size: 25px;
+    font-weight: 400;
+    line-height: 30px;
+    text-align: left;
+    color: rgba(190, 255, 0, 1);
 }
 
 .product__counter{

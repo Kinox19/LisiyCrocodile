@@ -6,9 +6,9 @@ const VideoBlock = () => {
     <div className={s.container} id='video'>
       <div className={s.blockLeft}>
         <h2 className={s.title}>Видео</h2>
-        <p className={s.text}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        <p className={s.text}>Мы&nbsp;шагнули на&nbsp;этот лёд. 26-го июля в&nbsp;Питере и&nbsp;28-го в&nbsp;Москве, в&nbsp;поддержку альбома &laquo;Стройматериалы&raquo; состоится долгожданный дебют Крокодила в&nbsp;столицах Необъятной. <br/> Пленных не&nbsp;берём&nbsp;&mdash; расстрел на&nbsp;месте. <br/> Приятного аппетита.</p>
       </div>
-      <iframe className={s.video} width="950" height="536" src="https://www.youtube.com/embed/IgckLVMxxDw?controls=0" title="Lisiy Crocks" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
+      <iframe className={s.video} width="810" height="536" src="https://www.youtube.com/embed/IgckLVMxxDw?controls=0" title="Lisiy Crocks" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
 
       </iframe>
     </div>

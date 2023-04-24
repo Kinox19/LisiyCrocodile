@@ -33,14 +33,14 @@ const productReducer = (state = defaultState, action) => {
           ...state,
           selectedQuantity: action.payload
         };
-        case "ADD_TO_CART":
+        case 'ADD_TO_CART':
           const newState = {
             ...state,
             cart: [...state.cart, action.payload],
           };
           localStorage.setItem("cart", JSON.stringify(newState.cart));
           return newState;
-        case "LOAD_CART":
+        case 'LOAD_CART':
           return {
             ...state,
             cart: action.payload,

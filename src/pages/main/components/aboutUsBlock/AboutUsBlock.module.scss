@@ -15,18 +15,20 @@
     color: #BEFF00;
 }
 
-.text{
-    width: 465px;
-    height: 210px; 
-
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 25px;
-    line-height: 30px;
-
-    
+.textContainer{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
     margin-top: 70px;
+}
+
+.text{
+    max-width: 486px;
+    font-family: Inter;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: left;
 }
 
 .img{

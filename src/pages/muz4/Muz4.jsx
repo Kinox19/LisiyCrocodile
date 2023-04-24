@@ -12,7 +12,7 @@ const Muz4 = () => {
             <div className={s.text__container}>
                 <p className={s.label}>Лысый крокодил / Ep - demo</p>
                 <h1 className={s.title}>кабинет 313</h1>
-                <p className={s.description}>Вы не поверите: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                <p className={s.description}>2019 год – наша первая коллекция компульсивно-импульсивного, записанная на диктофон в школьном кабинете.</p>
                 <button className={s.button__play}><img src={playIcon} alt=''></img>Слушать</button>
             </div>
 

@@ -6,7 +6,10 @@ const AboutUsBlock = () => {
   return (
     <div className={s.block} id='about'>
       <h2 className={s.title}>О нас</h2>
-      <p className={s.text}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      <div className={s.textContainer}>
+        <p className={s.text}>Привет человечество. Это группа Лысый Крокодил.</p>
+        <p className={s.text}>В&nbsp;2019 году наш балаган белорусского розлива был основан двумя школьными друзьями Филипович Николай (вокал), Буйницкий Роман (гитара). Сейчас, выбравшись за&nbsp;пределы тесных коморок и&nbsp;подвалов, мы&nbsp;пишем и&nbsp;играем независимую рок музыку для всех, кто в&nbsp;этом нуждается.<br/> Мужайтесь, друзья, нам есть, что показать!</p>
+      </div>
       <img className={s.img} src={image} alt=''/>
     </div>
   )

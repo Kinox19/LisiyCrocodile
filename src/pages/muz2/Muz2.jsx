@@ -25,7 +25,7 @@ const Muz2 = () => {
             <div className={s.text__container}>
                 <p className={s.label}>Лысый крокодил / EP - remaster</p>
                 <h1 className={s.title}>стройматериалы</h1>
-                <p className={s.description}>Вы не поверите: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                <p className={s.description}>2021-2022 год – повышение ставок. Мы росли вместе со своей аудиторией, в следствие чего поставили цель значительно повысить качество звука.</p>
                 <button className={s.button__play}><img src={playIcon} alt=''></img>Слушать</button>
             </div>
 
