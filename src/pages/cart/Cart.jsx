@@ -3,8 +3,7 @@ import s from './Cart.module.scss'
 import plus from '../../assets/Logos/plus.svg'
 import minus from '../../assets/Logos/minus.svg'
 import { useState } from 'react'
-import image from '../../assets/images/cart/cart__preview1.png'
-import { useContext, useEffect } from 'react'
+import { useEffect } from 'react'
 import { connect } from 'react-redux'
 import { useDispatch } from 'react-redux'
 import { selectQuantity } from '../../redux/actions/selectQuantity'
@@ -13,16 +12,12 @@ import { deleteItem } from '../../redux/actions/deleteItem'
 import { useNavigate } from 'react-router-dom'
 
 
-
 const Cart = ({cartItems}) => {
-
     const navigate = useNavigate();
-
     const quantity = useSelector((state) => state.products.quantity);
     const dispatch = useDispatch();
-
     const [total, setTotal] = useState(null)
-  
+ 
     const handlePlusQuantityChange = () => {
       const newQuantity = quantity + 1;
       dispatch(selectQuantity(newQuantity));
@@ -31,30 +26,27 @@ const Cart = ({cartItems}) => {
       const newQuantity = quantity - 1 <= 0 ? 1 : quantity - 1;
       dispatch(selectQuantity(newQuantity));
     };
-    
-    const handleItemDelete = (itemId) => {
-        const newCartItems = cartItems && Array.isArray(cartItems)
-          ? cartItems.filter(item => item.id !== itemId)
-          : [];
-        dispatch(deleteItem(itemId));
+   
+    const handleItemDelete = (id, size, color) => {
+        dispatch(deleteItem(id, size, color));
       };
+
+      useEffect(() => {
+        console.log(cartItems);
+      }, [cartItems]);
 
       useEffect(() => {
         let summ = cartItems.reduce(
           (total, { price, quantity }) => quantity * price + total,
           0
         );
-    
+   
         setTotal(summ);
       }, [cartItems]);
-
 
       const handleProceed = () => {
         navigate('/order', { state: { cartItems } })
       }
-
-
-      console.log(cartItems.length)
 
   return (
     <div className={s.main}>
@@ -99,7 +91,7 @@ const Cart = ({cartItems}) => {
                                 minimumFractionDigits: 0,
                             }).format(item.price * item.quantity)}
                         </p>
-                        <button className={s.item__delete} onClick={() => handleItemDelete(item.id)}>
+                        <button className={s.item__delete} onClick={() => handleItemDelete(item.id, item.size, item.color)}>
                             <svg width="30" height="36" viewBox="0 0 30 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g clip-path="url(#clip0_1126_1544)">
                             <path d="M23.2505 33.9926H6.75046C5.25046 33.9926 3.87549 32.6653 3.87549 30.94V6.25391H26.0005V30.94C26.0005 32.6653 24.7505 33.9926 23.2505 33.9926Z" stroke="#81886E" stroke-width="2.51131" stroke-miterlimit="10" stroke-linecap="round"/>
@@ -122,7 +114,6 @@ const Cart = ({cartItems}) => {
                 <p className={s.empty__text}>Корзина пуста.</p>
             )}
             </div>
-
             <div className={s.cart__makeOrder}>
                 {cartItems && cartItems.length ?(
                     <button className={s.proceed} onClick={handleProceed}>Перейти к оформлению</button>
@@ -144,10 +135,17 @@ const Cart = ({cartItems}) => {
     </div>
   )
 }
-
 const mapStateToProps = state => {
     return {
       cartItems: state.products.cart
     };
   };
-  export default connect(mapStateToProps)(Cart);
+  const mapDispatchToProps = dispatch => {
+    return {
+      deleteItem: (itemId) => {
+        dispatch(deleteItem(itemId))
+
+      }
+    };
+  };
+  export default connect(mapStateToProps, mapDispatchToProps)(Cart);

@@ -106,7 +106,7 @@ const Merch = () => {
     console.log(colorImage);
     dispatch(addToCart(productToAdd));
     console.log(productToAdd)
-    //navigate('/cart');
+    // navigate('/cart');
   };
 
   //работа над выбором цвета
@@ -150,13 +150,7 @@ const Merch = () => {
   <div className={s.product__selected}>
     <div className={s.product__image}>
       <div className={s.controls__image}>
-        <button className={s.controls__btn}>
-          <img src={leftBtn} alt="" />
-        </button>
         <img className={s.selected__image} src={colorImage} alt="" />
-        <button className={s.controls__btn}>
-          <img src={rigthBtn} alt="" />
-        </button>
         <div className={s.product__imageDescription}>
           <div className={s.product__nameBrand}>
             <p className={s.product__name}>{selectedProduct.title}</p>
@@ -181,9 +175,9 @@ const Merch = () => {
         {selectedProduct && selectedProduct.id && (
           <ul className={s.attachmentsList}>
             {selectedProduct.attachments.map((attachment) => (
-              <li className={s.attachment} key={attachment.value}>
+              <li className={s.attachment} key={attachment.attachment}>
                 <svg width="15" height="13" viewBox="0 0 15 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M14.7364 0.335966C15.0879 0.78392 15.0879 1.5102 14.7364 1.95815L6.3364 12.664C5.98492 13.112 5.41508 13.112 5.0636 12.664L0.263604 6.54639C-0.087868 6.09843 -0.087868 5.37216 0.263604 4.9242C0.615076 4.47625 1.18492 4.47625 1.5364 4.9242L5.7 10.2308L13.4636 0.335966C13.8151 -0.111989 14.3849 -0.111989 14.7364 0.335966Z" fill="#BEFF00"/>
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M14.7364 0.335966C15.0879 0.78392 15.0879 1.5102 14.7364 1.95815L6.3364 12.664C5.98492 13.112 5.41508 13.112 5.0636 12.664L0.263604 6.54639C-0.087868 6.09843 -0.087868 5.37216 0.263604 4.9242C0.615076 4.47625 1.18492 4.47625 1.5364 4.9242L5.7 10.2308L13.4636 0.335966C13.8151 -0.111989 14.3849 -0.111989 14.7364 0.335966Z" fill="#BEFF00"/>
                 </svg>
                 <span className={s.attachmentKey}>{attachment.attachment}</span><span className={s.attachmentValue}>{attachment.value}</span>
               </li>

@@ -1,24 +1,28 @@
 
 import React from 'react'
 import s from './OrderPage.module.scss'
-import { useLocation } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import { useContext, useEffect, useState } from 'react'
 import { useCallback } from 'react';
 import {useMemo} from 'react'
 const OrderPage = () => {
 
+    const navigate = useNavigate();
     const location = useLocation();
     const cartItems = location.state?.cartItems || [];
     const [total, setTotal] = useState(0);
   
     const handleClearLocalStorage = useCallback(() => {
       localStorage.clear();
+      navigate('/home');
+      
+      
     }, []);
   
     const handleChange = useCallback((e) => {
       const { name, value } = e.target;
       console.log(`Updating ${name} to ${value}`);
-      setFormValues((prevState) => ({
+      setFormValues(prevState => ({
         ...prevState,
         [name]: value,
       }));
@@ -33,7 +37,7 @@ const OrderPage = () => {
       address: "",
     });
   
-    const formFilled = useMemo(
+    let formFilled = useMemo(
       () =>
         formValues.name &&
         formValues.email &&
@@ -97,13 +101,15 @@ const OrderPage = () => {
                     <div>
                         <p className={s.item__quantity}>{item.quantity}x</p>
                     </div>
-                    <p className={s.item__price}>
-                        {new Intl.NumberFormat("ru-RU", {
-                            style: "currency",
-                            currency: "RUB",
-                            minimumFractionDigits: 0,
-                        }).format(item.price * item.quantity)}
-                    </p>
+                      <div className={s.priceContainer}>
+                        <p className={s.item__price}>
+                            {new Intl.NumberFormat("ru-RU", {
+                                style: "currency",
+                                currency: "RUB",
+                                minimumFractionDigits: 0,
+                            }).format(item.price * item.quantity)}
+                        </p>
+                      </div>
                     </div>
             ))
             ):(
@@ -125,12 +131,12 @@ const OrderPage = () => {
                 <div className={s.form__container}>
                     <p className={s.form__heading}>Заполните поля<br></br>для подтверждения заказа:</p>
                     <form className={s.inputs}>
-                        <input className={s.input} name='FIO' type="text" required placeholder="ФИО:" onChange={handleChange} />
-                        <input className={s.input} name='MAIL' type="email" required placeholder="Электронная почта:" onChange={handleChange} />
-                        <input className={s.input} name='TEL' type="tel" required placeholder="Контактный телефон:" onChange={handleChange} />
-                        <input className={s.input} name='STRANA' type="text" required placeholder="Страна:" onChange={handleChange} />
-                        <input className={s.input} name='GOGOD' type="text" required placeholder="Город:" onChange={handleChange} />
-                        <input className={s.input} name='ADRES' type="text" required placeholder="Адрес доставки:" onChange={handleChange} />
+                        <input className={s.input} name='name' type="text" required placeholder="ФИО:" onChange={handleChange} />
+                        <input className={s.input} name='email' type="email" required placeholder="Электронная почта:" onChange={handleChange} />
+                        <input className={s.input} name='phone' type="tel" required placeholder="Контактный телефон:" onChange={handleChange} />
+                        <input className={s.input} name='country' type="text" required placeholder="Страна:" onChange={handleChange} />
+                        <input className={s.input} name='city' type="text" required placeholder="Город:" onChange={handleChange} />
+                        <input className={s.input} name='address' type="text" required placeholder="Адрес доставки:" onChange={handleChange} />
                         <button className={formFilled ? `${s.button__submit} ${s.button__submit_enabled}` : `${s.button__submit} ${s.button__submit_disabled}`}
                         type='submit'
                         disabled={!formFilled}

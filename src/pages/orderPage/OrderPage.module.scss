@@ -179,6 +179,12 @@ input:invalid{
 
 }
 
+.priceContainer{
+    width: 150px;
+    display: flex;
+    justify-content: end;
+}
+
 .item__quantity{
     font-family: Inter;
     font-size: 25px;
@@ -194,7 +200,7 @@ input:invalid{
 }
 
 .order__price{
-    width: 300px;
+    width: fit-content;
 
     display: flex;
     align-items: end;
@@ -259,7 +265,7 @@ input:invalid{
     width: 361px;
     height: 74px;
     background-color: rgba(0, 0, 0, 1);
-    border: 2px solid rgba(58, 58, 58, 1);
+    border: 2px solid #BEFF00;
     font-family: Inter;
     font-size: 20px;
     font-weight: 700;
@@ -277,4 +283,32 @@ input:invalid{
     -moz-border-radius: 15px;
     -ms-border-radius: 15px;
     -o-border-radius: 15px;
+    transition: .3s ease-in-out;
+    -webkit-transition: .3s ease-in-out;
+    -moz-transition: .3s ease-in-out;
+    -ms-transition: .3s ease-in-out;
+    -o-transition: .3s ease-in-out;
+}
+
+.button__submit_enabled:hover{
+    background-color: #BEFF00;
+    color: #000000;
+    transition: .3s ease-in-out;
+    -webkit-transition: .3s ease-in-out;
+    -moz-transition: .3s ease-in-out;
+    -ms-transition: .3s ease-in-out;
+    -o-transition: .3s ease-in-out;
+}
+
+.button__submit_enabled:hover path{
+    fill: #000000;
+}
+
+.button__submit_enabled path{
+    fill: #BEFF00;
+    transition: .3s ease-in-out;
+    -webkit-transition: .3s ease-in-out;
+    -moz-transition: .3s ease-in-out;
+    -ms-transition: .3s ease-in-out;
+    -o-transition: .3s ease-in-out;
 }

@@ -49,7 +49,6 @@ if (savedCart) {
       </Routes>
       <Footer/>
     </div>
-    {/* </PersistGate> */}
     </Provider>
   );
 }

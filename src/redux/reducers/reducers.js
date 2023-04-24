@@ -11,18 +11,24 @@ const defaultState = {
     cart: []
 };
 
-const productReducer = (state = defaultState, action) => {
+const productReducer = (state = defaultState, action, payload) => {
     switch (action.type) {
       case 'SELECT_PRODUCT':
         return {
           ...state,
           selectedProduct: action.payload
         };
-      case 'DELETE_ITEM':
-        return {
-          ...state,
-          cartItems: state.cartItems.filter(item => item.id !== action.payload)
-        };
+        case 'DELETE_ITEM':
+          const updatedCart = state.cart.filter((item) =>
+            item.id !== action.payload.id ||
+            item.size !== action.payload.size ||
+            item.color !== action.payload.color
+          );
+          localStorage.setItem("cart", JSON.stringify(updatedCart));
+          return {
+            ...state,
+            cart: updatedCart,
+          };
         case 'SELECT_IMAGE':
           return {
             ...state,
@@ -59,6 +65,7 @@ const productReducer = (state = defaultState, action) => {
         return state;
     }
   };
+
 
   const rootReducer = combineReducers({
     products: productReducer
