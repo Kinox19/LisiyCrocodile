@@ -12,19 +12,19 @@ const MusicBlock = () => {
       <div className={s.columns}>
         <div className={s.leftSide}>
           <a href='/muz1'>
-            <img className={s.mus__link} src={cover1} alt=''></img>
+            <img className={s.mus__link} src={cover1} alt='Обложка Альбома "Стройматериалы - demo' title='Обложка Альбома "Стройматериалы - demo' ></img>
           </a>
           <a href='/muz3'>
-            <img className={s.mus__link} src={cover3} alt=''></img>
+            <img className={s.mus__link} src={cover3} alt='Обложка Сингла "Они нам верят' title='Обложка Сингла "Они нам верят'></img>
           </a>
         </div>
 
         <div className={s.rigthSide}>
           <a href='/muz2'>
-            <img className={s.mus__link} src={cover2} alt=''></img>
+            <img className={s.mus__link} src={cover2} alt='Обложка Альбома "Стройматериалы - remaster' title='Обложка Альбома "Стройматериалы - remaster'></img>
           </a>
           <a href='/muz4'>
-          <img className={s.mus__link} src={cover4} alt=''></img>
+          <img className={s.mus__link} src={cover4} alt='Обложка Альбома "Кабинет 313"' title='Обложка Альбома "Кабинет 313"'></img>
           </a>
         </div>
       </div>

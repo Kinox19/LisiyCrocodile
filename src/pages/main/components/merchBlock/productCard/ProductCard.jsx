@@ -15,7 +15,7 @@ const ProductCard = ({ product, selectProduct }) => {
   return (
     <div className={s.product__link} onClick={() => handleClick(product)}>
       <div className={s.wrapper}>
-        <img className={s.image} src={product.image} alt={product.title} />
+        <img className={s.image} src={product.image} alt={product.title} title={product.title}/>
         <div className={s.twoColumns}>
           <div className={s.leftColumn}>
             <h3 className={s.title}>{product.title}</h3>

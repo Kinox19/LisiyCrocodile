@@ -1,3 +1,4 @@
+
 import React from 'react'
 import { useEffect, useState } from 'react'
 import useSound from 'use-sound'
@@ -8,12 +9,10 @@ import trackNext from '../../assets/player/trackNext.svg'
 import trackPlay from '../../assets/player/trackPlay.svg'
 import trackPause from '../../assets/player/trackPause.svg'
 import volumeYes from '../../assets/player/volume.svg'
-import tracks from '../../pages/muz2/Muz2TrackList'
-
+import tracks from '../../pages/muz1/Muz1TrackList'
 
 const Player = ({id}) => {
     const track = tracks.find((track) => track.id === id);
-
     const [isPlaying, setIsPlaying] = useState(false);
     const [time, setTime] = useState({
       min: 0,
@@ -23,11 +22,8 @@ const Player = ({id}) => {
       min: 0,
       sec: 0
     });
-
     const [seconds, setSeconds] = useState();
-
     const [play, { pause, duration, sound }] = useSound(track.src);
-
     useEffect(() => {
       if (duration) {
         const sec = duration / 1000;
@@ -39,7 +35,6 @@ const Player = ({id}) => {
         });
       }
     }, [isPlaying, duration]);
-
     useEffect(() => {
       const interval = setInterval(() => {
         if (sound) {
@@ -55,7 +50,6 @@ const Player = ({id}) => {
       }, 1000);
       return () => clearInterval(interval);
     }, [sound]);
-
     const playingButton = () => {
       if (isPlaying) {
         pause();
@@ -65,15 +59,12 @@ const Player = ({id}) => {
         setIsPlaying(true);
       }
     };
-
     const [volume, setVolume] = useState(0.5);
-
     const handleVolumeChange = (e) => {
       const newVolume = e.target.value;
       setVolume(newVolume);
       sound.volume(newVolume);
     };
-
 
 
   return (
@@ -90,9 +81,20 @@ const Player = ({id}) => {
                 <div className={s.player__controlsUp}>
                     <button className={s.button}><img src={trackBack} alt=''/></button>
                     {!isPlaying ? (
-                        <button className={s.button} onClick={playingButton} ><img src={trackPlay} alt=''/></button>
+                        <button className={s.buttonPlay} onClick={playingButton} >
+                          <svg width="76" height="76" viewBox="0 0 76 76" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <circle cx="38" cy="38" r="37.25" stroke="#BEFF00" stroke-width="1.5"/>
+                          <path d="M49.7319 36.3744C50.8451 37.1723 50.8451 38.8277 49.7319 39.6256L33.4151 51.32C32.0917 52.2685 30.25 51.3226 30.25 49.6944L30.25 26.3056C30.25 24.6774 32.0917 23.7315 33.4151 24.68L49.7319 36.3744Z" fill="#BEFF00"/>
+                          </svg>
+                        </button>
                     ) : (
-                        <button className={s.button} onClick={playingButton} ><img src={trackPause} alt=''/></button>
+                        <button className={s.buttonPause} onClick={playingButton}>
+                          <svg width="76" height="76" viewBox="0 0 76 76" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <circle cx="38" cy="38" r="37.25" stroke="#BEFF00" stroke-width="1.5"/>
+                          <rect x="42" y="23" width="6" height="30" rx="3" fill="#BEFF00"/>
+                          <rect x="28" y="23" width="6" height="30" rx="3" fill="#BEFF00"/>
+                          </svg>
+                        </button>
                     )}
                     <button className={s.button}><img src={trackNext} alt=''/></button>
                 </div>
@@ -126,5 +128,4 @@ const Player = ({id}) => {
     </div>
   )
 }
-
 export default Player

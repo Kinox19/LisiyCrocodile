@@ -150,7 +150,7 @@ const Merch = () => {
   <div className={s.product__selected}>
     <div className={s.product__image}>
       <div className={s.controls__image}>
-        <img className={s.selected__image} src={colorImage} alt="" />
+        <img className={s.selected__image} src={colorImage} alt={selectedProduct.title} title={selectedProduct.title} />
         <div className={s.product__imageDescription}>
           <div className={s.product__nameBrand}>
             <p className={s.product__name}>{selectedProduct.title}</p>
@@ -248,7 +248,7 @@ const Merch = () => {
                 {products.map((product) => (
                 <li className={s.card} onClick={() => handleClick(product)}>
                     <div>
-                        <img className={s.card__image} src={product.image} alt={product.title}/>
+                        <img className={s.card__image} src={product.image} alt={product.title} title={product.title}/>
                     </div>
                     <div className={s.descriptionCard}>
                         <div className={s.card__nameBrand}>
