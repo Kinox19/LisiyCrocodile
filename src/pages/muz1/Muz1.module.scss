@@ -35,7 +35,7 @@
 }
 
 .title{
-    font-family: v_Mouth Breather BB;
+    font-family: 'BB';
     font-size: 100px;
     font-weight: 400;
     line-height: 104px;
@@ -73,6 +73,31 @@
     align-items: center;
     gap: 15px;
     cursor: pointer;
+
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+}
+
+.button__play:hover{
+    background-color: #BEFF00;
+    color: black;
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+}
+
+.button__play:hover path{
+    fill: black;
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
 }
 
 .tracks{
