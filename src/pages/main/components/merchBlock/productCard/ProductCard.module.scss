@@ -4,7 +4,6 @@
     flex-direction: column;
     align-items: center;
     padding-bottom: 35px;
-    
 }
 
 .image{
@@ -93,7 +92,6 @@
 
 .button:hover path{
     stroke: rgba(0, 0, 0, 1);
-    stroke-width: 1.75px;
     transition: 0.3s;
     -webkit-transition: 0.3s;
     -moz-transition: 0.3s;
@@ -132,4 +130,55 @@
 
 .product__link:hover{
     outline: 1px solid #BEFF00;
+}
+
+
+@media screen and (max-width:1280px) {
+
+    .wrapper{
+        max-width: 294px;
+        padding-bottom: 25px;
+    }
+
+    .image{
+        max-width: 294px;
+        max-height: 294px;
+    }
+
+    .twoColumns{
+        width: 244px;
+        margin-top: 25px;
+    }
+
+    .title{
+        font-size: 17px;
+        line-height: 21px;
+    }
+
+    .brand{
+        font-size: 12px;
+        line-height: 15px;
+
+        margin-top: 6px;
+    }
+    
+    .price{
+        font-size: 17px;
+        line-height: 21px;
+    }
+
+    .button{
+        height: 45px;
+        width: 123px;
+        border-radius: 9px;
+        border: 1.9px solid rgba(190, 255, 0, 1);
+        gap: 9px;
+        font-size: 12px;
+        line-height: 15px;
+        margin-top: 25px;
+        -webkit-border-radius: 9px;
+        -moz-border-radius: 9px;
+        -ms-border-radius: 9px;
+        -o-border-radius: 9px;
+    }
 }
