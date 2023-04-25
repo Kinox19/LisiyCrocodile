@@ -12,12 +12,12 @@
 
 .mus__link{
     max-width: 765px;
-    transition: 0.3s ease-in-out;
-    -webkit-transition: 0.3s ease-in-out;
-    -moz-transition: 0.3s ease-in-out;
-    -ms-transition: 0.3s ease-in-out;
-    -o-transition: 0.3s ease-in-out;
-    border: 2px solid rgba(58, 58, 58, 1);
+    transition: 0.1s ease-in-out;
+    -webkit-transition: 0.1s ease-in-out;
+    -moz-transition: 0.1s ease-in-out;
+    -ms-transition: 0.1s ease-in-out;
+    -o-transition: 0.1s ease-in-out;
+    outline: 2px solid rgba(58, 58, 58, 1);
     border-radius: 20px;
     -webkit-border-radius: 20px;
     -moz-border-radius: 20px;
@@ -26,13 +26,12 @@
 }
 
 .mus__link:hover{
-    transition: 0.3s ease-in-out;
-    -webkit-transition: 0.3s ease-in-out;
-    -moz-transition: 0.3s ease-in-out;
-    -ms-transition: 0.3s ease-in-out;
-    -o-transition: 0.3s ease-in-out;
-    border: 2px solid rgba(190, 255, 0, 1);
-
+    transition: 0.1s ease-in-out;
+    -webkit-transition: 0.1s ease-in-out;
+    -moz-transition: 0.1s ease-in-out;
+    -ms-transition: 0.1s ease-in-out;
+    -o-transition: 0.1s ease-in-out;
+    outline: 2px solid rgba(190, 255, 0, 1);
 }
 
 .leftSide{
@@ -55,7 +54,7 @@
     column-gap: 66px;
 }
 
-@media screen and (max-width: 1600px) {
+@media screen and (max-width: 1440px) {
     .music__block{
         margin-top: 80px;
     }
@@ -82,16 +81,25 @@
 
     .mus__link{
         max-width: 505px;
-        transition: 0.3s ease-in-out;
-        -webkit-transition: 0.3s ease-in-out;
-        -moz-transition: 0.3s ease-in-out;
-        -ms-transition: 0.3s ease-in-out;
-        -o-transition: 0.3s ease-in-out;
-        border: 1.3px solid rgba(58, 58, 58, 1);
+        transition: 0.1s ease-in-out;
+        -webkit-transition: 0.1s ease-in-out;
+        -moz-transition: 0.1s ease-in-out;
+        -ms-transition: 0.1s ease-in-out;
+        -o-transition: 0.1s ease-in-out;
+        outline: 1.3px solid rgba(58, 58, 58, 1);
         border-radius: 13px;
         -webkit-border-radius: 13px;
         -moz-border-radius: 13px;
         -ms-border-radius: 13px;
         -o-border-radius: 13px;
 }
+
+    .mus__link:hover{
+        transition: 0.1s ease-in-out;
+        -webkit-transition: 0.1s ease-in-out;
+        -moz-transition: 0.1s ease-in-out;
+        -ms-transition: 0.1s ease-in-out;
+        -o-transition: 0.1s ease-in-out;
+        outline: 1.3px solid rgba(190, 255, 0, 1);
+    }
 }
