@@ -83,11 +83,40 @@
     -o-transition: 0.3s ease-in-out;
 }
 
-.image{
-    margin-right: 143px;
-    width: 1475px;
-    height: 929px;
-    z-index: -1;
 
-    opacity: .8;
+@media screen and (max-width: 1280px){
+    .block{
+        width: 1280px;
+        height: 610px;
+        background-size: contain;
+    }
+
+    .heading{
+        font-size: 80px;
+        line-height: 83px;
+    }
+
+    .textInfo{
+        margin-left: 108px;
+    }
+
+    .text{
+        font-size: 17px;
+        line-height: 21px;
+        margin-top: 50px;
+    }
+
+    .button{
+        font-size: 12px;
+        line-height: 15px;
+        border: 1.8px solid #BEFF00;
+        border-radius: 9px;
+        width: 143px;
+        height: 49px;
+        margin-top: 50px;
+        -webkit-border-radius: 9px;
+        -moz-border-radius: 9px;
+        -ms-border-radius: 9px;
+        -o-border-radius: 9px;
+}
 }

@@ -40,3 +40,32 @@
     width: 1113px;
     height: 1080px;
 }
+
+@media screen and (max-width: 1280px){
+    .block{
+        height: 720px;
+        padding-top: 80px;
+    }
+
+    .title{
+        font-size: 100px;
+        line-height: 104px;
+    }
+
+    .textContainer{
+        gap: 30px;
+        margin-top: 50px;
+    }
+
+    .text{
+        max-width: 305px;
+        font-size: 12px;
+        line-height: 15px;
+    }
+
+    .img{
+        right: -110px;
+        width: 738px;
+        height: 720px;
+    }
+}

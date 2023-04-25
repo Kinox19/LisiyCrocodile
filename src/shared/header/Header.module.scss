@@ -122,3 +122,45 @@ a{
 nav{
     position: relative;
 }
+
+
+@media screen and (max-width: 1280px){
+    .header__wrapper{
+        height: 110px;
+    }
+
+    .header__container{
+        max-width: 1280px;
+    }
+
+    .logo__container{
+        gap: 10px;
+    }
+
+    .logo{
+        width: 27px;
+        height: 21px;
+    }
+
+    .logo__name{
+    font-size: 20px;
+    line-height: 21px;
+    }
+
+    .header__menu{
+    font-size: 17px;
+    line-height: 20px;
+    column-gap: 61px;
+    margin-top: 15px;
+    }
+
+    .cart__length{
+        top: 5px;
+        right: -17px;
+    }
+
+    .cart__lengthNumber{
+        font-size: 14px;
+        line-height: 14px;
+    }
+}

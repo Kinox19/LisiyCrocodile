@@ -51,3 +51,9 @@
     -o-border-radius: 15px;
     text-transform: uppercase;
 }
+
+@media screen and (max-width: 1280px){
+    .main__container{
+        width: 1062px;
+}
+}

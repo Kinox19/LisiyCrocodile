@@ -3,10 +3,6 @@
     gap: 130px;
 }
 
-.blockLeft{
-
-}
-
 .title{
     font-family: 'BB';
     font-size: 150px;
@@ -34,3 +30,34 @@
     -o-border-radius: 25px;
     margin-bottom: 189px;
 }
+
+@media screen and (max-width:1280px){
+    .container{
+        gap: 108px;
+    }
+
+    .title{
+        font-size: 100px;
+        line-height: 104px;
+    }
+
+    .text{
+        font-size: 17px;
+        line-height: 21px;
+        margin-top: 50px;
+        max-width: 414px;
+    }
+
+    .video{
+        margin-top: 150px;
+        border-radius: 13px;
+        -webkit-border-radius: 13px;
+        -moz-border-radius: 13px;
+        -ms-border-radius: 13px;
+        -o-border-radius: 13px;
+        margin-bottom: 154px;
+        width: 542px;
+        height: 359px;
+}
+}
+
