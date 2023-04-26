@@ -1,6 +1,6 @@
+
 import { combineReducers } from "redux"
 import products from '../../Products'
-
 const defaultState = {
     selectProduct: null,
     products: products,
@@ -10,7 +10,6 @@ const defaultState = {
     selectSize: null,
     cart: []
 };
-
 const productReducer = (state = defaultState, action, payload) => {
     switch (action.type) {
       case 'SELECT_PRODUCT':
@@ -22,7 +21,8 @@ const productReducer = (state = defaultState, action, payload) => {
           const updatedCart = state.cart.filter((item) =>
             item.id !== action.payload.id ||
             item.size !== action.payload.size ||
-            item.color !== action.payload.color
+            item.color !== action.payload.color ||
+            item.index !== action.payload.index
           );
           localStorage.setItem("cart", JSON.stringify(updatedCart));
           return {
@@ -37,7 +37,7 @@ const productReducer = (state = defaultState, action, payload) => {
       case 'SELECT_QUANTITY':
         return{
           ...state,
-          selectedQuantity: action.payload
+          quantity: action.payload,
         };
         case 'ADD_TO_CART':
           const newState = {
@@ -66,9 +66,7 @@ const productReducer = (state = defaultState, action, payload) => {
     }
   };
 
-
   const rootReducer = combineReducers({
     products: productReducer
   });
-
   export default rootReducer;

@@ -15,7 +15,8 @@ import rootReducer from "./redux/reducers/reducers";
 import { legacy_createStore as createStore} from 'redux'
 import { Provider } from 'react-redux';
 import OrderPage from "./pages/orderPage/OrderPage";
-import  Redirect from "react-router-dom";
+import Redirect from "react-router-dom";
+import PlayerState from './shared/player/context/playerContext'
 
 
 function App() {
@@ -33,23 +34,28 @@ if (savedCart) {
   return (
     <Provider store={store}>
     <div className="App">
+
       <Header/>
       <Routes>
         <Route path="/oferta" element={<Oferta/>} />
+
         <Route path="/muz1" element={<Muz1/>} />
         <Route path="/muz2" element={<Muz2/>} />
         <Route path="/muz3" element={<Muz3/>} />
         <Route path="/muz4" element={<Muz4/>} />
+        <Route path="/kachaet" element={<Player/>} />
+
         <Route exact path="/home" element={<Main/>} />
         <Route path="/merch" element={<Merch/>} />
-        <Route path="/kachaet" element={<Player/>} />
         <Route path="/cart" element={<Cart/> } />
         <Route path="/order" element={<OrderPage/>} />
         <Route path="/*" element={<NotFoundPage/>} />
       </Routes>
       <Footer/>
+
     </div>
     </Provider>
+
   );
 }
 

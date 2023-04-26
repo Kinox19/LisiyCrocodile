@@ -13,18 +13,21 @@ import { useNavigate } from 'react-router-dom'
 
 
 const Cart = ({cartItems}) => {
+
     const navigate = useNavigate();
-    const quantity = useSelector((state) => state.products.quantity);
+    let quantity = useSelector((state) => state.products.quantity);
     const dispatch = useDispatch();
-    const [total, setTotal] = useState(null)
+    const [total, setTotal] = useState(null);
  
-    const handlePlusQuantityChange = () => {
-      const newQuantity = quantity + 1;
-      dispatch(selectQuantity(newQuantity));
+    const handlePlusQuantityChange = (item) => {
+      item.quantity += 1;
+      console.log(item.quantity);
+      dispatch(selectQuantity(item.quantity));
     };
-    const handleMinusQuantityChange = () => {
-      const newQuantity = quantity - 1 <= 0 ? 1 : quantity - 1;
-      dispatch(selectQuantity(newQuantity));
+    const handleMinusQuantityChange = (item) => {
+      const newQuantity = item.quantity - 1 <= 0 ? 1 : item.quantity - 1;
+      item.quantity = newQuantity;
+      dispatch(selectQuantity(item.quantity));
     };
    
     const handleItemDelete = (id, size, color) => {
@@ -72,12 +75,12 @@ const Cart = ({cartItems}) => {
                             </div>
                         </div>
                         <div className={s.item__quantity}>
-                                <button className={s.quantityButton} onClick={handlePlusQuantityChange}>
+                                <button className={s.quantityButton} onClick={() => handlePlusQuantityChange(item)}>
                                 <img src={plus} alt="+" />
                                 </button>
                                 <p className={s.product__quantities}>{item.quantity}x</p>
                                 <div className={s.minus}>
-                                <button className={s.quantityButton} onClick={handleMinusQuantityChange}>
+                                <button className={s.quantityButton} onClick={()=>handleMinusQuantityChange(item)}>
                                 <img src={minus} alt="-" />
                                 </button>
                                 </div>

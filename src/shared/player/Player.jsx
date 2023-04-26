@@ -6,11 +6,8 @@ import s from './Player.module.scss'
 import playerImg from '../../assets/images/player/playerImg.png'
 import trackBack from '../../assets/player/trackBack.svg'
 import trackNext from '../../assets/player/trackNext.svg'
-import trackPlay from '../../assets/player/trackPlay.svg'
-import trackPause from '../../assets/player/trackPause.svg'
 import volumeYes from '../../assets/player/volume.svg'
 import tracks from '../../pages/muz1/Muz1TrackList'
-
 const Player = ({id}) => {
     const track = tracks.find((track) => track.id === id);
     const [isPlaying, setIsPlaying] = useState(false);
@@ -35,6 +32,7 @@ const Player = ({id}) => {
         });
       }
     }, [isPlaying, duration]);
+   
     useEffect(() => {
       const interval = setInterval(() => {
         if (sound) {
@@ -65,7 +63,6 @@ const Player = ({id}) => {
       setVolume(newVolume);
       sound.volume(newVolume);
     };
-
 
   return (
     <div className={s.main}>

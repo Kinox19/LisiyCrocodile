@@ -36,6 +36,7 @@ const Merch = () => {
   const selectedColor = useSelector(state => state.products.selectedColor);
   const selectedQuantity = useSelector(state => state.products.selectedQuantity) || 1;
   const selectedImage = useSelector(state => state.products.selectedImage);
+
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
