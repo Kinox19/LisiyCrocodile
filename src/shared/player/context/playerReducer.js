@@ -1,7 +1,5 @@
 import {
     SET_CURRENT_SONG,
-    TOGGLE_RANDOM,
-    TOGGLE_REPEAT,
     TOGGLE_PLAYING,
     SET_SONGS_ARRAY,
   } from './types'
@@ -18,16 +16,6 @@ import {
           ...state,
           currentSong: action.data,
           playing: true,
-        }
-      case TOGGLE_RANDOM:
-        return {
-          ...state,
-          random: action.data,
-        }
-      case TOGGLE_REPEAT:
-        return {
-          ...state,
-          repeat: action.data,
         }
       case TOGGLE_PLAYING:
         return {

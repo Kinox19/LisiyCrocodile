@@ -16,35 +16,6 @@ function Playlist() {
   }
 
   return (
-    // <div className="playlist no_drag">
-    //   <ul className="loi">
-    //     {songslist.map((song, i) => (
-    //       <li
-    //         className={'songContainer ' + (currentSong === i ? 'selected' : '')}
-    //         key={i}
-    //         onClick={() => {
-    //           SetCurrent(i)
-    //         }}
-    //       >
-    //         <div className="tmbn_song">
-    //           <i className="fas fa-play"></i>
-    //         </div>
-    //         <div className="songmeta_playlist">
-    //           <span className="songname">{song.title}</span>
-    //           <span className="songauthors">{song.artistName}</span>
-    //         </div>
-    //         <div className="playlist_btns_group">
-    //           <button className="fav_song playlist_btn">
-    //             <i className="far fa-heart fa-lg"></i>
-    //           </button>
-    //           <button className="options_song playlist_btn">
-    //             <i class="fas fa-ellipsis-v fa-lg"></i>
-    //           </button>
-    //         </div>
-    //       </li>
-    //     ))}
-    //   </ul>
-    // </div>
     <div className={s.beforePlayer}>
     <div className={s.main}>
       <div className={s.coverChange}>
@@ -66,7 +37,7 @@ function Playlist() {
           <p className={s.description}>
           2020 год – желание написать что-то стоящее и осмысленное, насколько это было возможно.
           </p>
-          <button className={s.button__play}>
+          <button className={s.button__play} onClick={() => {SetCurrent(songslist.fileUrl) }}>
             <svg width="21" height="28" viewBox="0 0 21 28" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M20.1271 12.356C21.2751 13.1514 21.2751 14.8486 20.1271 15.644L3.13899 27.4137C1.81258 28.3327 5.35539e-07 27.3833 6.06073e-07 25.7697L1.63501e-06 2.23028C1.70555e-06 0.616645 1.81259 -0.332661 3.13899 0.586298L20.1271 12.356Z" fill="#BEFF00"/>
             </svg>
@@ -86,10 +57,9 @@ function Playlist() {
                 <button className={s.play}>
                 {currentSong === i ? (
                   <svg width="76" height="76" viewBox="0 0 76 76" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="38" cy="38" r="37.25" stroke="#BEFF00" stroke-width="1.5"/>
-                    <rect x="42" y="23" width="6" height="30" rx="3" fill="#BEFF00"/>
-                    <rect x="28" y="23" width="6" height="30" rx="3" fill="#BEFF00"/>
-                  </svg>
+                  <circle cx="38" cy="38" r="37.25" stroke="#BEFF00" strokeWidth="1.5" />
+                  <path d="M49.7319 36.3744C50.8451 37.1723 50.8451 38.8277 49.7319 39.6256L33.4151 51.32C32.0917 52.2685 30.25 51.3226 30.25 49.6944L30.25 26.3056C30.25 24.6774 32.0917 23.7315 33.4151 24.68L49.7319 36.3744Z" fill="#BEFF00" />
+                </svg>
               ) : (
                 <svg width="76" height="76" viewBox="0 0 76 76" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <circle cx="38" cy="38" r="37.25" stroke="#81886E" strokeWidth="1.5" />

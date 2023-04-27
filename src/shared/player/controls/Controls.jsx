@@ -2,7 +2,11 @@
 import React, { useState, useEffect, useRef, useContext } from "react";
 import playerContext from "../context/playerContext";
 import s from './Controls.module.scss'
+
+
+
 function Controls() {
+  
   const {
     currentSong,
     songs,
@@ -13,6 +17,9 @@ function Controls() {
     handleEnd,
     songslist,
   } = useContext(playerContext);
+
+
+
   const audio = useRef("audio_tag");
   const [statevolum, setStateVolum] = useState(0.3);
   const [dur, setDur] = useState(0);
