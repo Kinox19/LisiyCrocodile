@@ -8,7 +8,6 @@ import Muz2 from "./pages/muz2/Muz2";
 import Muz3 from "./pages/muz3/Muz3";
 import Muz4 from "./pages/muz4/Muz4";
 import Merch from "./pages/merch/Merch";
-import Player from "./shared/player/Player";
 import Cart from "./pages/cart/Cart";
 import NotFoundPage from "./pages/notFoundPage/NotFoundPage";
 import rootReducer from "./redux/reducers/reducers";
@@ -43,7 +42,6 @@ if (savedCart) {
         <Route path="/muz2" element={<Muz2/>} />
         <Route path="/muz3" element={<Muz3/>} />
         <Route path="/muz4" element={<Muz4/>} />
-        <Route path="/kachaet" element={<Player/>} />
 
         <Route exact path="/home" element={<Main/>} />
         <Route path="/merch" element={<Merch/>} />

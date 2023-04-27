@@ -143,13 +143,14 @@ input[type=range]{
     align-self: self-start;
 }
 
-.volume__button{
+.volumeSvg:hover .pathToFill{
+    fill: #BEFF00;
     transition: .3s ease-in-out;
     -webkit-transition: .3s ease-in-out;
     -moz-transition: .3s ease-in-out;
     -ms-transition: .3s ease-in-out;
     -o-transition: .3s ease-in-out;
-}
+} 
 
 .player__trackVolume{
     width: 146px;
@@ -185,11 +186,58 @@ input[type=range]{
     box-shadow: -522px 0px 0px 522px rgba(190, 255, 0, 1);
 }
 
+.buttonChange{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: .1s ease-in-out;
+    -webkit-transition: .1s ease-in-out;
+    -moz-transition: .1s ease-in-out;
+    -ms-transition: .1s ease-in-out;
+    -o-transition: .1s ease-in-out;
+    width: 35px;
+    height: 35px;
+}
+
+.buttonChange:hover svg{
+    transition: .1s ease-in-out;
+    -webkit-transition: .1s ease-in-out;
+    -moz-transition: .1s ease-in-out;
+    -ms-transition: .1s ease-in-out;
+    -o-transition: .1s ease-in-out;
+    width: 35px;
+    height: 35px;
+}
+
 .button{
     background-color: transparent;
     border: none;
     outline: none;
     cursor: pointer;
+    transition: .3s ease-in-out;
+    -webkit-transition: .3s ease-in-out;
+    -moz-transition: .3s ease-in-out;
+    -ms-transition: .3s ease-in-out;
+    -o-transition: .3s ease-in-out;
+}
+
+.button:hover .svgInButton{
+    fill: rgba(190, 255, 0, 1);
+    transition: .3s ease-in-out;
+    -webkit-transition: .3s ease-in-out;
+    -moz-transition: .3s ease-in-out;
+    -ms-transition: .3s ease-in-out;
+    -o-transition: .3s ease-in-out;
+}
+
+.button:hover .svgInButton .fillOnHover{
+    fill: #000;
+    transition: .3s ease-in-out;
+    -webkit-transition: .3s ease-in-out;
+    -moz-transition: .3s ease-in-out;
+    -ms-transition: .3s ease-in-out;
+    -o-transition: .3s ease-in-out;
 }
 
 .buttonPlay{

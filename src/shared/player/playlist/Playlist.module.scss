@@ -21,7 +21,6 @@
     width: 1920px;
     height: 500px;
     max-width: 100%;
-    background-image: url('../../../assets/images/mainPage/covers/cover_stroy1.png');
     justify-content: center;
     gap: 1486px;
     align-items: center;
@@ -87,8 +86,57 @@
     margin-bottom: 130px;
     display: flex;
     flex-direction: column;
+
     gap: 35px;
 }
+
+.twoTexts{
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: space-between;
+}
+
+.titleButton{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.button__text{
+    font-family: Inter;
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 24px;
+    text-align: left;
+    width: 150px;
+    color: rgba(129, 136, 110, 1);
+    transition: .3s ease-in-out;
+    -webkit-transition: .3s ease-in-out;
+    -moz-transition: .3s ease-in-out;
+    -ms-transition: .3s ease-in-out;
+    -o-transition: .3s ease-in-out;
+}
+
+.buttonNextAlbum:hover svg{
+    fill: #BEFF00;
+    transition: .3s ease-in-out;
+    -webkit-transition: .3s ease-in-out;
+    -moz-transition: .3s ease-in-out;
+    -ms-transition: .3s ease-in-out;
+    -o-transition: .3s ease-in-out;
+}
+
+.buttonNextAlbum:hover path{
+    fill: #000;
+    transition: .3s ease-in-out;
+    -webkit-transition: .3s ease-in-out;
+    -moz-transition: .3s ease-in-out;
+    -ms-transition: .3s ease-in-out;
+    -o-transition: .3s ease-in-out;
+}
+
 
 .label{
     font-family: Inter;
@@ -187,6 +235,10 @@
     border-bottom: 2px solid #3A3A3A;
 }
 
+.track__wrapper:hover{
+    background-color: rgba(8, 8, 8, 1);
+}
+
 .control__play{
     width: 76px;
     height: 76px;
@@ -231,6 +283,15 @@
     outline: none;
     border: none;
 }
+
+.control__download:hover path{
+    stroke: rgba(190, 255, 0, 1);
+}
+
+.control__download:hover .pathNeeded{
+    fill:#BEFF00;
+}
+
 
 .track__timeDownload{
     display: flex;
