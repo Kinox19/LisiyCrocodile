@@ -1,0 +1,307 @@
+.main{
+    display: block;
+    width: 100%;
+    background-color: rgba(16, 16, 16, 1);
+    padding: 25px 0;
+    position: sticky;
+    bottom: 0;
+    left: 0;
+    z-index: 101;
+}
+
+.player__wrapper{
+    display: flex;
+    flex-direction: row;
+
+    justify-content: space-between;
+
+    max-width: 1596px;
+    margin: 0 auto;
+}
+
+.player__info{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: start;
+    width: 426px;
+    gap: 35px;
+
+    margin-top: 9px;
+}
+
+.current__image{
+    border: 0.7px solid #81886E;
+    border-radius: 5px;
+
+    width: 80px;
+    height: 80px;
+}
+
+.current__track{
+    margin-bottom: 10px;
+    font-family: Inter;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 27px;
+    text-align: left;
+    color: rgba(190, 255, 0, 1);
+}
+
+.current__artist{
+    font-family: Inter;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 22px;
+    text-align: left;
+    color: rgba(129, 136, 110, 1);
+}
+
+.player__controls{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    margin-left: -230px;
+}
+
+.player__controlsUp{
+    display: flex;
+    flex-direction: row;
+    gap: 45px;
+    align-items: center;
+}
+
+.player__controlsDown{
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    align-items: center;
+}
+
+input[type=range]{
+    background: transparent;
+}
+
+.player__playBar{
+    width: 522px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border-radius: 100px;
+    -webkit-border-radius: 100px;
+    -moz-border-radius: 100px;
+    -ms-border-radius: 100px;
+    -o-border-radius: 100px;
+}
+
+.player__playBar::-webkit-slider-runnable-track{
+    border-radius: 5px;
+    height: 5px;
+    background-color: rgba(58, 58, 58, 1);
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.player__playBar::-webkit-slider-thumb {
+    background: rgba(190, 255, 0, 1);
+    border-radius: 100px;
+    cursor: pointer;
+    width: 13px;
+    height: 13px;
+    -webkit-appearance: none;
+    margin-top: -4px;
+    -webkit-border-radius: 100px;
+    -moz-border-radius: 100px;
+    -ms-border-radius: 100px;
+    -o-border-radius: 100px;
+    box-shadow: -522px 0px 0px 522px rgba(190, 255, 0, 1);
+
+}
+
+.player__trackTime{
+    font-family: Inter;
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 21px;
+    text-align: left;
+    color: rgba(129, 136, 110, 1);
+    width: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.player__controlsVolume{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    align-self: self-start;
+}
+
+.volumeSvg:hover .pathToFill{
+    fill: #BEFF00;
+    transition: .3s ease-in-out;
+    -webkit-transition: .3s ease-in-out;
+    -moz-transition: .3s ease-in-out;
+    -ms-transition: .3s ease-in-out;
+    -o-transition: .3s ease-in-out;
+} 
+
+.player__trackVolume{
+    width: 146px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+.player__trackVolume::-webkit-slider-runnable-track{
+    border-radius: 5px;
+    height: 3px;
+    background-color: rgba(58, 58, 58, 1);
+    cursor: pointer;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    overflow: hidden;
+}
+
+.player__trackVolume::-webkit-slider-thumb {
+    background: rgba(190, 255, 0, 1);
+    border-radius: 100px;
+    cursor: pointer;
+    width: 13px;
+    height: 13px;
+    -webkit-appearance: none;
+    margin-top: -5px;
+    -webkit-border-radius: 100px;
+    -moz-border-radius: 100px;
+    -ms-border-radius: 100px;
+    -o-border-radius: 100px;
+    box-shadow: -522px 0px 0px 522px rgba(190, 255, 0, 1);
+}
+
+.buttonChange{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: .1s ease-in-out;
+    -webkit-transition: .1s ease-in-out;
+    -moz-transition: .1s ease-in-out;
+    -ms-transition: .1s ease-in-out;
+    -o-transition: .1s ease-in-out;
+    width: 35px;
+    height: 35px;
+}
+
+.buttonChange:hover svg{
+    transition: .1s ease-in-out;
+    -webkit-transition: .1s ease-in-out;
+    -moz-transition: .1s ease-in-out;
+    -ms-transition: .1s ease-in-out;
+    -o-transition: .1s ease-in-out;
+    width: 35px;
+    height: 35px;
+}
+
+.button{
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: .3s ease-in-out;
+    -webkit-transition: .3s ease-in-out;
+    -moz-transition: .3s ease-in-out;
+    -ms-transition: .3s ease-in-out;
+    -o-transition: .3s ease-in-out;
+}
+
+.button:hover .svgInButton{
+    fill: rgba(190, 255, 0, 1);
+    transition: .3s ease-in-out;
+    -webkit-transition: .3s ease-in-out;
+    -moz-transition: .3s ease-in-out;
+    -ms-transition: .3s ease-in-out;
+    -o-transition: .3s ease-in-out;
+}
+
+.button:hover .svgInButton .fillOnHover{
+    fill: #000;
+    transition: .3s ease-in-out;
+    -webkit-transition: .3s ease-in-out;
+    -moz-transition: .3s ease-in-out;
+    -ms-transition: .3s ease-in-out;
+    -o-transition: .3s ease-in-out;
+}
+
+.buttonPlay{
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: .3s ease-in-out;
+    -webkit-transition: .3s ease-in-out;
+    -moz-transition: .3s ease-in-out;
+    -ms-transition: .3s ease-in-out;
+    -o-transition: .3s ease-in-out;
+}
+
+
+.buttonPlay:hover svg{
+    fill: rgba(190, 255, 0, 1);
+    transition: .3s ease-in-out;
+    -webkit-transition: .3s ease-in-out;
+    -moz-transition: .3s ease-in-out;
+    -ms-transition: .3s ease-in-out;
+    -o-transition: .3s ease-in-out;
+}
+
+.buttonPlay:hover path{
+    fill: black;
+    transition: .3s ease-in-out;
+    -webkit-transition: .3s ease-in-out;
+    -moz-transition: .3s ease-in-out;
+    -ms-transition: .3s ease-in-out;
+    -o-transition: .3s ease-in-out;
+}
+
+.buttonPause{
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: .3s ease-in-out;
+    -webkit-transition: .3s ease-in-out;
+    -moz-transition: .3s ease-in-out;
+    -ms-transition: .3s ease-in-out;
+    -o-transition: .3s ease-in-out;
+}
+
+.buttonPause:hover svg{
+    fill: rgba(190, 255, 0, 1);
+    transition: .3s ease-in-out;
+    -webkit-transition: .3s ease-in-out;
+    -moz-transition: .3s ease-in-out;
+    -ms-transition: .3s ease-in-out;
+    -o-transition: .3s ease-in-out;
+}
+
+.buttonPause:hover rect{
+    fill: black;
+    transition: .3s ease-in-out;
+    -webkit-transition: .3s ease-in-out;
+    -moz-transition: .3s ease-in-out;
+    -ms-transition: .3s ease-in-out;
+    -o-transition: .3s ease-in-out;
+}
+
+.hideButton{
+    display: none;
+}
+

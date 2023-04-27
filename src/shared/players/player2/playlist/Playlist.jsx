@@ -2,26 +2,24 @@ import React, { useContext } from 'react'
 import playerContext from '../context/playerContext'
 import s from './Playlist.module.scss'
 import { useNavigate } from 'react-router-dom'
-import cover from '../../../assets/images/mainPage/covers/cover_stroy1.png'
 
 function Playlist() {
   const navigate = useNavigate();
   const { SetCurrent, currentSong, songslist } = useContext(playerContext)
 
   const handleAlbumChangeNext = () => {
-    navigate('/muz2');
+    navigate('/muz3');
   }
 
   return (
     <div className={s.beforePlayer}>
     <div className={s.main}>
       <div className={s.coverChange}>
-        <img src={cover} alt="" />
       </div>
       <div className={s.main__container}>
       <div className={s.upperNav}>
         <div className={s.text__container}>
-            <p className={s.label}>Лысый крокодил / EP - demo</p>
+            <p className={s.label}>Лысый крокодил / EP – remaster</p>
             <div className={s.titleButton}>
               <h1 className={s.title}>стройматериалы</h1>
               <button className={s.buttonNextAlbum} onClick={handleAlbumChangeNext}>
@@ -32,7 +30,7 @@ function Playlist() {
             </button>
             </div>
             <div className={s.twoTexts}>
-              <p className={s.description}>2020 год – желание написать что-то стоящее и осмысленное, насколько это было возможно.</p>
+              <p className={s.description}>2021-2022 год – повышение ставок. Мы росли вместе со своей аудиторией, в следствие чего поставили цель значительно повысить качество звука.</p>
               <p className={s.button__text}>к следующему альбому</p>
             </div>
             <button className={s.button__play}>
@@ -63,7 +61,7 @@ function Playlist() {
                 </svg>
               )}
                 </button>
-                <img src='https://i.ibb.co/x6LVGD5/cover-stroy-Demo.png' className={s.track__cover} alt='' />
+                <img src="https://i.ibb.co/qjjYkvC/cover-stroy.png" alt="cover-stroy" className={s.track__cover} />
                 <div className={s.track__textInfo}>
                   <p className={s.track__name}>{song.title}</p>
                   <p className={s.track__artist}>{song.artist}</p>

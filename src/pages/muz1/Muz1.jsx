@@ -1,7 +1,7 @@
 import React from 'react'
-import PlayerState from '../../shared/player/context/PlayerState'
-import Playlist from '../../shared/player/playlist/Playlist'
-import Controls from '../../shared/player/controls/Controls'
+import PlayerState from '../../shared/players/player1/context/PlayerState'
+import Playlist from '../../shared/players/player1/playlist/Playlist'
+import Controls from '../../shared/players/player1/controls/Controls'
 
 
 const Muz1 = () => {

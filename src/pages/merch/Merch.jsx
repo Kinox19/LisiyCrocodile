@@ -226,7 +226,7 @@ const Merch = () => {
           <button className={s.quantityButton} onClick={handlePlusQuantityChange}>
             <img src={plus} alt="+" />
           </button>
-          <p className={s.product__quantities}>{quantity}x</p>
+          <p className={s.product__quantities}>{quantity} шт.</p>
           <div className={s.minus}>
             <button className={s.quantityButton} onClick={handleMinusQuantityChange}>
               <img src={minus} alt="-" />

@@ -34,25 +34,4 @@ export const song_list = [
         time: "2:22",
         downloadUrl: 'https://drive.google.com/uc?export=download&id=13lrS2rrCNJupCS6SZisf3EPR2atg154U',
     },
-    {
-        title: 'test',
-        artist: 'Лысый Крокодил',
-        fileUrl: 'https://audio.jukehost.co.uk/883kFnqhNZMCUWLypt111jWkiSRVJKWK',
-        time: "2:22",
-        downloadUrl: 'https://drive.google.com/uc?export=download&id=13lrS2rrCNJupCS6SZisf3EPR2atg154U',
-    },
-    {
-        title: 'test',
-        artist: 'Лысый Крокодил',
-        fileUrl: 'https://audio.jukehost.co.uk/883kFnqhNZMCUWLypt111jWkiSRVJKWK',
-        time: "2:22",
-        downloadUrl: 'https://drive.google.com/uc?export=download&id=13lrS2rrCNJupCS6SZisf3EPR2atg154U',
-    },
-    {
-        title: 'test',
-        artist: 'Лысый Крокодил',
-        fileUrl: 'https://audio.jukehost.co.uk/883kFnqhNZMCUWLypt111jWkiSRVJKWK',
-        time: "2:22",
-        downloadUrl: 'https://drive.google.com/uc?export=download&id=13lrS2rrCNJupCS6SZisf3EPR2atg154U',
-    },
   ]

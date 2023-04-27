@@ -14,8 +14,8 @@ import rootReducer from "./redux/reducers/reducers";
 import { legacy_createStore as createStore} from 'redux'
 import { Provider } from 'react-redux';
 import OrderPage from "./pages/orderPage/OrderPage";
-import Redirect from "react-router-dom";
-import PlayerState from './shared/player/context/playerContext'
+// import Redirect from "react-router-dom";
+// import PlayerState from './shared/players/player1/context/playerContext'
 
 
 function App() {

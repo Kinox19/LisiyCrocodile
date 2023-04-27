@@ -16,14 +16,9 @@
 }
 
 .coverChange{
-    display: flex;
-    flex-direction: row;
-    width: 1920px;
+    width: 100%;
     height: 500px;
-    max-width: 100%;
-    justify-content: center;
-    gap: 1486px;
-    align-items: center;
+    background-image: url('../../../../assets/images/mainPage/covers/cover_stroy2.png');
 }
 
 .buttonAlbumLeft{

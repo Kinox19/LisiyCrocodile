@@ -78,7 +78,7 @@ const Cart = ({cartItems}) => {
                                 <button className={s.quantityButton} onClick={() => handlePlusQuantityChange(item)}>
                                 <img src={plus} alt="+" />
                                 </button>
-                                <p className={s.product__quantities}>{item.quantity}x</p>
+                                <p className={s.product__quantities}>{item.quantity} шт.</p>
                                 <div className={s.minus}>
                                 <button className={s.quantityButton} onClick={()=>handleMinusQuantityChange(item)}>
                                 <img src={minus} alt="-" />
