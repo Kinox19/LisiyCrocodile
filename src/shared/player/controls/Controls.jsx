@@ -1,9 +1,8 @@
+
 import React, { useState, useEffect, useRef, useContext } from "react";
 import playerContext from "../context/playerContext";
 import s from './Controls.module.scss'
-
 function Controls() {
-  // Global State
   const {
     currentSong,
     songs,
@@ -14,32 +13,24 @@ function Controls() {
     handleEnd,
     songslist,
   } = useContext(playerContext);
-
   const audio = useRef("audio_tag");
-
-  // self State
   const [statevolum, setStateVolum] = useState(0.3);
   const [dur, setDur] = useState(0);
   const [currentTime, setCurrentTime] = useState(0);
-
   const fmtMSS = (s) => {
     return (s - (s %= 60)) / 60 + (9 < s ? ":" : ":0") + ~~s;
   };
-
   const toggleAudio = () =>
     audio.current.paused ? audio.current.play() : audio.current.pause();
-
   const handleVolume = (q) => {
     setStateVolum(q);
     audio.current.volume = q;
   };
-
   const handleProgress = (e) => {
     let compute = (e.target.value * dur) / 100;
     setCurrentTime(compute);
     audio.current.currentTime = compute;
   };
-
   useEffect(() => {
     audio.current.volume = statevolum;
     if (playing) {
@@ -47,7 +38,13 @@ function Controls() {
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [currentSong]);
-
+  const handleVolumeClick = () => {
+    if (statevolum === 0) {
+      handleVolume(0.3);
+    } else {
+      handleVolume(0);
+    }
+  };
   return (
     <div className={s.main}>
       <div className={s.player__wrapper}>
@@ -97,7 +94,7 @@ function Controls() {
           </svg>
         </button>
       </div>
-      
+     
         <div className={s.player__controlsDown}>
           <p className={s.player__trackTime}>{fmtMSS(currentTime)}</p>
           <input className={s.player__playBar}
@@ -110,15 +107,24 @@ function Controls() {
           <p className={s.player__trackTime}>{fmtMSS(dur)}</p>
         </div>
       </div>
-
       <div className={s.player__controlsVolume}>
-        
-        <svg width="31" height="24" viewBox="0 0 31 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M1 16.6706H5.89024L16.7937 23V1L5.89024 7.38757H1V16.6706Z" stroke="#BEFF00" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-          <path d="M21.333 18.8823C24.7381 14.1535 24.7018 9.57015 21.333 5.13232" stroke="#BEFF00" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-          <path d="M25.585 22.6944C30.1371 15.4193 30.1371 8.31875 25.585 1.39282" stroke="#BEFF00" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+      <button className={s.volume__button} onClick={handleVolumeClick}>
+      <svg width="31" height="24" viewBox="0 0 31 24" fill="none" xmlns="http://www.w3.org/2000/svg" >
+          {statevolum === 0 ?
+            <>
+              <path d="M1 16.6706H5.88911L16.79 23V1L5.88911 7.38757H1V16.6706Z" stroke="#BEFF00" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M22 8L29.5 16" stroke="#BEFF00" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M29.5 8L22 16" stroke="#BEFF00" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </>
+            :
+            <>
+              <path d="M1 16.6706H5.89024L16.7937 23V1L5.89024 7.38757H1V16.6706Z" stroke="#BEFF00" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M21.333 18.8823C24.7381 14.1535 24.7018 9.57015 21.333 5.13232" stroke="#BEFF00" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M25.585 22.6944C30.1371 15.4193 30.1371 8.31875 25.585 1.39282" stroke="#BEFF00" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+            </>
+          }
         </svg>
-
+        </button>
         <input className={s.player__trackVolume}
           value={Math.round(statevolum * 100)}
           type="range"
@@ -131,10 +137,9 @@ function Controls() {
     </div>
   );
 }
-
 export default Controls;
 
-{
+
   /* <div className={s.main}>
 <div className={s.player__wrapper}>
     <div className={s.player__info}>
@@ -193,4 +198,4 @@ export default Controls;
     </div>
 </div>
 </div> */
-}
+

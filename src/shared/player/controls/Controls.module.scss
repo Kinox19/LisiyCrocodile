@@ -143,6 +143,14 @@ input[type=range]{
     align-self: self-start;
 }
 
+.volume__button{
+    transition: .3s ease-in-out;
+    -webkit-transition: .3s ease-in-out;
+    -moz-transition: .3s ease-in-out;
+    -ms-transition: .3s ease-in-out;
+    -o-transition: .3s ease-in-out;
+}
+
 .player__trackVolume{
     width: 146px;
     -webkit-appearance: none;
@@ -159,6 +167,7 @@ input[type=range]{
     -moz-border-radius: 5px;
     -ms-border-radius: 5px;
     -o-border-radius: 5px;
+    overflow: hidden;
 }
 
 .player__trackVolume::-webkit-slider-thumb {
@@ -173,6 +182,7 @@ input[type=range]{
     -moz-border-radius: 100px;
     -ms-border-radius: 100px;
     -o-border-radius: 100px;
+    box-shadow: -522px 0px 0px 522px rgba(190, 255, 0, 1);
 }
 
 .button{
