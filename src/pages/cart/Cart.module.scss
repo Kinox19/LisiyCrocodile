@@ -278,3 +278,151 @@
 
     margin-top: 130px;
 }
+
+
+@media screen and (max-width: 1280px){
+
+    .main__container{
+        width: 1064px;
+        color: #BEFF00;
+        margin-top: 50px;
+    }
+
+    .heading{
+        font-size: 100px;
+        line-height: 104px;
+    }
+
+    .cart__output{
+        margin-top: 50px;
+        margin-bottom: 85px
+    }
+
+    .cart__item{
+        padding: 25px 109px;
+    }
+
+    .item__info{
+    }
+
+    .item__description{
+        width: 249px;
+        gap: 40px;
+    }
+
+    .item__image{
+        width: 68px;
+        height: 68px;
+        border-radius: 3px;
+        -webkit-border-radius: 3px;
+        -moz-border-radius: 3px;
+        -ms-border-radius: 3px;
+        -o-border-radius: 3px;
+}
+
+    .item__nameProperties{
+        gap: 9px;
+    }
+
+    .item__properties{
+        gap: 15px;
+    }
+
+    .item__name{
+        font-size: 20px;
+        line-height: 24px;
+    }
+
+    .item__size{
+        font-size: 17px;
+        line-height: 21px;
+    }
+
+    .item__color{
+        height: 16px;
+        width: 16px;
+        outline: .7px solid white;
+        border-radius: 100px;
+        -webkit-border-radius: 100px;
+        -moz-border-radius: 100px;
+        -ms-border-radius: 100px;
+        -o-border-radius: 100px;
+}
+
+    .item__quantity{
+        gap: 9px;
+    }
+
+    .product__quantities{
+        font-size: 17px;
+        line-height: 21px;
+    }
+
+    .quantityButton{
+        width: 18px;
+        height: 18px;
+        padding: 3px;
+    }
+
+    .quantityButton:hover{
+        border: .7px solid #BEFF00;
+    }
+
+    .item__priceDelete{
+        gap: 104px;
+    }
+
+    .item__price{
+        font-size: 20px;
+        line-height: 24px;
+    }
+
+    .cart__makeOrder{
+        margin-bottom: 170px;
+        gap: 97px;
+    }
+
+    .proceed{
+        border: 2px solid rgba(190, 255, 0, 1);
+        font-size: 12px;
+        line-height: 15px;
+        padding: 15px 30px;
+        border-radius: 9px;
+        -webkit-border-radius: 9px;
+        -moz-border-radius: 9px;
+        -ms-border-radius: 9px;
+        -o-border-radius: 9px;
+}
+
+    .btn__disabled{
+        border: 2px solid #3A3A3A;
+        font-size: 12px;
+        line-height: 15px;
+        padding: 15px 30px;
+        border-radius: 9px;
+        -webkit-border-radius: 9px;
+        -moz-border-radius: 9px;
+        -ms-border-radius: 9px;
+        -o-border-radius: 9px;
+    }
+
+    .order__price{
+        gap: 25px;
+    }
+
+    .order__text{
+        font-size: 12px;
+        line-height: 15px;
+    }
+
+    .finalPrice{
+        font-size: 20px;
+        line-height: 24px;
+    }
+
+    .empty__text{
+        font-size: 17px;
+        line-height: 21px;
+        margin-top: 85px;
+    }
+}

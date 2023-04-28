@@ -21,7 +21,6 @@ const Cart = ({cartItems}) => {
  
     const handlePlusQuantityChange = (item) => {
       item.quantity += 1;
-      console.log(item.quantity);
       dispatch(selectQuantity(item.quantity));
     };
     const handleMinusQuantityChange = (item) => {
@@ -35,7 +34,6 @@ const Cart = ({cartItems}) => {
       };
 
       useEffect(() => {
-        console.log(cartItems);
       }, [cartItems]);
 
       useEffect(() => {
@@ -43,9 +41,9 @@ const Cart = ({cartItems}) => {
           (total, { price, quantity }) => quantity * price + total,
           0
         );
-   
         setTotal(summ);
       }, [cartItems]);
+  
 
       const handleProceed = () => {
         navigate('/order', { state: { cartItems } })
