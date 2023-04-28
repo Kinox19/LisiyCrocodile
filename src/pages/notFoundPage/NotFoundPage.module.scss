@@ -37,7 +37,7 @@
     line-height: 24px;
     text-transform: uppercase;
     color: #BEFF00;
-    background: #000000;
+    background: transparent;
     border: 3px solid #BEFF00;
     border-radius: 15px;
     padding: 25px 50px;
@@ -57,4 +57,33 @@
     -moz-transition: .3s ease-in-out;
     -ms-transition: .3s ease-in-out;
     -o-transition: .3s ease-in-out;
+}
+
+@media screen and (max-width:1280px){
+    .container{
+        margin-top: 50px;
+        margin-bottom: 90px;
+        gap: 50px;
+    }
+
+    .error{
+        font-size: 100px;
+        line-height: 104px;
+    }
+
+    .text{
+        font-size: 17px;
+        line-height: 21px;
+    }
+
+    .button{
+        font-size: 12px;
+        line-height: 15px;
+        border-radius: 9px;
+        padding: 15px 30px;
+        -webkit-border-radius: 9px;
+        -moz-border-radius: 9px;
+        -ms-border-radius: 9px;
+        -o-border-radius: 9px;
+    }
 }

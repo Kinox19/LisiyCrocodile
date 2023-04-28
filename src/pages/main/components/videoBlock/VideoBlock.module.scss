@@ -1,6 +1,12 @@
 .container{
+    margin-bottom: 130px;
+}
+
+.blocks{
     display: flex;
-    gap: 130px;
+    flex-direction: row;
+    margin-top: 50px;
+    gap: 160px;
 }
 
 .title{
@@ -17,47 +23,78 @@
     font-weight: 400;
     line-height: 30px;
     text-align: left;
-    margin-top: 70px;
-    max-width: 642px;
+    max-width: 626px;
+}
+
+.blockRight{
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
 }
 
 .video{
-    margin-top: 225px;
     border-radius: 25px;
     -webkit-border-radius: 25px;
     -moz-border-radius: 25px;
     -ms-border-radius: 25px;
     -o-border-radius: 25px;
-    margin-bottom: 189px;
 }
 
-@media screen and (max-width:1440px){
+.videoText{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+
+    color: #81886E;
+
+    max-width: 495px;
+}
+
+@media screen and (max-width:1280px){
     .container{
+        margin-bottom: 85px;
+    }
+    
+    .blocks{
+        display: flex;
+        flex-direction: row;
+        margin-top: 50px;
         gap: 108px;
     }
-
+    
     .title{
         font-size: 100px;
         line-height: 104px;
     }
-
+    
     .text{
         font-size: 17px;
         line-height: 21px;
-        margin-top: 50px;
         max-width: 414px;
     }
-
+    
+    .blockRight{
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+    }
+    
     .video{
-        margin-top: 150px;
         border-radius: 13px;
         -webkit-border-radius: 13px;
         -moz-border-radius: 13px;
         -ms-border-radius: 13px;
         -o-border-radius: 13px;
-        margin-bottom: 154px;
         width: 542px;
         height: 359px;
 }
+    
+    .videoText{
+        font-size: 12px;
+        line-height: 15px;
+        max-width: 297px;
+    }
 }
 

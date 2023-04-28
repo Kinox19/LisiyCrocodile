@@ -45,3 +45,36 @@
 .text__container:last-of-type{
     margin-bottom: 260px;
 }
+
+
+@media screen and (max-width:1280px){
+    .main__container{
+        width: 1064px;
+    }
+
+    .title{
+        font-size: 100px;
+        line-height: 104px;
+        max-width: 573px;
+        margin-top: 50px;
+    }
+
+    .text{
+        font-size: 17px;
+        line-height: 21px;
+        max-width: 630px;
+    }
+
+    .text__container{
+        gap: 25px;
+    }
+
+    .text__container:first-of-type{
+        margin-top: 85px;
+    }
+
+    .text__container:last-of-type{
+        margin-bottom: 170px;
+    }
+
+}

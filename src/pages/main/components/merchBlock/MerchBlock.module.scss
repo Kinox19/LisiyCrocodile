@@ -1,5 +1,5 @@
 .main{
-    margin-bottom: 170px;
+    margin-bottom: 130px;
 }
 
 .title{
@@ -65,27 +65,9 @@
     -o-transition: 0.1s ease-in-out;
 }
 
-// .buttonChange:first-of-type{
-//     margin-right: 35px;
-// }
-
-// .buttonChange:last-of-type{
-//     margin-left: 35px;
-// }
-
-// .buttonChange:first-of-type :hover{
-//     margin-right: 0px;
-// }
-
-// .buttonChange:last-of-type :hover{
-//     margin-left: 0px;
-// }
-
-
-
-@media screen and (max-width:1440px){
+@media screen and (max-width:1280px){
     .main{
-        margin-bottom: 108px;
+        margin-bottom: 85px;
     }
 
     .title{
@@ -97,15 +79,6 @@
     .merch__block{
         column-gap: 25px;
     }
-
-    // .buttonChange:first-of-type{
-    //     margin-right: 15px;
-    // }
-    
-    // .buttonChange:last-of-type{
-    //     margin-left: 15px;
-    // }
-
     .arrow{
         width: 13px;
         height: 27px;

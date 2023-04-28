@@ -74,12 +74,12 @@ const Cart = ({cartItems}) => {
                         </div>
                         <div className={s.item__quantity}>
                                 <button className={s.quantityButton} onClick={() => handlePlusQuantityChange(item)}>
-                                <img src={plus} alt="+" />
+                                <img className={s.quantityButtonImg} src={plus} alt="+" />
                                 </button>
                                 <p className={s.product__quantities}>{item.quantity} шт.</p>
                                 <div className={s.minus}>
                                 <button className={s.quantityButton} onClick={()=>handleMinusQuantityChange(item)}>
-                                <img src={minus} alt="-" />
+                                <img className={s.quantityButtonImg} src={minus} alt="-" />
                                 </button>
                                 </div>
                         </div>
@@ -93,7 +93,7 @@ const Cart = ({cartItems}) => {
                             }).format(item.price * item.quantity)}
                         </p>
                         <button className={s.item__delete} onClick={() => handleItemDelete(item.id, item.size, item.color)}>
-                            <svg width="30" height="36" viewBox="0 0 30 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <svg className={s.button__delete_svg} viewBox="0 0 30 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g clip-path="url(#clip0_1126_1544)">
                             <path d="M23.2505 33.9926H6.75046C5.25046 33.9926 3.87549 32.6653 3.87549 30.94V6.25391H26.0005V30.94C26.0005 32.6653 24.7505 33.9926 23.2505 33.9926Z" stroke="#81886E" stroke-width="2.51131" stroke-miterlimit="10" stroke-linecap="round"/>
                             <path d="M1.62451 6.30078H28.3745" stroke="#81886E" stroke-width="2.73529" stroke-miterlimit="10" stroke-linecap="round"/>

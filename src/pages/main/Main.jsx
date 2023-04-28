@@ -23,15 +23,27 @@ const Main = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.pageYOffset > 1500 ) {
+      let offset;
+      const screenWidth = window.innerWidth;
+      if (screenWidth >= 1280) {
+        offset = 1000;
+      } else if (screenWidth >= 768) {
+        offset = 700;
+      } else if (screenWidth >= 320) {
+        offset = 300;
+      } else {
+        offset = 1500;
+      }
+  
+      if (window.pageYOffset > offset) {
         setShowScrollButton(true);
       } else {
         setShowScrollButton(false);
       }
     };
-
+  
     window.addEventListener('scroll', handleScroll);
-
+  
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };

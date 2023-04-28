@@ -3,9 +3,6 @@ import s from './MerchBlock.module.scss'
 import products from '../../../../Products'
 import { useState } from 'react'
 import ProductCard from './productCard/ProductCard'
-import leftBtn from '../../../../assets/Logos/IconLeft.svg'
-import rigthBtn from '../../../../assets/Logos/IconRigth.svg'
-import { Link } from 'react-router-dom'
 
 const MerchBlock = () => {
 

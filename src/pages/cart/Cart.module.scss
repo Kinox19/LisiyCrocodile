@@ -145,6 +145,11 @@
     -o-border-radius: 100px;
 }
 
+.quantityButtonImg{
+    width: 19px;
+    height: 19px;
+}
+
 .quantityButton:hover{
     border: 1px solid #BEFF00;
 }
@@ -252,6 +257,12 @@
     outline: none;
     border: none;
     cursor: pointer;
+    
+}
+
+.button__delete_svg{
+    width: 30px;
+    height: 46px;
 }
 
 .item__delete:hover path{
@@ -278,6 +289,8 @@
 
     margin-top: 130px;
 }
+
+
 
 
 @media screen and (max-width: 1280px){
@@ -364,12 +377,22 @@
         padding: 3px;
     }
 
+    .quantityButtonImg{
+        width: 12px;
+        height: 12px;
+    }
+
     .quantityButton:hover{
         border: .7px solid #BEFF00;
     }
 
     .item__priceDelete{
         gap: 104px;
+    }
+
+    .button__delete_svg{
+        width: 20px;
+        height: 24px;
     }
 
     .item__price{
@@ -425,4 +448,6 @@
         line-height: 21px;
         margin-top: 85px;
     }
+
+
 }

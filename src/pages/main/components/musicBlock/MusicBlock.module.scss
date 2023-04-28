@@ -1,5 +1,5 @@
 .music__block{
-    margin-top: 130px;
+    margin-bottom: 130px;
 }
 
 .title{
@@ -37,7 +37,6 @@
 .leftSide{
     display: flex;
     gap: 130px;
-    margin-top: 70px;
     flex-direction: column;
 }
 
@@ -46,17 +45,17 @@
     gap: 130px;
     margin-top: 174px;
     flex-direction: column;
-    margin-bottom: 171px;
 }
 
 .columns{
+    margin-top: 70px;
     display: flex;
     column-gap: 66px;
 }
 
-@media screen and (max-width: 1440px) {
+@media screen and (max-width: 1280px) {
     .music__block{
-        margin-top: 80px;
+        margin-bottom: 80px;
     }
 
     .title{
@@ -65,18 +64,17 @@
     }
 
     .columns{
+        margin-top: 50px;
         column-gap: 52px;
     }
 
     .leftSide{
-        gap: 80px;
-        margin-top: 50px;
+        gap: 85px;
     }
 
     .rigthSide{
-        gap: 130px;
-        margin-top: 114px;
-        margin-bottom: 134px;
+        gap: 85px;
+        margin-top: 64px;
     }
 
     .mus__link{
