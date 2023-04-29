@@ -10,7 +10,7 @@ const VideoBlock = () => {
         <p className={s.text}>Мы&nbsp;шагнули на&nbsp;этот лёд. 26-го июля в&nbsp;Питере и&nbsp;28-го в&nbsp;Москве, в&nbsp;поддержку альбома &laquo;Стройматериалы&raquo; состоится долгожданный дебют Крокодила в&nbsp;столицах Необъятной. <br/> Пленных не&nbsp;берём&nbsp;&mdash; расстрел на&nbsp;месте. <br/> Приятного аппетита.</p>
       </div>
       <div className={s.blockRight}>
-      <iframe className={s.video} width="810" height="536" src="https://www.youtube.com/embed/sAvtcqwKGjU" title="Лысый Крокодил промо" frameborder="0" allow="picture-in-picture;" allowfullscreen></iframe>
+      <iframe className={s.video} width="810" height="536" src="https://www.youtube.com/embed/sAvtcqwKGjU" title="Лысый Крокодил промо" frameBorder="0" allow="picture-in-picture;" allowFullScreen></iframe>
       <p className={s.videoText}>Видеоприглашение на концерты Лысый Крокодил в Москве и Санкт-Петербурге </p>
       </div>
       </div>

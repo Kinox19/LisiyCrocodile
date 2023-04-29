@@ -56,3 +56,17 @@
         height: 47px;
     }
 }
+
+@media screen and (max-width:768px){
+    .scrollToTopBtn{
+        position: sticky;
+        bottom: 35px;
+        margin-right: -35px;
+        float: right;
+    }
+
+    .buttonSvg{
+        width: 28px;
+        height: 28px;
+    }
+}

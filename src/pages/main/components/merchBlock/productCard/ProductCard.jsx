@@ -23,7 +23,7 @@ const ProductCard = ({ product, selectProduct }) => {
             <button className={s.button}>
 
 
-              <svg width="24" height="28" viewBox="0 0 24 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <svg className={s.buttonSvg}  viewBox="0 0 24 28" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <mask id="path-1-inside-1_1501_1748" fill="white">
                 <path d="M0 9.043C0 8.53951 0.408161 8.13135 0.911654 8.13135H23.0883C23.5918 8.13135 24 8.53951 24 9.043V23.8069C24 26.123 22.1225 28.0005 19.8064 28.0005H4.19361C1.87754 28.0005 0 26.123 0 23.8069V9.043Z"/>
                 </mask>

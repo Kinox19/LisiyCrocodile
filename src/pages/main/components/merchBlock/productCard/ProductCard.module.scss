@@ -80,6 +80,11 @@
     cursor: pointer;
 }
 
+.buttonSvg{
+    width: 24px;
+    height: 28px;
+}
+
 .button:hover{
     background-color: #BEFF00;
     color: black;
@@ -181,6 +186,12 @@
         -ms-border-radius: 9px;
         -o-border-radius: 9px;
     }
+
+    .buttonSvg{
+        width: 15px;
+        height: 17px;
+        padding-bottom: 2px;
+    }
 }
 
 @media screen and (max-width:768px) {
@@ -230,5 +241,10 @@
         -moz-border-radius: 5px;
         -ms-border-radius: 5px;
         -o-border-radius: 5px;
-}
+    }
+
+    .buttonSvg{
+        width: 10px;
+        height: 11px;
+    }
 }

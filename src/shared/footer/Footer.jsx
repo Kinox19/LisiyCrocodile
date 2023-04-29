@@ -14,7 +14,7 @@ const Footer = () => {
   };
 
   return (
-    <div className={s.footer}>
+    <footer className={s.footer}>
       <div className={s.footer__wrapper}>
         <ul className={s.footer__connection}>
           <li className={s.footer__connection__point}>
@@ -98,7 +98,7 @@ const Footer = () => {
           </ul>
         </nav>
       </div>
-    </div>
+    </footer>
   );
 };
 

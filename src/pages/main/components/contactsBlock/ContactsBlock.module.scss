@@ -2,7 +2,8 @@
     display: flex;
     position: relative;
     flex-direction: column;
-    min-height: 1080px;
+    min-height: max-content;
+    padding-bottom: 150px;
 }
 
 .title{
@@ -38,7 +39,7 @@
 
 @media screen and (max-width:1280px) {
     .block{
-        min-height: 720px;
+        padding-bottom: 100px;
     }
 
     .title{
@@ -74,17 +75,17 @@
 
 @media screen and (max-width:768px) {
     .block{
-        min-height: 488px;
+        padding-bottom: 40px;
     }
 
     .title{
         font-size: 60px;
         line-height: 62px;
-        margin-top: 70px;
+        margin-top: 55px;
     }
 
     .text{
-        max-width: 197px;
+        max-width: 130px;
         font-size: 11px;
         line-height: 13px;
         margin-top: 20px;
