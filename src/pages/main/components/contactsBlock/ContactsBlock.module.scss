@@ -62,7 +62,48 @@
         top: 0;
         right: -109px;
         z-index: -1;
-        max-width: 1280;
+        max-width: 1280px;
         max-height: 720px;
+    }
+
+    .qr__svg{
+        width: 217px;
+        height: 215px;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .block{
+        min-height: 488px;
+    }
+
+    .title{
+        font-size: 60px;
+        line-height: 62px;
+        margin-top: 70px;
+    }
+
+    .text{
+        max-width: 197px;
+        font-size: 11px;
+        line-height: 13px;
+        margin-top: 20px;
+    }
+
+    .qr__container{
+        margin-top: 35px;
+    }
+
+    .picBack{
+        top: 0;
+        right: -65px;
+        z-index: -1;
+        max-width: 768px;
+        max-height: 488px;
+    }
+
+    .qr__svg{
+        width: 130px;
+        height: 129px;
     }
 }

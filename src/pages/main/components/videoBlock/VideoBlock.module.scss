@@ -56,31 +56,31 @@
     .container{
         margin-bottom: 85px;
     }
-    
+
     .blocks{
         display: flex;
         flex-direction: row;
         margin-top: 50px;
         gap: 108px;
     }
-    
+
     .title{
         font-size: 100px;
         line-height: 104px;
     }
-    
+
     .text{
         font-size: 17px;
         line-height: 21px;
         max-width: 414px;
     }
-    
+
     .blockRight{
         display: flex;
         flex-direction: column;
         gap: 25px;
     }
-    
+
     .video{
         border-radius: 13px;
         -webkit-border-radius: 13px;
@@ -90,7 +90,7 @@
         width: 542px;
         height: 359px;
 }
-    
+
     .videoText{
         font-size: 12px;
         line-height: 15px;
@@ -98,3 +98,51 @@
     }
 }
 
+@media screen and (max-width:768px){
+    .container{
+        margin-bottom: 70px;
+    }
+
+    .blocks{
+        display: flex;
+        flex-direction: column;
+        margin-top: 35px;
+        gap: 35px;
+    }
+
+    .title{
+        font-size: 60px;
+        line-height: 62px;
+    }
+
+    .text{
+        font-size: 11px;
+        line-height: 13px;
+        max-width: 260px;
+    }
+
+    .blockRight{
+        display: flex;
+        align-self: center;
+        flex-direction: column;
+        gap: 20px;
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+
+    .video{
+        border-radius: 13px;
+        -webkit-border-radius: 13px;
+        -moz-border-radius: 13px;
+        -ms-border-radius: 13px;
+        -o-border-radius: 13px;
+        width: 508px;
+        height: 268px;
+}
+
+    .videoText{
+        font-size: 8px;
+        line-height: 10px;
+        max-width: 198px;
+    }
+}

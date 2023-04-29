@@ -3,10 +3,35 @@ import s from './MerchBlock.module.scss'
 import products from '../../../../Products'
 import { useState } from 'react'
 import ProductCard from './productCard/ProductCard'
+import { useEffect, useCallback } from 'react'
 
 const MerchBlock = () => {
-
   const [position, setPosition] = useState(0);
+  const [visibleProducts, setVisibleProducts] = useState([]);
+
+  const handleResize = useCallback(() => {
+    const screenWidth = window.innerWidth;
+    if (screenWidth <= 320) {
+      setVisibleProducts([products[position]]);
+    } else if (screenWidth <= 768) {
+      setVisibleProducts([
+        products[(position) % products.length],
+        products[(position + 1) % products.length],
+      ]);
+    } else if (screenWidth > 768) {
+      setVisibleProducts([
+        products[(position) % products.length],
+        products[(position + 1) % products.length],
+        products[(position + 2) % products.length],
+      ]);
+    }
+  }, [position]);
+
+  useEffect(() => {
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, [position, handleResize]);
 
   const handlePrevClick = () => {
     const newPosition = position - 1 < 0 ? products.length - 1 : position - 1;
@@ -17,13 +42,6 @@ const MerchBlock = () => {
     const newPosition = position + 1 >= products.length ? 0 : position + 1;
     setPosition(newPosition);
   };
-
-  const visibleProducts = [
-    products[(position - 1 + products.length) % products.length],
-    products[position],
-    products[(position + 1) % products.length],
-  ];
-
 
   return (
     <div className={s.main} id='merch'>
