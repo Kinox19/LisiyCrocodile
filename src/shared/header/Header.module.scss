@@ -210,3 +210,11 @@ nav{
         line-height: 8px;
     }
 }
+
+
+
+@media screen and (max-width: 320px){
+    .header__wrapper{
+        display: none;
+    }
+}
