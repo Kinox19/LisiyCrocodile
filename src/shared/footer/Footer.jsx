@@ -15,6 +15,7 @@ const Footer = () => {
 
   return (
     <footer className={s.footer}>
+      <div className={s.footer__fix}>
       <div className={s.footer__wrapper}>
         <ul className={s.footer__connection}>
           <li className={s.footer__connection__point}>
@@ -97,6 +98,7 @@ const Footer = () => {
             </li>
           </ul>
         </nav>
+      </div>
       </div>
     </footer>
   );

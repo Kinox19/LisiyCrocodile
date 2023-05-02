@@ -495,6 +495,7 @@
 
     .container{
         width: 638px;
+        margin-top: 70px;
     }
 
     .columns{
@@ -560,7 +561,17 @@
     .cart__item{
         padding: 7px 0;
         width: 313px;
+        border-bottom: 0px solid rgba(58, 58, 58, 1);
     }
+
+        .cart__item:first-of-type{
+        border-top: 1px solid rgba(58, 58, 58, 1);
+    }
+
+    .cart__item:last-of-type{
+        border-bottom: 1px solid rgba(58, 58, 58, 1);
+    }
+
 
     .item__description{
         width: 102px;
@@ -604,10 +615,10 @@
     .order__price{
         gap: 8px;
 
-        padding-bottom: 15px;
+        padding-bottom: 4px;
         border-bottom: 1px solid #3A3A3A;
 
-        margin-top: 50px;
+        margin-top: 35px;
     }
     
     .order__text{
@@ -616,40 +627,42 @@
     }
     
     .finalPrice{
-        font-size: 17px;
-        line-height: 21px;
+        font-size: 11px;
+        line-height: 13px;
     }
     
     .button__submit{
-        margin-top: 50px;
-        width: 212px;
-        height: 45px;
-        font-size: 12px;
-        line-height: 15px;
-        gap: 9px;
-        border-radius: 9px;
-        -webkit-border-radius: 9px;
-        -moz-border-radius: 9px;
-        -ms-border-radius: 9px;
-        -o-border-radius: 9px;
+        margin-top: 35px;
+        width: 138px;
+        height: 28px;
+        font-size: 8px;
+        line-height: 10px;
+        gap: 5px;
+        border-radius: 5px;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        -ms-border-radius: 5px;
+        -o-border-radius: 5px;
+        border: 1px solid rgba(58, 58, 58, 1);
 }
     .submitOrderSvg{
-        width: 17px;
-        height: 17px;
+        width: 11px;
+        height: 11px;
     }
     
     .button__submit_enabled{
-        margin-top: 50px;
-        width: 212px;
-        height: 45px;
-        font-size: 12px;
-        line-height: 15px;
-        gap: 9px;
-        border-radius: 9px;
-        -webkit-border-radius: 9px;
-        -moz-border-radius: 9px;
-        -ms-border-radius: 9px;
-        -o-border-radius: 9px;
+        margin-top: 35px;
+        width: 138px;
+        height: 28px;
+        font-size: 8px;
+        line-height: 10px;
+        gap: 5px;
+        border-radius: 5px;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        -ms-border-radius: 5px;
+        -o-border-radius: 5px;
+        border: 1px solid #BEFF00;
     }
 
     .button__submit_enabled:hover{

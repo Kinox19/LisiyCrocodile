@@ -78,3 +78,34 @@
     }
 
 }
+
+@media screen and (max-width:768px){
+    .main__container{
+        width: 638px;
+    }
+
+    .title{
+        font-size: 60px;
+        line-height: 62px;
+        max-width: 344px;
+        margin-top: 70px;
+    }
+
+    .text{
+        font-size: 11px;
+        line-height: 13px;
+        max-width: 378px;
+    }
+
+    .text__container{
+        gap: 20px;
+    }
+
+    .text__container:first-of-type{
+        margin-top: 70px;
+    }
+
+    .text__container:last-of-type{
+        margin-bottom: 100px;
+    }
+}
