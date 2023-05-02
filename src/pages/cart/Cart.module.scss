@@ -135,7 +135,6 @@
     cursor: pointer;
     width: 31px;
     height: 31px;
-
     padding: 6px;
     border-radius: 100px;
 
@@ -148,6 +147,7 @@
 .quantityButtonImg{
     width: 19px;
     height: 19px;
+
 }
 
 .quantityButton:hover{
@@ -315,9 +315,6 @@
         padding: 25px 109px;
     }
 
-    .item__info{
-    }
-
     .item__description{
         width: 249px;
         gap: 40px;
@@ -447,6 +444,166 @@
         font-size: 17px;
         line-height: 21px;
         margin-top: 85px;
+    }
+
+
+}
+
+@media screen and (max-width: 768px){
+
+    .main__container{
+        width: 638px;
+        color: #BEFF00;
+        margin-top: 70px;
+    }
+
+    .heading{
+        font-size: 60px;
+        line-height: 62px;
+    }
+
+    .cart__output{
+        margin-top: 35px;
+        margin-bottom: 70px
+    }
+
+    .cart__item{
+        padding: 20px 65px;
+    }
+
+    .item__info{
+        gap: 52px
+    }
+
+    .item__description{
+        width: 141px;
+        gap: 20px;
+    }
+
+    .item__image{
+        width: 43px;
+        height: 43px;
+        border-radius: 2px;
+        -webkit-border-radius: 2px;
+        -moz-border-radius: 2px;
+        -ms-border-radius: 2px;
+        -o-border-radius: 2px;
+}
+
+    .item__nameProperties{
+        gap: 7px;
+    }
+
+    .item__properties{
+        gap: 7px;
+    }
+
+    .item__name{
+        font-size: 11px;
+        line-height: 13px;
+    }
+
+    .item__size{
+        font-size: 11px;
+        line-height: 13px;
+    }
+
+    .item__color{
+        height: 9px;
+        width: 9px;
+        outline: .7px solid white;
+        border-radius: 100px;
+        -webkit-border-radius: 100px;
+        -moz-border-radius: 100px;
+        -ms-border-radius: 100px;
+        -o-border-radius: 100px;
+}
+
+    .item__quantity{
+        gap: 7px;
+    }
+
+    .product__quantities{
+        font-size: 11px;
+        line-height: 13px;
+    }
+
+    .quantityButton{
+        width: 14px;
+        height: 14px;
+        padding: 0;
+    }
+
+    .quantityButtonImg{
+        width: 9px;
+        height: 9px;
+    }
+
+    .quantityButton:hover{
+        border: .7px solid #BEFF00;
+    }
+
+    .item__priceDelete{
+        gap: 65px;
+    }
+
+    .button__delete_svg{
+        width: 16px;
+        height: 13px;
+    }
+
+    .item__price{
+        font-size: 11px;
+        line-height: 13px;
+    }
+
+    .cart__makeOrder{
+        margin-bottom: 100px;
+        gap: 48px;
+    }
+
+    .proceed{
+        border: 1px solid rgba(190, 255, 0, 1);
+        font-size: 8px;
+        line-height: 10px;
+        padding: 9px 18px;
+        border-radius: 5px;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        -ms-border-radius: 5px;
+        -o-border-radius: 5px;
+}
+
+    .btn__disabled{
+        border: 1px solid #3A3A3A;
+        font-size: 8px;
+        line-height: 10px;
+        padding: 9px 18px;
+        border-radius: 5px;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        -ms-border-radius: 5px;
+        -o-border-radius: 5px;
+    }
+
+    .order__price{
+        gap: 8px;
+    }
+
+    .order__text{
+        font-size: 8px;
+        line-height: 10px;
+    }
+
+    .finalPrice{
+        font-size: 11px;
+        line-height: 13px;
+    }
+
+    .empty__text{
+        font-size: 11px;
+        line-height: 13px;
+        margin-top: 70px;
     }
 
 

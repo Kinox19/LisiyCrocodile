@@ -1,7 +1,7 @@
 import React from 'react'
 import s from './Merch.module.scss'
-import leftBtn from '../../assets/Logos/IconLeft.svg'
-import rigthBtn from '../../assets/Logos/IconRigth.svg'
+// import leftBtn from '../../assets/Logos/IconLeft.svg'
+// import rigthBtn from '../../assets/Logos/IconRigth.svg'
 import plus from '../../assets/Logos/plus.svg'
 import minus from '../../assets/Logos/minus.svg'
 import ScrollToTopButton from '../../shared/scrollTotopButton/ScrollToTopButton'
@@ -13,19 +13,19 @@ import { useSelector } from 'react-redux'
 import { connect } from 'react-redux'
 import { selectProduct } from '../../redux/actions/selectProduct';
 import { selectQuantity } from '../../redux/actions/selectQuantity';
-import { persistStore, persistReducer } from "redux-persist";
-import storage from "redux-persist/lib/storage";
-import rootReducer from '../../redux/reducers/reducers'
+// import { persistStore, persistReducer } from "redux-persist";
+// import storage from "redux-persist/lib/storage";
+// import rootReducer from '../../redux/reducers/reducers'
 import { useNavigate } from 'react-router-dom'
 import {addToCart} from '../../redux/actions/addToCard'
 import { selectSize } from '../../redux/actions/selectSize'
 import { selectColor } from '../../redux/actions/selectColor'
 import { selectImage } from '../../redux/actions/selectImage'
 
-const persistConfig = {
-  key: "root",
-  storage,
-};
+// const persistConfig = {
+//   key: "root",
+//   storage,
+// };
 
 // const persistedReducer = persistReducer(persistConfig, rootReducer);
 
@@ -38,7 +38,7 @@ const Merch = () => {
   const selectedImage = useSelector(state => state.products.selectedImage);
 
   const dispatch = useDispatch();
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
 
   const handleClick = (product) => {
     dispatch(selectProduct(product));
