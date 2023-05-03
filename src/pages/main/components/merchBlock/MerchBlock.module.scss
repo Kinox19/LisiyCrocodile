@@ -134,3 +134,38 @@
         height: 51px;
     }
 }
+
+@media screen and (max-width:400px){
+    .main{
+        margin-bottom: 65px;
+    }
+
+    .title{
+        font-size: 60px;
+        line-height: 62px;
+        margin-bottom: 35px;
+    }
+
+    .merch__block{
+        column-gap: 26px;
+    }
+    .arrow{
+        width: 11px;
+        height: 24px;
+    }
+
+    .buttonWrapper{
+        width: 31px;
+        height: 44px;
+    }
+
+    .buttonChange{
+        width: 35px;
+        height: 51px;
+    }
+
+    .buttonChange:hover .arrow{
+        width: 35px;
+        height: 51px;
+    }
+}

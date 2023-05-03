@@ -14,11 +14,15 @@
 }
 
 .textInfo{
-    //padding-left: 162px;
     display: flex;
     flex-direction: column;
     align-self: flex-start;
 }
+
+.mobileText{
+    display: none;
+}
+
 
 .heading{
     margin: 0;
@@ -107,6 +111,11 @@
         margin-top: 50px;
     }
 
+    .mobileText{
+        display: none;
+    }
+
+
     .button{
         font-size: 12px;
         line-height: 15px;
@@ -147,6 +156,10 @@
         max-width: 248px;
     }
 
+    .mobileText{
+        display: none;
+    }
+
     .button{
         font-size: 8px;
         line-height: 10px;
@@ -159,5 +172,52 @@
         -moz-border-radius: 5px;
         -ms-border-radius: 5px;
         -o-border-radius: 5px;
+}
+}
+
+@media screen and (max-width: 400px){
+    .block{
+        width: 400px;
+        height: 447px;
+        background-size: cover;
+    }
+
+    .heading{
+        font-size: 50px;
+        line-height: 52px;
+        max-width: 265px;
+        padding-top: 40px;
+    }
+
+    .textInfo{
+        margin-left: 16px;
+    }
+
+    .text{
+        display: none;
+    }
+
+    .mobileText{
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 17px;
+        line-height: 21px;
+        display: block;
+        margin-top: 35px;
+        max-width: 248px;
+    }
+
+    .button{
+        font-size: 14px;
+        line-height: 17px;
+        border: 1.5px solid #BEFF00;
+        border-radius: 9px;
+        width: 150px;
+        height: 45px;
+        -webkit-border-radius: 9px;
+        -moz-border-radius: 9px;
+        -ms-border-radius: 9px;
+        -o-border-radius: 9px;
 }
 }

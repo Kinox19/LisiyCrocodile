@@ -1,6 +1,7 @@
 import React from 'react'
 import s from './AboutUsBlock.module.scss'
 import image from '../../../../assets/images/mainPage/aboutUs.png'
+import imageMob from '../../../../assets/images/mainPage/aboutUsBack.png'
 
 const AboutUsBlock = () => {
   return (
@@ -20,6 +21,7 @@ const AboutUsBlock = () => {
         <p className={s.text}>Мужайтесь, друзья, нам есть, что показать!</p>
       </div>
       <img className={s.img} src={image} alt=''/>
+      <img className={s.imgMob} src={imageMob} alt=''/>
     </div>
   )
 }

@@ -150,3 +150,53 @@
         outline: 1px solid rgba(190, 255, 0, 1);
     }
 }
+
+@media screen and (max-width: 400px) {
+    .music__block{
+        margin-top: 80px;
+        margin-bottom: 40px;
+    }
+
+    .title{
+        font-size: 60px;
+        line-height: 62px;
+    }
+
+    .columns{
+        margin-top: 35px;
+        column-gap: 20px;
+    }
+
+    .leftSide{
+        gap: 35px;
+    }
+
+    .rigthSide{
+        gap: 35px;
+        margin-top: 39px;
+    }
+
+    .mus__link{
+        max-width: 309px;
+        transition: 0.1s ease-in-out;
+        -webkit-transition: 0.1s ease-in-out;
+        -moz-transition: 0.1s ease-in-out;
+        -ms-transition: 0.1s ease-in-out;
+        -o-transition: 0.1s ease-in-out;
+        outline: 1px solid rgba(58, 58, 58, 1);
+        border-radius: 8px;
+        -webkit-border-radius: 8px;
+        -moz-border-radius: 8px;
+        -ms-border-radius: 8px;
+        -o-border-radius: 8px;
+}
+
+    .mus__link:hover{
+        transition: 0.1s ease-in-out;
+        -webkit-transition: 0.1s ease-in-out;
+        -moz-transition: 0.1s ease-in-out;
+        -ms-transition: 0.1s ease-in-out;
+        -o-transition: 0.1s ease-in-out;
+        outline: 1px solid rgba(190, 255, 0, 1);
+    }
+}

@@ -248,3 +248,57 @@
         height: 11px;
     }
 }
+
+@media screen and (max-width:400px) {
+
+    .wrapper{
+        max-width: 247px;
+        padding-bottom: 20px;
+    }
+
+    .image{
+        max-width: 247px;
+        max-height: 247px;
+    }
+
+    .twoColumns{
+        width: 247px;
+        margin-top: 20px;
+    }
+
+    .title{
+        font-size: 17px;
+        line-height: 21px;
+    }
+
+    .brand{
+        font-size: 14px;
+        line-height: 17px;
+        margin-top: 5px;
+    }
+    
+    .price{
+        font-size: 17px;
+        line-height: 21px;
+    }
+
+    .button{
+        height: 45px;
+        width: 137px;
+        border-radius: 9px;
+        border: 1px solid rgba(190, 255, 0, 1);
+        gap: 10px;
+        font-size: 14px;
+        line-height: 17px;
+        margin-top: 20px;
+        -webkit-border-radius: 9px;
+        -moz-border-radius: 9px;
+        -ms-border-radius: 9px;
+        -o-border-radius: 9px;
+}
+
+    .buttonSvg{
+        width: 17px;
+        height: 20px;
+    }
+}

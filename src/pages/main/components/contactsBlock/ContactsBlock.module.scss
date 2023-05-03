@@ -108,3 +108,39 @@
         height: 129px;
     }
 }
+
+@media screen and (max-width:400px) {
+    .block{
+        padding-bottom: 40px;
+    }
+
+    .title{
+        font-size: 60px;
+        line-height: 62px;
+        margin-top: 55px;
+    }
+
+    .text{
+        max-width: 130px;
+        font-size: 11px;
+        line-height: 13px;
+        margin-top: 20px;
+    }
+
+    .qr__container{
+        margin-top: 35px;
+    }
+
+    .picBack{
+        top: 0;
+        right: -65px;
+        z-index: -1;
+        max-width: 768px;
+        max-height: 488px;
+    }
+
+    .qr__svg{
+        width: 130px;
+        height: 129px;
+    }
+}
