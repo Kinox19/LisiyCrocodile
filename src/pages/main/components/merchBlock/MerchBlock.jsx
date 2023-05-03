@@ -11,14 +11,14 @@ const MerchBlock = () => {
 
   const handleResize = useCallback(() => {
     const screenWidth = window.innerWidth;
-    if (screenWidth <= 320) {
+    if (screenWidth <= 400) {
       setVisibleProducts([products[position]]);
     } else if (screenWidth <= 768) {
       setVisibleProducts([
         products[(position) % products.length],
         products[(position + 1) % products.length],
       ]);
-    } else if (screenWidth > 768) {
+    } else if (screenWidth > 900) {
       setVisibleProducts([
         products[(position) % products.length],
         products[(position + 1) % products.length],
