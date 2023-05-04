@@ -61,7 +61,7 @@ const Main = () => {
 
   return (
     <div className={s.main}>
-        <MainBlock/>
+        {/* <MainBlock/> */}
 
         <div className={s.main__container}>
           <AboutUsBlock/>
