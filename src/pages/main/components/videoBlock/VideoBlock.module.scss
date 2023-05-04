@@ -26,6 +26,10 @@
     max-width: 626px;
 }
 
+.textMob{
+    display: none;
+}
+
 .blockRight{
     display: flex;
     flex-direction: column;
@@ -98,7 +102,7 @@
     }
 }
 
-@media screen and (max-width:900px){
+@media screen and (max-width:1024px){
     .container{
         margin-bottom: 70px;
     }

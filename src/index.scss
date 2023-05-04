@@ -1,9 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Open+Sans:wght@400;600;700&display=swap');
 @import url('../src/vendor/fonts.css');
 
-*{
-    border: 1px solid red;
-}
 
 html{
     box-sizing: border-box;
@@ -75,25 +72,25 @@ button{
     cursor: pointer;
 }
 
-*{
-    border: 1px solid red;
-}
+// *{
+//     border: 1px solid red;
+// }
 
-@media screen and (max-width: 1280px){
-    *{
-        border: 1px solid blue;
-    }
-}
+// @media screen and (max-width: 1280px){
+//     *{
+//         border: 1px solid blue;
+//     }
+// }
 
-@media screen and (max-width: 900px){
-    *{
-        border: 1px solid pink;
-    }
-}
+// @media screen and (max-width: 1024px){
+//     *{
+//         border: 1px solid green;
+//     }
+// }
 
-@media screen and (max-width: 400px){
-    *{
-        border: 1px solid white;
-    }
-}
+// @media screen and (max-width: 400px){
+//     *{
+//         border: 1px solid white;
+//     }
+// }
 

@@ -100,7 +100,7 @@
     }
 }
 
-@media screen and (max-width:900px){
+@media screen and (max-width:1024px){
     .main{
         margin-bottom: 70px;
     }
@@ -112,7 +112,10 @@
     }
 
     .merch__block{
-        column-gap: 20px;
+        column-gap: 25px;
+
+        display: flex;
+        justify-content: center;
     }
     .arrow{
         width: 11px;
