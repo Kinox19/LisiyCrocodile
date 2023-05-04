@@ -75,4 +75,25 @@ button{
     cursor: pointer;
 }
 
+*{
+    border: 1px solid red;
+}
+
+@media screen and (max-width: 1280px){
+    *{
+        border: 1px solid blue;
+    }
+}
+
+@media screen and (max-width: 900px){
+    *{
+        border: 1px solid pink;
+    }
+}
+
+@media screen and (max-width: 400px){
+    *{
+        border: 1px solid white;
+    }
+}
 

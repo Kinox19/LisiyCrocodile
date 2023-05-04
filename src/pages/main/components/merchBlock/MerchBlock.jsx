@@ -18,7 +18,7 @@ const MerchBlock = () => {
         products[(position) % products.length],
         products[(position + 1) % products.length],
       ]);
-    } else if (screenWidth > 900) {
+    } else if (screenWidth > 1280) {
       setVisibleProducts([
         products[(position) % products.length],
         products[(position + 1) % products.length],

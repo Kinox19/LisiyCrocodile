@@ -148,6 +148,9 @@
 
     .merch__block{
         column-gap: 26px;
+
+        display: flex;
+        justify-content: center;
     }
     .arrow{
         width: 11px;
