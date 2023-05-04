@@ -301,4 +301,17 @@
         width: 17px;
         height: 20px;
     }
+
+    .product__link{
+        text-decoration: none;
+        border-radius: none;
+        -webkit-border-radius: none;
+        -moz-border-radius: none;
+        -ms-border-radius: none;
+        -o-border-radius: none;
+}
+    
+    .product__link:hover{
+        outline: none;
+    }
 }

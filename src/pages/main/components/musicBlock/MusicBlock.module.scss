@@ -153,8 +153,8 @@
 
 @media screen and (max-width: 400px) {
     .music__block{
-        margin-top: 80px;
-        margin-bottom: 40px;
+        margin-top: 100px;
+        margin-bottom: 100px;
     }
 
     .title{
@@ -163,21 +163,22 @@
     }
 
     .columns{
+        display: none;
+    }
+
+    .mobColumn{
         margin-top: 35px;
-        column-gap: 20px;
     }
 
-    .leftSide{
-        gap: 35px;
+    .wrapper{
+        display: flex;
+        flex-direction: column;
+        gap: 35px
     }
 
-    .rigthSide{
-        gap: 35px;
-        margin-top: 39px;
-    }
-
-    .mus__link{
-        max-width: 309px;
+    .mus__link1{
+        max-width: 361px;
+        height: 361px;
         transition: 0.1s ease-in-out;
         -webkit-transition: 0.1s ease-in-out;
         -moz-transition: 0.1s ease-in-out;
@@ -189,14 +190,94 @@
         -moz-border-radius: 8px;
         -ms-border-radius: 8px;
         -o-border-radius: 8px;
-}
-
-    .mus__link:hover{
+        position: relative;
+        background-image: url('../../../../assets/images/mainPage/covers/back1.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .mus__link2{
+        max-width: 361px;
+        height: 361px;
         transition: 0.1s ease-in-out;
         -webkit-transition: 0.1s ease-in-out;
         -moz-transition: 0.1s ease-in-out;
         -ms-transition: 0.1s ease-in-out;
         -o-transition: 0.1s ease-in-out;
-        outline: 1px solid rgba(190, 255, 0, 1);
+        outline: 1px solid rgba(58, 58, 58, 1);
+        border-radius: 8px;
+        -webkit-border-radius: 8px;
+        -moz-border-radius: 8px;
+        -ms-border-radius: 8px;
+        -o-border-radius: 8px;
+        position: relative;
+        background-image: url('../../../../assets/images/mainPage/covers/back2.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .mus__link3{
+        max-width: 361px;
+        height: 361px;
+        transition: 0.1s ease-in-out;
+        -webkit-transition: 0.1s ease-in-out;
+        -moz-transition: 0.1s ease-in-out;
+        -ms-transition: 0.1s ease-in-out;
+        -o-transition: 0.1s ease-in-out;
+        outline: 1px solid rgba(58, 58, 58, 1);
+        border-radius: 8px;
+        -webkit-border-radius: 8px;
+        -moz-border-radius: 8px;
+        -ms-border-radius: 8px;
+        -o-border-radius: 8px;
+        position: relative;
+        background-image: url('../../../../assets/images/mainPage/covers/back3.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .mus__link4{
+        max-width: 361px;
+        height: 361px;
+        transition: 0.1s ease-in-out;
+        -webkit-transition: 0.1s ease-in-out;
+        -moz-transition: 0.1s ease-in-out;
+        -ms-transition: 0.1s ease-in-out;
+        -o-transition: 0.1s ease-in-out;
+        outline: 1px solid rgba(58, 58, 58, 1);
+        border-radius: 8px;
+        -webkit-border-radius: 8px;
+        -moz-border-radius: 8px;
+        -ms-border-radius: 8px;
+        -o-border-radius: 8px;
+        position: relative;
+        background-image: url('../../../../assets/images/mainPage/covers/back4.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+
+    .muzInfo{
+        position: absolute;
+        right: 20px;
+        bottom: 20px;
+
+        display: flex;
+        flex-direction: row;
+        gap: 6px;
+
+        align-items: end;
+    }
+
+    .arrowText{
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 11px;
+        line-height: 13px;
+        text-align: right;
+
+        color: #81886E;
+
+        text-align: end;
+
+        max-width: 98px;
     }
 }

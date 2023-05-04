@@ -36,6 +36,10 @@
     z-index: -1;
 }
 
+.picBackMob{
+    display: none;
+}
+
 
 @media screen and (max-width:1280px) {
     .block{
@@ -118,17 +122,25 @@
         font-size: 60px;
         line-height: 62px;
         margin-top: 55px;
+
+        color:#BEFF00;
     }
 
     .text{
-        max-width: 130px;
-        font-size: 11px;
-        line-height: 13px;
-        margin-top: 20px;
+        max-width: 193px;
+        font-size: 17px;
+        line-height: 21px;
+        margin-top: 15px;
+        text-align: center;
     }
 
     .qr__container{
-        margin-top: 35px;
+        margin-top: 150px;
+
+        display: flex;
+        flex-direction: column;
+        justify-self: center;
+        align-self: center;
     }
 
     .picBack{
@@ -137,10 +149,25 @@
         z-index: -1;
         max-width: 768px;
         max-height: 488px;
+
+        display: none;
     }
 
     .qr__svg{
         width: 130px;
         height: 129px;
+
+        justify-self: center;
+        align-self: center;
+    }
+
+    .picBackMob{
+        width: 400px;
+        height: 591px;
+        display: block;
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        left: -20px;
     }
 }

@@ -113,7 +113,7 @@
 
 @media screen and (max-width: 400px){
     .block{
-        height: 393px;
+        height: 477px;
         padding-top: 40px;
     }
 
@@ -131,6 +131,7 @@
         max-width: 361px;
         font-size: 17px;
         line-height: 21px;
+        color: rgba(190, 255, 0, 1);
     }
 
     .img{
@@ -138,11 +139,12 @@
     }
     
     .imgMob{
-        display: block;
+        display: flex;
         position: absolute;
         z-index: -1;
         top: 0;
-        left: 0;
+        left: -20px;
+        right: -20px;
         height: 488px;
         width: 400px;
     }

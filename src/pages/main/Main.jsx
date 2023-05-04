@@ -62,8 +62,8 @@ const Main = () => {
   return (
     <div className={s.main}>
         <MainBlock/>
-        <div className={s.main__container}>
 
+        <div className={s.main__container}>
           <AboutUsBlock/>
           <MusicBlock/>
           <VideoBlock/>
@@ -71,7 +71,7 @@ const Main = () => {
           <ContactsBlock/>
           {showScrollButton && <ScrollToTopButton />}
         </div>
-        
+
     </div>
   )
 }
