@@ -4,6 +4,7 @@
     flex-direction: column;
     min-height: max-content;
     padding-bottom: 150px;
+    margin: 0;
 }
 
 .title{
@@ -115,7 +116,7 @@
 
 @media screen and (max-width:400px) {
     .block{
-        width: 100%;
+        max-width: 390px;
         padding-bottom: 40px;
     }
 
@@ -163,7 +164,7 @@
     }
 
     .picBackMob{
-        width: 100% !important;
+        width: 99vw;
       //  width: 95vw;
         height: 591px;
         display: block;

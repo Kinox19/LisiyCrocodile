@@ -115,11 +115,12 @@
     .block{
         height: 477px;
         padding-top: 40px;
+        max-width: 393px;
     }
 
     .title{
-        font-size: 60px;
-        line-height: 62px;
+        font-size: 50px;
+        line-height: 52px;
     }
 
     .textContainer{
@@ -131,7 +132,6 @@
         max-width: 361px;
         font-size: 17px;
         line-height: 21px;
-        color: rgba(190, 255, 0, 1);
     }
 
     .img{
@@ -144,7 +144,7 @@
         z-index: -1;
         top: 0;
         height: 488px;
-        width: 100%;
+        width: 99vw;
         align-self: center;
     }
 }
