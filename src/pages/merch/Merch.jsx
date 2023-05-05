@@ -172,7 +172,7 @@ const Merch = () => {
     <div className={s.product__info}>
       <h3 className={s.descriptionTitle}>Описание товара:</h3>
       <div className={s.info__description}>
-        <p className={s.description}>{selectedProduct.description}</p>
+        <p className={s.description}>{selectedProduct.description1}<br/>{selectedProduct.description2}</p>
         {selectedProduct && selectedProduct.id && (
           <ul className={s.attachmentsList}>
             {selectedProduct.attachments.map((attachment) => (

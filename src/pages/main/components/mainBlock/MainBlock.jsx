@@ -8,7 +8,9 @@ const MainBlock = () => {
         <h1 className={s.heading}>ЛЫсый КРокодил</h1>
         <p className={s.text}>Концерты Лысого Крокодила в&nbsp;Москве и&nbsp;Санкт-Петербурге&nbsp;&mdash; скоро!</p>
         <p className={s.mobileText}>Концерты Крокодила<br/> в&nbsp;Москве и&nbsp;Питере&nbsp;<br/>&mdash; скоро!</p>
-        <button className={s.button}>Подробнее</button>
+        <a href="/home#video">
+          <button className={s.button}>Подробнее</button>
+        </a>
       </div>
     </div>
   )

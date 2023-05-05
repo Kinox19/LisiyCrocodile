@@ -3,7 +3,8 @@ const products = [
         id: 'hat',
         title: 'Шапка',
         brand: '“Лысый крокодил”',
-        description: 'Шлем повелителя бесконечности. Надев нашу шапку вы обретаете:',
+        description1: 'Шлем повелителя бесконечности.',
+        description2: 'Надев нашу шапку вы обретаете:',
         attachments: [
             {
                 attachment: 'выносливость',
@@ -40,7 +41,7 @@ const products = [
                 color: 'Pink',
                 value: 'rgba(255, 100, 90, 1)',
             },
-            
+
         ],
         image: [
             "https://i.ibb.co/D1pyw0b/hat-black.png",
@@ -54,7 +55,8 @@ const products = [
         id: 'shirt',
         title: 'Футболка',
         brand: '“Лысый крокодил”',
-        description: 'Доспех бога из 100% хлопка. Надев нашу футболку вы обретаете:',
+        description1: 'Доспех бога из 100% хлопка.',
+        description2: 'Надев нашу футболку вы обретаете:',
         attachments: [
             {
                 attachment: 'бессмертие',
@@ -105,7 +107,8 @@ const products = [
         id: 'hoodie',
         title: 'Худи',
         brand: '“Лысый крокодил”',
-        description: 'Нагрудник императора человечества. Надев наш худи вы обретаете:',
+        description1: 'Нагрудник императора человечества.',
+        description2: 'Надев наш худи вы обретаете:',
         attachments: [
             {
                 attachment: 'базовый навык телепортации',
@@ -156,7 +159,8 @@ const products = [
         id: 'cap',
         title: 'Кепка',
         brand: '“Лысый крокодил”',
-        description: 'Шляпа пророка-скитальца. Надев нашу кепку, вы обретаете:',
+        description1: 'Шляпа пророка-скитальца.',
+        description2: 'Надев нашу кепку, вы обретаете:',
         attachments: [
             {
                 attachment: 'невидимость',
@@ -196,7 +200,8 @@ const products = [
         id: 'shopper',
         title: 'Шопер',
         brand: '“Лысый крокодил”',
-        description: 'Сумка из прочной ткани. Надев наш шопер вы обретаете:',
+        description1: 'Сумка из прочной ткани.',
+        description2: 'Надев наш шопер вы обретаете:',
         attachments: [
             {
                 attachment: 'заклинание нежети',
@@ -246,7 +251,8 @@ const products = [
         id: 'cup',
         title: 'Термокружка',
         brand: '“Лысый крокодил”',
-        description: 'Магический кубок из гномьей стали. Испив из нашей кружки вы обретаете:',
+        description1: 'Магический кубок из гномьей стали.',
+        description2: 'Испив из нашей кружки вы обретаете:',
         attachments: [
             {
                 attachment: 'храбрость',

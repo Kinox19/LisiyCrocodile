@@ -120,14 +120,23 @@
         padding-bottom: 40px;
         background-image: url('../../../../assets/images/mainPage/picContactsMob.png');
         background-size: cover;
+        
+
+        position: relative;
+        margin-top: 174px;
     }
 
     .title{
         font-size: 50px;
         line-height: 52px;
-        margin-top: 55px;
+        margin-top: 0px;
 
         color:#BEFF00;
+
+
+        position: absolute;
+
+        top: -87px;
     }
 
     .text{
@@ -136,10 +145,11 @@
         line-height: 21px;
         margin-top: 15px;
         text-align: center;
+        margin-bottom: 111px;
     }
 
     .qr__container{
-        margin-top: 150px;
+        margin-top: 250px;
 
         display: flex;
         flex-direction: column;
