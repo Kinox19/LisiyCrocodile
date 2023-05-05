@@ -72,25 +72,25 @@ button{
     cursor: pointer;
 }
 
-*{
-    border: 1px solid red;
-}
+// *{
+//     border: 1px solid red;
+// }
 
-@media screen and (max-width: 1280px){
-    *{
-        border: 1px solid blue;
-    }
-}
+// @media screen and (max-width: 1280px){
+//     *{
+//         border: 1px solid blue;
+//     }
+// }
 
-@media screen and (max-width: 1024px){
-    *{
-        border: 1px solid green;
-    }
-}
+// @media screen and (max-width: 1024px){
+//     *{
+//         border: 1px solid green;
+//     }
+// }
 
-@media screen and (max-width: 400px){
-    *{
-        border: 1px solid white;
-    }
-}
+// @media screen and (max-width: 400px){
+//     *{
+//         border: 1px solid white;
+//     }
+// }
 
