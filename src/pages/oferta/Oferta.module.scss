@@ -109,3 +109,34 @@
         margin-bottom: 100px;
     }
 }
+
+@media screen and (max-width:400px){
+    .main__container{
+        width: 361px;
+    }
+
+    .title{
+        font-size: 50px;
+        line-height: 52px;
+        max-width: 287px;
+        margin-top: 70px;
+    }
+
+    .text{
+        font-size: 17px;
+        line-height: 21px;
+        max-width: 361px;
+    }
+
+    .text__container{
+        gap: 35px;
+    }
+
+    .text__container:first-of-type{
+        margin-top: 35px;
+    }
+
+    .text__container:last-of-type{
+        margin-bottom: 200px;
+    }
+}

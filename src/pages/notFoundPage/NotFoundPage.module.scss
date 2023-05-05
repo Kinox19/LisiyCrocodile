@@ -31,6 +31,10 @@
     color: #81886E;
 }
 
+.textMob{
+    display: none;
+}
+
 .button{
     font-family: 'Inter';
     font-style: normal;
@@ -78,6 +82,10 @@
         line-height: 21px;
     }
 
+    .textMob{
+        display: none;
+    }
+
     .button{
         font-size: 12px;
         line-height: 15px;
@@ -121,30 +129,40 @@
 
 @media screen and (max-width:400px){
     .container{
-        margin-top: 70px;
-        margin-bottom: 90px;
-        gap: 65px;
+        margin-top: 80px;
+        margin-bottom: 80px;
+        gap: 35px;
     }
 
     .error{
-        font-size: 57px;
-        line-height: 59px;
+        font-size: 50px;
+        line-height: 52px;
     }
 
     .text{
-        font-size: 10px;
-        line-height: 13px;
-        max-width: 360px;
+        display: none;
+    }
+
+    .textMob{
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        display: block;
+        font-size: 17px;
+        line-height: 21px;
+        max-width: 262px;
+        text-align: left;
+        color: #81886E;
     }
 
     .button{
-        font-size: 7px;
-        line-height: 9px;
-        border-radius: 5px;
-        padding: 9px 17px;
-        -webkit-border-radius: 5px;
-        -moz-border-radius: 5px;
-        -ms-border-radius: 5px;
-        -o-border-radius: 5px;
+        font-size: 14px;
+        line-height: 17px;
+        border-radius: 9px;
+        padding: 14px 30px;
+        -webkit-border-radius: 9px;
+        -moz-border-radius: 9px;
+        -ms-border-radius: 9px;
+        -o-border-radius: 9px;
 }
 }

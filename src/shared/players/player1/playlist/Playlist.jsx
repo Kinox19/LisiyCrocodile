@@ -30,7 +30,7 @@ function Playlist() {
             </button>
             </div>
             <div className={s.twoTexts}>
-              <p className={s.description}>2020 год – желание написать что-то стоящее и осмысленное, насколько это было возможно.</p>
+              <p className={s.description}>2020 год – желание написать нечто стоящее и осмысленное, насколько это было возможно.</p>
               <p className={s.button__text}>к следующему альбому</p>
             </div>
             <button className={s.button__play}>

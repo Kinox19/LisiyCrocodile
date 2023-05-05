@@ -9,6 +9,10 @@
     z-index: 101;
 }
 
+.player__wrapperMob{
+    display: none;
+}
+
 .player__wrapper{
     display: flex;
     flex-direction: row;
@@ -472,7 +476,7 @@ input[type=range]{
     
 }
 
-@media screen and (max-width: 768px){
+@media screen and (max-width: 1024px){
     .main{
         padding: 12px 0;
     }
@@ -619,4 +623,150 @@ input[type=range]{
         -o-transition: .3s ease-in-out;
     }
     
+}
+
+
+@media screen and (max-width: 400px){
+    .main{
+        box-sizing: border-box;
+        padding: 10px 16px;
+        width: 100%;
+    }
+
+    .player__wrapper{
+        display: none;
+    }
+
+    .player__wrapperMob{
+        display: flex;
+        flex-direction: column;
+        gap: 13px;
+    }
+    
+    .player__infoMob{
+        width: 300px;
+        align-self: center;
+    }
+
+    .current__trackArtistMob{
+        display: flex;
+        flex-direction: row;
+
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 11px;
+        line-height: 13px;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+
+        color: #81886E;
+
+    }
+
+    .player__controlsMob{
+        display: flex;
+        flex-direction: column;
+        gap: 13px;
+    }
+
+    .player__controlsUpMob{
+        display: flex;
+        flex-direction: row;
+
+        justify-content: center;
+    }
+
+    .current__imageMob{
+        width: 45px;
+        height: 45px;
+        border: 1px solid rgba(129, 136, 110, 1);
+        border-radius: 3px;
+        -webkit-border-radius: 3px;
+        -moz-border-radius: 3px;
+        -ms-border-radius: 3px;
+        -o-border-radius: 3px;
+
+        margin-right: auto;
+    }
+
+    .track__controlsMob{
+        display: flex;
+        flex-direction: row;
+        gap: 32px;
+        align-items: center;
+        height: 38px;
+        margin-right: 8%;
+    }
+
+    .buttonChangeMob{
+        width: 14px;
+        height: 17px;
+    }
+
+    .buttonMob{
+        width: 38px;
+        height: 38px;
+    }
+
+    .downloadMob{
+        margin-left: auto;
+    }
+
+    .player__controlsDownMob{
+        display: flex;
+        flex-direction: row;
+        gap: 15px;
+        align-items: center;
+    }
+
+    .player__trackTimeMob{
+        font-family: Inter;
+        font-size: 11px;
+        font-weight: 400;
+        line-height: 13px;
+        text-align: left;
+        color: rgba(129, 136, 110, 1);
+    }
+
+    .player__playBarMob{
+        width: 283px;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        border-radius: 100px;
+        -webkit-border-radius: 100px;
+        -moz-border-radius: 100px;
+        -ms-border-radius: 100px;
+        -o-border-radius: 100px;
+    }
+
+    .player__playBarMob::-webkit-slider-runnable-track{
+        border-radius: 5px;
+        height: 5px;
+        background-color: rgba(58, 58, 58, 1);
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        -ms-border-radius: 5px;
+        -o-border-radius: 5px;
+        overflow: hidden;
+        cursor: pointer;
+    }
+
+    .player__playBarMob::-webkit-slider-thumb {
+        background: rgba(190, 255, 0, 1);
+        border-radius: 100px;
+        cursor: pointer;
+        width: 13px;
+        height: 13px;
+        -webkit-appearance: none;
+        margin-top: -4px;
+        -webkit-border-radius: 100px;
+        -moz-border-radius: 100px;
+        -ms-border-radius: 100px;
+        -o-border-radius: 100px;
+        box-shadow: -522px 0px 0px 522px rgba(190, 255, 0, 1);
+
+    }
 }

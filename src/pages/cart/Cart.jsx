@@ -117,20 +117,21 @@ const Cart = ({cartItems}) => {
             </div>
             <div className={s.cart__makeOrder}>
                 {cartItems && cartItems.length ?(
-                    <button className={s.proceed} onClick={handleProceed}>Перейти к оформлению</button>
+                    <><button className={s.proceed} onClick={handleProceed}>Перейти к оформлению</button>
+                    <div className={s.order__price}>
+                      <p className={s.order__text}>Сумма заказа:</p>
+                      <p className={s.finalPrice}>
+                        {new Intl.NumberFormat("ru-RU", {
+                          style: "currency",
+                          currency: "RUB",
+                          minimumFractionDigits: 0,
+                        }).format(total)}
+                      </p>
+                    </div></>
                 ):(
                     <button className={s.btn__disabled} disabled>Перейти к оформлению</button>
                 )}
-                <div className={s.order__price}>
-                    <p className={s.order__text}>Сумма заказа:</p>
-                    <p className={s.finalPrice}>
-                        {new Intl.NumberFormat("ru-RU", {
-                            style: "currency",
-                            currency: "RUB",
-                            minimumFractionDigits: 0,
-                        }).format(total)}
-                    </p>
-                </div>
+                
             </div>
         </div>
     </div>

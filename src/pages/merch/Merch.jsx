@@ -245,6 +245,7 @@ const Merch = () => {
   </div>
 )}
             <div>
+                <p className={s.title__others}>Прочее</p>
                 <ul className={s.merch__block}>
                 {products.map((product) => (
                 <li className={s.card} onClick={() => handleClick(product)}>
