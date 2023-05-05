@@ -21,7 +21,7 @@ const AboutUsBlock = () => {
         <p className={s.text}>Мужайтесь, друзья, нам есть, что показать!</p>
       </div>
       <img className={s.img} src={image} alt=''/>
-      {/* <img className={s.imgMob} src={imageMob} alt=''/> */}
+      <img className={s.imgMob} src={imageMob} alt=''/>
     </div>
   )
 }
