@@ -15,7 +15,7 @@ const ContactsBlock = () => {
             <p className={s.text}>Покупайте билеты на&nbsp;концерты и&nbsp;следите за&nbsp;всеми новостями в&nbsp;нашей группе в&nbsp;ВК.</p>
         </div>
         <img className={s.picBack} src={picBack} alt=''></img>
-        {/* <img className={s.picBackMob} src={picBackMob} alt=''/> */}
+        <img className={s.picBackMob} src={picBackMob} alt=''/>
     </div>
   )
 }
