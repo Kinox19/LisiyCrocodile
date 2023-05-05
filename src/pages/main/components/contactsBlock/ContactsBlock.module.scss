@@ -118,6 +118,8 @@
     .block{
         max-width: 390px;
         padding-bottom: 40px;
+        background-image: url('../../../../assets/images/mainPage/picContactsMob.png');
+        background-size: cover;
     }
 
     .title{
@@ -164,7 +166,7 @@
     }
 
     .picBackMob{
-        width: 99vw;
+        width: 393px;
       //  width: 95vw;
         height: 591px;
         display: block;
@@ -172,5 +174,7 @@
         z-index: -1;
         top: 0;
         //left: -10px;
+        background-image: url('../../../../assets/images/mainPage/picContactsMob.png');
+        background-size: cover;
     }
 }
