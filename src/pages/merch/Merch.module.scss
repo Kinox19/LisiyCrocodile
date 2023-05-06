@@ -99,10 +99,6 @@
     line-height: 36px;
     text-align: left;
 }
-
-
-
-
 .product__selected{
     display: flex;
     flex-direction: row;
@@ -520,7 +516,7 @@ path{
     outline: none;
     border: none;
     width: auto;
-    padding: 0px 25px;
+    padding: 0px 21px;
     height: 36px;
     border-radius: 10px;
     -webkit-border-radius: 10px;
@@ -531,16 +527,16 @@ path{
 }
 
 .size:hover{
-    border: 1px solid rgba(190, 255, 0, 1);
+    outline: 1px solid rgba(190, 255, 0, 1);
+    outline-offset: -1px;
 }
 
 .selected__size{
     font-family: Inter;
     font-size: 25px;
-    font-weight: 700;
     line-height: 30px;
-    border: 1px solid rgba(190, 255, 0, 1)
-
+    outline: 1px solid rgba(190, 255, 0, 1);
+    outline-offset: -1px;
 }
 
 .color{
@@ -756,14 +752,15 @@ path{
     }
 
     .size:hover{
-        border: 1px solid rgba(190, 255, 0, 1);
+        outline: 1px solid rgba(190, 255, 0, 1);
+        outline-offset: -1px;
     }
 
     .selected__size{
-        font-weight: 700;
         font-size: 17px;
         line-height: 21px;
-        border: 1px solid rgba(190, 255, 0, 1)
+        outline: 1px solid rgba(190, 255, 0, 1);
+        outline-offset: -1px;
 
     }
 
@@ -1105,13 +1102,15 @@ path{
     }
 
     .size:hover{
-        border: 1px solid rgba(190, 255, 0, 1);
+        outline: 1px solid rgba(190, 255, 0, 1);
+        outline-offset: -1px;
     }
 
     .selected__size{
         font-size: 15px;
         line-height: 18px;
-        border: 1px solid rgba(190, 255, 0, 1)
+        outline: 1px solid rgba(190, 255, 0, 1);
+        outline-offset: -1px;
 
     }
 
@@ -1415,13 +1414,15 @@ path{
 }
 
     .size:hover{
-        border: 1px solid rgba(190, 255, 0, 1);
+        outline: 1px solid rgba(190, 255, 0, 1);
+        outline-offset: -1px;
     }
 
     .selected__size{
         font-size: 17px;
         line-height: 21px;
-        border: 1px solid rgba(190, 255, 0, 1)
+        outline: 1px solid rgba(190, 255, 0, 1);
+        outline-offset: -1px;
 
     }
 

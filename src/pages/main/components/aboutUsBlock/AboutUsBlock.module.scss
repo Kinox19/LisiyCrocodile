@@ -1,6 +1,7 @@
 .block{
     position: relative;
     height: 1080px;
+    width: 1596px;
 
     padding-top: 130px;
     display: flex;
@@ -52,6 +53,7 @@
 @media screen and (max-width: 1280px){
     .block{
         height: 720px;
+        width: 1064px;
         padding-top: 80px;
     }
 
@@ -86,6 +88,7 @@
 @media screen and (max-width: 1024px){
     .block{
         height: 488px;
+        width: 638px;
         padding-top: 70px;
     }
 
@@ -106,7 +109,7 @@
     }
 
     .img{
-        right: -52px;
+        right: -65px;
         width: 443px;
         height: 488px;
     }

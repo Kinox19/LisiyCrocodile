@@ -169,16 +169,16 @@ function Controls() {
         </button>
         <button className={s.buttonMob} onClick={() => {togglePlaying(); toggleAudio();}}>
           <button className={!playing ? "" : `${s.hideButton}`}>
-            <svg className={s.svgInButtonMob}  viewBox="0 0 76 76" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg className={s.svgInButton}  viewBox="0 0 76 76" fill="none" xmlns="http://www.w3.org/2000/svg">
               <circle cx="38" cy="38" r="37.25" stroke="#BEFF00" stroke-width="1.5"/>
-              <path className={s.fillOnHoverMob} d="M49.7319 36.3744C50.8451 37.1723 50.8451 38.8277 49.7319 39.6256L33.4151 51.32C32.0917 52.2685 30.25 51.3226 30.25 49.6944L30.25 26.3056C30.25 24.6774 32.0917 23.7315 33.4151 24.68L49.7319 36.3744Z" fill="#BEFF00"/>
+              <path className={s.fillOnHover} d="M49.7319 36.3744C50.8451 37.1723 50.8451 38.8277 49.7319 39.6256L33.4151 51.32C32.0917 52.2685 30.25 51.3226 30.25 49.6944L30.25 26.3056C30.25 24.6774 32.0917 23.7315 33.4151 24.68L49.7319 36.3744Z" fill="#BEFF00"/>
             </svg>
           </button>
-          <button className={!playing ? `${s.hideButtonMob}` : ""}>
-            <svg className={s.svgInButton} viewBox="0 0 76 76" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <button className={!playing ? `${s.hideButton}` : ""}>
+            <svg className={s.svgInButton} viewBox="0 0 76 76" fill="none" xmlns="http://www. w3.org/2000/svg">
               <circle cx="38" cy="38" r="37.25" stroke="#BEFF00" stroke-width="1.5"/>
-              <rect className={s.fillOnHoverMob} x="42" y="23" width="6" height="30" rx="3" fill="#BEFF00"/>
-              <rect className={s.fillOnHoverMob} x="28" y="23" width="6" height="30" rx="3" fill="#BEFF00"/>
+              <rect className={s.fillOnHover} x="42" y="23" width="6" height="30" rx="3" fill="#BEFF00"/>
+              <rect className={s.fillOnHover} x="28" y="23" width="6" height="30" rx="3" fill="#BEFF00"/>
             </svg>
           </button>
         </button>

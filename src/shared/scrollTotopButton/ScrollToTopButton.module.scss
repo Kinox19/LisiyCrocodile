@@ -1,7 +1,8 @@
 .scrollToTopBtn{
     position: sticky;
     bottom: 70px;
-    margin-right: -100px;
+    align-self: flex-end;
+    margin-right: 80px;
     float: right;
     cursor: pointer;
 
@@ -47,7 +48,7 @@
     .scrollToTopBtn{
         position: sticky;
         bottom: 50px;
-        margin-right: -80px;
+        margin-right: 50px;
         float: right;
     }
 
@@ -61,7 +62,7 @@
     .scrollToTopBtn{
         position: sticky;
         bottom: 35px;
-        margin-right: -35px;
+        margin-right: 20px;
         float: right;
     }
 
@@ -73,10 +74,14 @@
 
 @media screen and (max-width:400px){
     .scrollToTopBtn{
-        display: none;
+        position: sticky;
+        bottom: 35px;
+        margin-right: 16px;
+        float: right;
     }
 
     .buttonSvg{
-        display: none;
+        width: 31px;
+        height: 31px;
     }
 }

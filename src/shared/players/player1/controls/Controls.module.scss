@@ -694,8 +694,9 @@ input[type=range]{
     .track__controlsMob{
         display: flex;
         flex-direction: row;
-        gap: 32px;
+        gap: 31px;
         align-items: center;
+        align-self: flex-end;
         height: 38px;
         margin-right: 8%;
     }
@@ -710,8 +711,14 @@ input[type=range]{
         height: 38px;
     }
 
+    .svgInButton{
+        width: 38px;
+        height: 38px;
+    }
+
     .downloadMob{
         margin-left: auto;
+        align-self: flex-end;
     }
 
     .player__controlsDownMob{
