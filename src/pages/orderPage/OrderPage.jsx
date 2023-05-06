@@ -97,7 +97,7 @@ const OrderPage = () => {
                     </div>
                    
                     <div>
-                        <p className={s.item__quantity}>{item.quantity}x</p>
+                        <p className={s.item__quantity}>{item.quantity} шт.</p>
                     </div>
                       <div className={s.priceContainer}>
                         <p className={s.item__price}>
