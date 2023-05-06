@@ -62,9 +62,9 @@
     border: 2px solid #BEFF00;
   }
 
-.input:invalid{
-    border: 2px solid #E20000;
-}
+// .input:invalid{
+//     border: 2px solid #E20000;
+// }
 
 ::-webkit-input-placeholder { /* WebKit browsers */
     color:#81886E;
@@ -81,6 +81,17 @@
 
 .input:focus{
     outline: 1px solid rgba(129, 136, 110, 1);
+}
+
+.test{
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 15px;
+}
+
+.errorSign{
+    width: 7px;
+    height: 30px;
 }
 
 .form__heading{

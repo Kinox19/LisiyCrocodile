@@ -2,21 +2,24 @@
 import React from 'react'
 import s from './OrderPage.module.scss'
 import { useLocation, useNavigate } from 'react-router-dom';
-import { useContext, useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { useCallback } from 'react';
 import {useMemo} from 'react'
-const OrderPage = () => {
+import error from '../../assets/error.png'
 
+
+
+const OrderPage = () => {
     const navigate = useNavigate();
     const location = useLocation();
     const cartItems = location.state?.cartItems || [];
     const [total, setTotal] = useState(0);
-  
+ 
     const handleClearLocalStorage = useCallback(() => {
       localStorage.clear();
       navigate('/home');
     }, []);
-  
+ 
     const handleChange = useCallback((e) => {
       const { name, value } = e.target;
       console.log(`Updating ${name} to ${value}`);
@@ -25,7 +28,7 @@ const OrderPage = () => {
         [name]: value,
       }));
     }, []);
-  
+ 
     const [formValues, setFormValues] = useState({
       name: "",
       email: "",
@@ -34,7 +37,7 @@ const OrderPage = () => {
       city: "",
       address: "",
     });
-  
+ 
     let formFilled = useMemo(
       () =>
         formValues.name &&
@@ -45,7 +48,7 @@ const OrderPage = () => {
         formValues.address,
       [formValues]
     );
-  
+ 
     useEffect(() => {
       if (cartItems.length > 0) {
         const summ = cartItems.reduce(
@@ -55,19 +58,84 @@ const OrderPage = () => {
         setTotal(summ);
       }
     }, [cartItems]);
-  
+ 
     useEffect(() => {
       console.log(`Updating formFilled to ${formFilled}`);
     }, [formFilled]);
-  
+ 
     useEffect(() => {
       return () => {
         handleClearLocalStorage();
       };
     }, [handleClearLocalStorage]);
 
-    console.log(formFilled)
 
+
+    /////////////////
+    
+      const [name, setName] = useState({ value: '', valid: false });
+      const [email, setEmail] = useState({ value: '', valid: false });
+      const [phone, setPhone] = useState({ value: '', valid: false });
+      const [country, setCountry] = useState({ value: '', valid: false });
+      const [city, setCity] = useState({ value: '', valid: false });
+      const [address, setAddress] = useState({ value: '', valid: false });
+    
+      const handleCheck = (e) => {
+        const { name, value } = e.target;
+        switch (name) {
+          case 'name':
+            setName({
+              value: value,
+              valid: value.trim().length >= 3,
+            });
+            break;
+          case 'email':
+            setEmail({
+              value: value,
+              valid: /\S+@\S+\.\S+/.test(value),
+            });
+            break;
+          case 'phone':
+            setPhone({
+              value: value,
+              valid: value.length >= 9 && value.length <= 13,
+            });
+            break;
+          case 'country':
+            setCountry({
+              value: value,
+              valid: value.trim().length >= 3,
+            });
+            break;
+          case 'city':
+            setCity({
+              value: value,
+              valid: value.trim().length >= 3,
+            });
+            break;
+          case 'address':
+            setAddress({
+              value: value,
+              valid: value.trim().length >= 3,
+            });
+            break;
+          default:
+            break;
+        }
+      };
+    
+      const renderError = (field) => {
+        if (!field.valid && field.value.length > 0) {
+          return <img className={s.errorSign} src={error} alt="error" />;
+        }
+        return null;
+      };
+
+
+      const handleDouble = (e) => {
+        handleChange(e);
+        handleCheck(e);
+      }
   return (
     <div className={s.main}>
         <div className={s.container}>
@@ -129,13 +197,63 @@ const OrderPage = () => {
                 <div className={s.form__container}>
                     <p className={s.form__heading}>Заполните поля<br></br>для подтверждения заказа:</p>
                     <form className={s.inputs}>
-                        <input className={s.input} name='name' type="text" required placeholder="ФИО:" onChange={handleChange} />
-                        <input className={s.input} name='email' type="email" required placeholder="Электронная почта:" onChange={handleChange} />
-                        <input className={s.input} name='phone' type="tel" required placeholder="Контактный телефон:" onChange={handleChange} />
-                        <input className={s.input} name='country' type="text" required placeholder="Страна:" onChange={handleChange} />
-                        <input className={s.input} name='city' type="text" required placeholder="Город:" onChange={handleChange} />
-                        <input className={s.input} name='address' type="text" required placeholder="Адрес доставки:" onChange={handleChange} />
-                        <button className={formFilled ? `${s.button__submit} ${s.button__submit_enabled}` : `${s.button__submit} ${s.button__submit_disabled}`}
+                      <input
+                        className={s.input}
+                        name="name"
+                        type="text"
+                        required
+                        placeholder="ФИО:"
+                        onBlur={handleDouble}
+                      />
+                      {renderError(name)}
+                      <div className={s.test}>
+                      <input
+                        className={s.input}
+                        name="email"
+                        type="email"
+                        required
+                        placeholder="Электронная почта:"
+                        onBlur={handleDouble}
+                      />
+                      {renderError(email)}
+                      </div>
+                      <input
+                        className={s.input}
+                        name="phone"
+                        type="tel"
+                        required
+                        placeholder="Контактный телефон:"
+                        onBlur={handleDouble}
+                      />
+                      {renderError(phone)}
+                      <input
+                        className={s.input}
+                        name="country"
+                        type="text"
+                        required
+                        placeholder="Страна:"
+                        onBlur={handleDouble}
+                      />
+                      {renderError(country)}
+                      <input
+                        className={s.input}
+                        name="city"
+                        type="text"
+                        required
+                        placeholder="Город:"
+                        onBlur={handleDouble}
+                      />
+                      {renderError(city)}
+                      <input
+                        className={s.input}
+                        name="address"
+                        type="text"
+                        required
+                        placeholder="Адрес доставки:"
+                        onBlur={handleDouble}
+                      />
+                      {renderError(address)}
+                      <button className={formFilled ? `${s.button__submit} ${s.button__submit_enabled}` : `${s.button__submit} ${s.button__submit_disabled}`}
                         type='submit'
                         disabled={!formFilled}
                         onClick={handleClearLocalStorage}>
