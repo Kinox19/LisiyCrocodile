@@ -172,14 +172,16 @@
     }
 
     .mobColumn{
-        display: block;
+        display: flex;
         margin-top: 35px;
+        justify-content: center;
     }
 
     .wrapper{
         display: flex;
         flex-direction: column;
-        gap: 35px
+        gap: 35px;
+        width: 361px;
     }
 
     .leftSide{

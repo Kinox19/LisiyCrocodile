@@ -116,12 +116,10 @@
 
 @media screen and (max-width:400px) {
     .block{
-        max-width: 390px;
+        width: 100%;
         padding-bottom: 40px;
         background-image: url('../../../../assets/images/mainPage/picContactsMob.png');
         background-size: cover;
-        
-
         position: relative;
         margin-top: 174px;
     }
@@ -133,10 +131,11 @@
 
         color:#BEFF00;
 
-
+        
         position: absolute;
 
         top: -87px;
+        left: 16px;
     }
 
     .text{
@@ -173,18 +172,5 @@
 
         justify-self: center;
         align-self: center;
-    }
-
-    .picBackMob{
-        width: 393px;
-      //  width: 95vw;
-        height: 591px;
-        display: block;
-        position: absolute;
-        z-index: -1;
-        top: 0;
-        //left: -10px;
-        background-image: url('../../../../assets/images/mainPage/picContactsMob.png');
-        background-size: cover;
     }
 }

@@ -3,6 +3,9 @@
     height: 1080px;
 
     padding-top: 130px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .title{
@@ -11,8 +14,8 @@
     font-weight: 400;
     font-size: 150px;
     line-height: 155px;
-
     color: #BEFF00;
+    align-self: start;
 }
 
 .textContainer{
@@ -20,6 +23,7 @@
     flex-direction: column;
     gap: 50px;
     margin-top: 70px;
+    align-self: flex-start;
 }
 
 .text{
@@ -59,6 +63,7 @@
     .textContainer{
         gap: 30px;
         margin-top: 50px;
+        align-self: flex-start;
     }
 
     .text{
@@ -101,7 +106,7 @@
     }
 
     .img{
-        right: -65px;
+        right: -52px;
         width: 443px;
         height: 488px;
     }
@@ -115,29 +120,33 @@
     .block{
         height: 477px;
         padding-top: 40px;
-        max-width: 100%;
+        width: 100%;
     }
 
     .title{
         font-size: 50px;
         line-height: 52px;
+        margin-left: 16px;
     }
 
     .textContainer{
         gap: 30px;
         margin-top: 35px;
+        max-width: 361px;
+        align-self: center;
     }
 
     .text{
         max-width: 361px;
         font-size: 17px;
         line-height: 21px;
+        align-self: flex-start;
     }
 
     .img{
         display: none;
     }
-    
+
     .imgMob{
         display: flex;
         position: absolute;
