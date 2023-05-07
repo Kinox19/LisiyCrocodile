@@ -86,12 +86,16 @@
 .test{
     display: flex;
     flex-direction: row-reverse;
-    gap: 15px;
+
+    position: relative;
 }
 
 .errorSign{
     width: 7px;
     height: 30px;
+
+    position: absolute;
+    left: -22px;
 }
 
 .form__heading{
