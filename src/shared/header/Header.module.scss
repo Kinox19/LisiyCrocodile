@@ -1,7 +1,10 @@
-.header__wrapper{
+.header{
     position: sticky;
     top: 0;
+    z-index: 999;
+}
 
+.header__wrapper{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -9,7 +12,6 @@
     height: 151px;
 
     background-color: black;
-    z-index: 100;
 }
 
 .header__container{
@@ -122,6 +124,10 @@ nav{
     position: relative;
 }
 
+.header__wrapperBurg{
+    display: none;
+}
+
 
 @media screen and (max-width: 1280px){
     .header__wrapper{
@@ -161,6 +167,10 @@ nav{
     .cart__lengthNumber{
         font-size: 14px;
         line-height: 14px;
+    }
+
+    .header__wrapperBurg{
+        display: none;
     }
 }
 
@@ -209,6 +219,10 @@ nav{
         font-size: 8px;
         line-height: 8px;
     }
+
+    .header__wrapperBurg{
+        display: none;
+    }
 }
 
 
@@ -216,5 +230,104 @@ nav{
 @media screen and (max-width: 400px){
     .header__wrapper{
         display: none;
+    }
+
+    .header__wrapperBurg{
+        display: flex;
+        width: 100%;
+        height: 88px;
+        align-items: end;
+        justify-content: center;
+        position: sticky;
+        top: 0;
+        z-index: 99;
+        background-color: rgba(0, 0, 0, 1);
+    }
+
+    .logo__containerBurg{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 15px;
+        gap: 6px;
+    }
+
+    .logo{
+        width: 23px;
+        height: 18px;
+    }
+
+    .logo__name{
+        font-size: 17px;
+        line-height: 18px;
+    }
+
+    .burger__button{
+        position: absolute;
+        top: 55px;
+        right: 16px;
+    }
+
+    .burger__popUp{
+        background-color: rgba(0, 0, 0, 0);  
+        display: none;
+        position: relative;
+    }
+
+    .burger__popUp_active::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        backdrop-filter: blur(5px);
+        z-index: -1;
+      }
+    
+    .burger__popUp_active{
+        display: flex;
+    }
+    
+    .burger__background{
+        box-sizing: border-box;
+        position: fixed;
+        width: 240px;
+        height: 1012px;
+        background-color: rgba(16, 16, 16, 1);
+        top: 0px;
+        right: 0;
+        z-index: 999;
+        padding: 55px 30px;
+    }
+
+    .header__menu{
+        margin-top: 58px;
+        font-size: 20px;
+        line-height: 24px;
+        text-align: start;
+        display: flex;
+        flex-direction: column;
+        column-gap: 0;
+        row-gap: 35px;
+        width: 180px;
+        border-bottom: 1px solid rgba(58, 58, 58, 1);
+        padding-bottom: 35px;
+    }
+
+    .button__toMain{
+        height: 45px;
+        width: 170px;
+        border-radius: 9px;
+        font-family: Inter;
+        font-size: 14px;
+        font-weight: 700;
+        line-height: 17px;
+        text-align: center;
+        color: rgba(190, 255, 0, 1);
+        border: 1px solid rgba(190, 255, 0, 1);
+        margin-top: 35px;
+        text-transform: uppercase;
     }
 }
