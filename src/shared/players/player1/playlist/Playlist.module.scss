@@ -497,7 +497,7 @@
     }
 }
 
-@media screen and (max-width:900px){
+@media screen and (max-width:1024px){
     .main__container{
         width: 638px;
     }
@@ -565,6 +565,7 @@
 
     .tracks{
         margin-bottom: 68px;
+        margin-top: 70px;
     }
 
     .track__wrapper{
@@ -695,6 +696,7 @@
     }
 
     .button__play{
+        margin-top: 20px;
         font-size: 14px;
         line-height: 17px;
         border: 1px solid rgba(190, 255, 0, 1);
@@ -711,6 +713,7 @@
     .button__play_svg{
         width: 24px;
         height: 20px;
+        margin-left: -10px;
     }
 
     .tracks{
