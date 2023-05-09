@@ -18,13 +18,16 @@ const Header = () => {
   ];
 
   const [isActive, setIsActive] = useState(false);
+  const [menuRight, setMenuRight] = useState('-240px');
 
   const handleOpen = () => {
-    setIsActive(prevState => !prevState);
+    setIsActive(true);
+    setMenuRight('0');
   };
-  
+
   const handleClose = () => {
-    setIsActive(prevState => !prevState);
+    setIsActive(false);
+    setMenuRight('-240px');
   };
 
   return (
@@ -68,7 +71,7 @@ const Header = () => {
         </div>
 
 
-        <div className={`${s.burger__popUp} ${isActive ? s.burger__popUp_active : ''}`}>
+        <div className={`${s.burger__popUp} ${isActive ? s.burger__popUp_active : ''}`} style={{right: menuRight}}>
           <div className={s.burger__background}>
             <button className={s.burger__icon} onClick={handleClose}>
               <svg width="23" height="15" viewBox="0 0 23 15" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -81,7 +84,7 @@ const Header = () => {
               <ul className={s.header__menu}>
                 {links.map((link) => (
                   <li key={link.id} className={s.header__link}>
-                    <a className={s.header__href} href={`${link.to}#${link.id}`}>{link.label}</a>
+                    <a className={s.header__href} href={`${link.to}#${link.id}`} onClick={handleClose}>{link.label} </a>
                   </li>
                 ))}
               </ul>
