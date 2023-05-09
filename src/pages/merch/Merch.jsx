@@ -37,6 +37,8 @@ const Merch = () => {
   const selectedQuantity = useSelector(state => state.products.selectedQuantity) || 1;
   const selectedImage = useSelector(state => state.products.selectedImage);
 
+  const [animation, setAnimation] = useState("");
+
   const dispatch = useDispatch();
   // const navigate = useNavigate();
 
@@ -104,10 +106,11 @@ const Merch = () => {
       quantity: quantity,
       image: colorImage,
     };
-    console.log(colorImage);
     dispatch(addToCart(productToAdd));
-    console.log(productToAdd)
-    // navigate('/cart');
+    setAnimation(s.animation__addToCart);
+    setTimeout(() => {
+      setAnimation("");
+    }, 200);
   };
 
   //работа над выбором цвета
@@ -234,6 +237,7 @@ const Merch = () => {
           </div>
         </div>
       </div>
+      <div className={s.button__container}>
       <button className={s.button__addToCart} onClick={handleAddToCart}>
       <svg className={s.addToCartSvg} viewBox="0 0 29 28" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M5.9594 14C5.9594 13.317 6.53382 12.7633 7.24239 12.7633H13.217V7.00392C13.217 6.32089 13.7915 5.76718 14.5 5.76718C15.2086 5.76718 15.783 6.32089 15.783 7.00392V12.7633H21.7578C22.4663 12.7633 23.0407 13.317 23.0407 14C23.0407 14.683 22.4663 15.2367 21.7578 15.2367H15.783V20.996C15.783 21.6791 15.2086 22.2328 14.5 22.2328C13.7915 22.2328 13.217 21.6791 13.217 20.996V15.2367H7.24239C6.53382 15.2367 5.9594 14.683 5.9594 14Z" fill="#BEFF00"/>
@@ -241,6 +245,8 @@ const Merch = () => {
       </svg>
         Добавить в корзину
       </button>
+      <div className={`${s.button__animation} ${animation}`}>+1</div>
+      </div>
     </div>
   </div>
 )}

@@ -22,7 +22,7 @@ function Playlist() {
             <p className={s.label}>Лысый крокодил / EP - demo</p>
             <div className={s.titleButton}>
               <h1 className={s.title}>стройматериалы</h1>
-              <button className={s.buttonNextAlbum} onClick={handleAlbumChangeNext}>
+              <button className={s.buttonNextAlbum} onClick={handleAlbumChangeNext} title='к следующему альбому'>
               <svg className={s.buttonNextAlbumSvg} viewBox="0 0 70 70" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <circle cx="35" cy="35" r="33.5" transform="rotate(-180 35 35)" stroke="#BEFF00" stroke-width="3"/>
                 <path d="M38.0023 44.4959C37.2813 45.2975 37.2813 46.5972 38.0023 47.3988C38.7232 48.2004 39.8922 48.2004 40.6131 47.3988L50.4593 36.4514C50.8198 36.0506 51 35.5253 51 35C51 34.7217 50.9502 34.4563 50.8599 34.2143C50.7698 33.9722 50.6363 33.7454 50.4593 33.5486L40.6131 22.6012C39.8922 21.7996 38.7232 21.7996 38.0023 22.6012C37.2813 23.4028 37.2813 24.7025 38.0023 25.5041L44.6968 32.9474L20.8462 32.9474C19.8266 32.9474 19 33.8664 19 35C19 36.1336 19.8266 37.0526 20.8462 37.0526L44.6968 37.0526L38.0023 44.4959Z" fill="#BEFF00"/>

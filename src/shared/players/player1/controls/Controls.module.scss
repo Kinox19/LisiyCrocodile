@@ -479,6 +479,8 @@ input[type=range]{
 @media screen and (max-width: 1024px){
     .main{
         padding: 12px 0;
+
+        z-index: 0;
     }
 
     .player__wrapper{

@@ -1,3 +1,62 @@
+.button__container {
+    position: relative;
+  }
+  
+  .button__animation {
+    position: absolute;
+    top: 50px;
+    left: 400px;
+    transform: translateX(-50%);
+    opacity: 0;
+    animation: button-animation 1s ease-in-out;
+    font-family: Inter;
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 21px;
+    -webkit-animation: button-animation 1s ease-in-out;
+}
+  
+  @keyframes button-animation {
+    0% {
+      opacity: 1;
+      transform: translate(-50%, 0);
+    }
+    80% {
+      opacity: 1;
+      transform: translate(-50%, -80%);
+    }
+    100% {
+      opacity: 0;
+      transform: translate(-50%, -100%);
+    }
+  }
+  
+  .animation__addToCart {
+    animation-name: addToCart;
+    animation-duration: 0.2s;
+    animation-timing-function: ease-in-out;
+  }
+  
+  @keyframes addToCart {
+    0% {
+      transform: scale(1);
+    }
+    25% {
+      transform: scale(1.2);
+    }
+    50% {
+      transform: scale(0.8);
+    }
+    75% {
+      transform: scale(1.1);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+
+
+
 .main{
     display: flex;
     align-items: center;
@@ -321,6 +380,7 @@
 .addToCartSvg{
     width: 29px;
     height: 28px;
+    margin-left: -5px;
 }
 
 
@@ -966,7 +1026,7 @@ path{
     }
 }
 
-@media screen and (max-width: 900px){
+@media screen and (max-width: 1024px){
     .main__container{
         width: 638px;
     }
@@ -1221,10 +1281,10 @@ path{
     }
 
     .button__oferta{
-        font-size: 8px;
-        line-height: 10px;
-        width: 125px;
-        height: 28px;
+        font-size: 9px;
+        line-height: 11px;
+        width: 140px;
+        height: 31px;
         border-radius: 5px;
         border: 1px solid rgba(190, 255, 0, 1);
         -webkit-border-radius: 5px;

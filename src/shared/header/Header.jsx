@@ -3,10 +3,12 @@ import s from './Header.module.scss'
 import logo_header from '../../assets/Logos/logo_header.svg'
 import { useSelector } from 'react-redux'
 import { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 
 const Header = () => {
 
   const cartItems = useSelector(state => state.products.cart);
+  const navigate = useNavigate();
 
   const links = [
     { id: 'about', label: 'о нас', to: '/home' },
@@ -18,17 +20,18 @@ const Header = () => {
   ];
 
   const [isActive, setIsActive] = useState(false);
-  const [menuRight, setMenuRight] = useState('-240px');
 
   const handleOpen = () => {
     setIsActive(true);
-    setMenuRight('0');
   };
 
   const handleClose = () => {
     setIsActive(false);
-    setMenuRight('-240px');
   };
+
+  const handleHome = () => {
+    navigate('/home')
+  }
 
   return (
     <header className={s.header}>
@@ -57,10 +60,10 @@ const Header = () => {
         </div>
 
         <div className={s.header__wrapperBurg}>
-          <div className={s.logo__containerBurg}>
+          <a className={s.logo__containerBurg} href='/home'>
               <img className={s.logo} src={logo_header} alt=''/>
               <p className={s.logo__name}>лысый крокодил</p>
-          </div>
+          </a>
           <button className={s.burger__button} onClick={handleOpen}>
             <svg width="23" height="15" viewBox="0 0 23 15" fill="none" xmlns="http://www.w3.org/2000/svg">
               <rect y="13" width="23.0006" height="2" rx="1" fill="#BEFF00"/>
@@ -70,9 +73,8 @@ const Header = () => {
           </button>
         </div>
 
-
-        <div className={`${s.burger__popUp} ${isActive ? s.burger__popUp_active : ''}`} style={{right: menuRight}}>
-          <div className={s.burger__background}>
+        <div className={`${s.burger__popUp} ${isActive ? s.burger__popUp_active : ''}`}></div>
+        <div className={`${s.burger__background} ${isActive ? s.burger__background_active : ''}`}>
             <button className={s.burger__icon} onClick={handleClose}>
               <svg width="23" height="15" viewBox="0 0 23 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <rect y="13" width="23.0006" height="2" rx="1" fill="#BEFF00"/>
@@ -93,9 +95,8 @@ const Header = () => {
               )}
             </nav>
 
-            <button className={s.button__toMain} >На главную</button>
+            <button className={s.button__toMain} onClick={handleHome}>На главную</button>
           </div>
-        </div>
     </header>
   );
 }

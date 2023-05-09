@@ -32,7 +32,6 @@
     align-items: center;
     gap: 15px;
 }
-
 .logo__name{
     font-family: 'Bb';
     font-size: 30px;
@@ -108,7 +107,6 @@ nav{
 .header__wrapperBurg{
     display: none;
 }
-
 @media screen and (max-width: 1280px){
     .header__wrapper{
         height: 110px;
@@ -126,7 +124,6 @@ nav{
     .burger__background{
         display: none;
     }
-
     .logo__name{
     font-size: 20px;
     line-height: 21px;
@@ -151,47 +148,134 @@ nav{
 }
 @media screen and (max-width: 1024px){
     .header__wrapper{
-        height: 81px;
+        display: none;
     }
-    // .header__container{
-    //     max-width: 1280px;
-    // }
-    .logo__container{
+    .header__wrapperBurg{
+        display: flex;
+        width: 100%;
+        height: 59px;
+        align-items: center;
+        justify-content: center;
+        position: sticky;
+        top: 0;
+        z-index: 2;
+        background-color: rgba(0, 0, 0, 1);
+    }
+    .logo__containerBurg{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 0;
         gap: 6px;
     }
     .logo{
-        width: 16px;
-        height: 13px;
+        width: 23px;
+        height: 18px;
     }
     .logo__name{
-    font-size: 13px;
-    line-height: 14px;
+        font-size: 17px;
+        line-height: 18px;
     }
-    .header__menu{
-    font-size: 11px;
-    line-height: 13px;
-    column-gap: 33px;
-    margin-top: 15px;
+    .burger__button{
+        position: absolute;
+        top: 20px;
+        right: 65px;
     }
-    .cart__length{
-        top: 8px;
-        right: -15px;
-        width: 8px;
-        height: 8px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding: 2px 2px;
-    }
-    .cart__lengthNumber{
-        font-size: 8px;
-        line-height: 8px;
-    }
-    .header__wrapperBurg{
+    .burger__popUp{
+        background-color: rgba(0, 0, 0, 0);
         display: none;
+        position: relative;
     }
+    .burger__popUp_active::before {
+        content: '';
+        position: absolute;
+        top: -88px;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        backdrop-filter: blur(4px);
+        transition: blur 0.3s ease-in-out;
+        background-color: rgba(0, 0, 0, 0.15);
+        z-index: 3;
+        -webkit-transition: backdrop-filter 5s ease-in-out;
+
+}
+    .burger__popUp_active{
+        display: flex;
+        transition: blur 5s ease-in-out;
+        -webkit-transition: blur 5s ease-in-out;
+        -moz-transition: blur 5s ease-in-out;
+        -ms-transition: blur 5s ease-in-out;
+        -o-transition: blur 5s ease-in-out;
+}
+    .burger__popUp_active .logo__containerBurg{
+        backdrop-filter: blur(4px);
+    }
+    .burger__background{
+        box-sizing: border-box;
+        position: fixed;
+        display: none;
+        width: 248px;
+        height: 1035px;
+        background-color: rgba(16, 16, 16, 1);
+        top: 0px;
+        right: -240px;
+        z-index: 999;
+        padding: 20px 25px;
+        display: block;
+        transition: right 0.3s ease-in-out;
+        -webkit-transition: right 0.3s ease-in-out;
+        -moz-transition: right 0.3s ease-in-out;
+        -ms-transition: right 0.3s ease-in-out;
+        -o-transition: right 0.3s ease-in-out;
 }
 
+    .burger__background_active {
+        display: block;
+        right: 0px;
+      }
+
+    .header__menu{
+        margin-top: 85px;
+        font-size: 18px;
+        line-height: 22px;
+        text-align: start;
+        display: flex;
+        flex-direction: column;
+        column-gap: 0;
+        row-gap: 40px;
+        width: 180px;
+        border-bottom: 1px solid rgba(58, 58, 58, 1);
+        padding-bottom: 35px;
+    }
+    .button__toMain{
+        height: 31px;
+        width: 103px;
+        border-radius: 5px;
+        font-family: Inter;
+        font-size: 9px;
+        font-weight: 700;
+        line-height: 11px;
+        text-align: center;
+        color: rgba(190, 255, 0, 1);
+        border: 1px solid rgba(190, 255, 0, 1);
+        margin-top: 40px;
+        text-transform: uppercase;
+    }
+
+    .cart__length{
+        top: 336px;
+        right: 108px;
+        padding: 0px 3px 0px 3px;
+    }
+    .cart__lengthNumber{
+        font-size: 10px;
+        line-height: 10px;
+        font-weight: 600;
+
+    }
+}
 
 @media screen and (max-width: 400px){
     .header__wrapper{
@@ -233,7 +317,7 @@ nav{
         background-color: rgba(0, 0, 0, 0);
         display: none;
         position: relative;
-}
+    }
     .burger__popUp_active::before {
         content: '';
         position: absolute;
@@ -242,20 +326,27 @@ nav{
         width: 100vw;
         height: 100vh;
         backdrop-filter: blur(4px);
+        transition: blur 0.3s ease-in-out;
         background-color: rgba(0, 0, 0, 0.15);
         z-index: 3;
+        -webkit-transition: backdrop-filter 5s ease-in-out;
 
 }
     .burger__popUp_active{
         display: flex;
-    }
+        transition: blur 5s ease-in-out;
+        -webkit-transition: blur 5s ease-in-out;
+        -moz-transition: blur 5s ease-in-out;
+        -ms-transition: blur 5s ease-in-out;
+        -o-transition: blur 5s ease-in-out;
+}
     .burger__popUp_active .logo__containerBurg{
         backdrop-filter: blur(4px);
     }
-
     .burger__background{
         box-sizing: border-box;
         position: fixed;
+        display: none;
         width: 240px;
         height: 1012px;
         background-color: rgba(16, 16, 16, 1);
@@ -270,6 +361,12 @@ nav{
         -ms-transition: right 0.3s ease-in-out;
         -o-transition: right 0.3s ease-in-out;
 }
+
+    .burger__background_active {
+        display: block;
+        right: 0px;
+      }
+
     .header__menu{
         margin-top: 58px;
         font-size: 20px;
@@ -296,5 +393,17 @@ nav{
         border: 1px solid rgba(190, 255, 0, 1);
         margin-top: 35px;
         text-transform: uppercase;
+    }
+
+    .cart__length{
+        top: 325px;
+        right: 84px;
+        padding: 0px 3px 0px 3px;
+    }
+    .cart__lengthNumber{
+        font-size: 10px;
+        line-height: 10px;
+        font-weight: 600;
+
     }
 }
