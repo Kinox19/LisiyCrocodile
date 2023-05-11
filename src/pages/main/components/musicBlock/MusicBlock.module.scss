@@ -23,6 +23,13 @@
     -moz-border-radius: 20px;
     -ms-border-radius: 20px;
     -o-border-radius: 20px;
+
+}
+
+.mus__link:active{
+    filter: saturate(0);
+    -webkit-filter: saturate(0);
+    outline: 2px solid rgba(0, 0, 0, 1);
 }
 
 .mus__link:hover{

@@ -147,6 +147,7 @@ const Merch = () => {
   //
 
   return (
+    <div>
     <div className={s.main}>
         <div className={s.main__container}>
             <h1 className={s.title}>Мерч</h1>
@@ -281,8 +282,11 @@ const Merch = () => {
                 <p className={s.text__attention}>Перед оформлением заказа рекомендуем ознакомиться с&nbsp;договором об&nbsp;оплате.</p>
                 <Link to="/oferta"><button className={s.button__oferta}>Договор об оплате</button></Link>
             </div>
-            {showScrollButton && <ScrollToTopButton />}
+
         </div>
+
+    </div>
+    {showScrollButton && <ScrollToTopButton />}
     </div>
   )
 }

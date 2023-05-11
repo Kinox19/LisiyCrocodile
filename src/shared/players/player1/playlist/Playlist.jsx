@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom'
 
 function Playlist() {
   const navigate = useNavigate();
-  const { SetCurrent, currentSong, songslist } = useContext(playerContext)
+  const { SetCurrent, currentSong, songslist, playing } = useContext(playerContext)
 
   const handleAlbumChangeNext = () => {
     navigate('/muz2');
@@ -34,9 +34,16 @@ function Playlist() {
               <p className={s.button__text}>к следующему альбому</p>
             </div>
             <button className={s.button__play} onClick={() => {SetCurrent([0])}}>
-              <svg className={s.button__play_svg}  viewBox="0 0 21 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M20.1271 12.356C21.2751 13.1514 21.2751 14.8486 20.1271 15.644L3.13899 27.4137C1.81258 28.3327 5.35539e-07 27.3833 6.06073e-07 25.7697L1.63501e-06 2.23028C1.70555e-06 0.616645 1.81259 -0.332661 3.13899 0.586298L20.1271 12.356Z" fill="#BEFF00"/>
-              </svg>
+              {!playing ? (
+                <svg className={s.button__play_svg} width="21" height="28" viewBox="0 0 21 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M20.1271 12.356C21.2751 13.1514 21.2751 14.8486 20.1271 15.644L3.13899 27.4137C1.81258 28.3327 5.35539e-07 27.3833 6.06073e-07 25.7697L1.63501e-06 2.23028C1.70555e-06 0.616645 1.81259 -0.332661 3.13899 0.586298L20.1271 12.356Z" fill="#BEFF00"/>
+                </svg>
+                ) : (
+                  <svg className={s.button__play_svg} width="20" height="28" viewBox="0 0 20 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="14" width="6" height="28" rx="3" fill="#BEFF00"/>
+                    <rect width="6" height="28" rx="3" fill="#BEFF00"/>
+                  </svg>
+                )}
               Слушать
             </button>
           </div>

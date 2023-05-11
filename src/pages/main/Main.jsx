@@ -68,6 +68,8 @@ const Main = () => {
           <MerchBlock/>
           <ContactsBlock/>
           {showScrollButton && <ScrollToTopButton />}
+          <div className={s.paddingBlock}>
+          </div>
     </div>
   )
 }
