@@ -55,6 +55,10 @@
     }
   }
 
+.marginDiv{
+    padding-bottom: 70px;
+}
+
 .main{
     display: flex;
     align-items: center;
@@ -439,7 +443,7 @@ path{
     display: flex;
     gap: 21px;
     margin-top: 130px;
-    margin-bottom: 190px;
+    margin-bottom: 120px;
 }
 
 .text__attention{
@@ -662,6 +666,11 @@ path{
 }
 
 @media screen and (max-width: 1280px){
+
+    .marginDiv{
+        padding-bottom: 50px;
+    }
+
     .button__container {
         position: relative;
       }
@@ -994,7 +1003,7 @@ path{
         display: flex;
         gap: 21px;
         margin-top: 130px;
-        margin-bottom: 190px;
+        margin-bottom: 120px;
     }
 
     .text__attention{
@@ -1084,8 +1093,10 @@ path{
 
 @media screen and (max-width: 1024px){
     
-    
-    
+    .marginDiv{
+        padding-bottom: 35px;
+    }
+
     .main__container{
         width: 638px;
     }
@@ -1386,7 +1397,7 @@ path{
     .oferta{
         gap: 74px;
         margin-top: 70px;
-        margin-bottom: 110px;
+        margin-bottom: 105px;
     }
 
     .text__attention{
@@ -1457,6 +1468,11 @@ path{
 }
 
 @media screen and (max-width: 400px) {
+
+    .marginDiv{
+        padding-bottom: 35px;
+    }
+
     .main__container{
         width: 361px;
     }
@@ -1757,7 +1773,7 @@ path{
         flex-direction: column;
         gap: 35px;
         margin-top: 100px;
-        margin-bottom: 135px;
+        margin-bottom: 165px;
         align-items: center;
     }
 

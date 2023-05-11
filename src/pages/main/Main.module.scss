@@ -6,16 +6,11 @@
     scroll-behavior: smooth;
     box-sizing: border-box;
     color: #BEFF00;
-
-    // position: relative;
 }
 
 .paddingBlock{
-    height: 35px;
+    height: 70px;
     width: 100%;
-
-    // position: absolute;
-    // bottom: 0px;
 }
 
 // .main__container{
@@ -64,20 +59,23 @@
     text-transform: uppercase;
 }
 
-// @media screen and (max-width: 1280px){
-//     .main__container{
-//         width: 1062px;
-// }
-// }
+@media screen and (max-width: 1280px){
+    .paddingBlock{
+        height: 50px;
+    }
 
-// @media screen and (max-width: 1024px){
-//     .main__container{
-//         width: 638px;
-// }
-// }
+}
 
-// @media screen and (max-width: 400px){
-//     .main__container{
-//         width: 361px;
-// }
-// }
+@media screen and (max-width: 1024px){
+    .paddingBlock{
+        height: 35px;
+        width: 100%;
+    }
+
+}
+
+@media screen and (max-width: 400px){
+    .paddingBlock{
+        height: 35px;
+    }
+}

@@ -147,7 +147,7 @@ const Merch = () => {
   //
 
   return (
-    <div>
+    <div className={s.marginDiv}>
     <div className={s.main}>
         <div className={s.main__container}>
             <h1 className={s.title}>Мерч</h1>
@@ -287,7 +287,9 @@ const Merch = () => {
 
     </div>
     {showScrollButton && <ScrollToTopButton />}
+      <div className={s.marginBlock}></div>
     </div>
+    
   )
 }
 
