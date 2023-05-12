@@ -73,13 +73,13 @@ const Cart = ({cartItems}) => {
                             </div>
                         </div>
                         <div className={s.item__quantity}>
-                                <button className={s.quantityButton} onClick={() => handlePlusQuantityChange(item)}>
-                                <img className={s.quantityButtonImg} src={plus} alt="+" />
+                                <button className={s.quantityButton} onClick={()=>handleMinusQuantityChange(item)}>
+                                  <img className={s.quantityButtonImg} src={minus} alt="-" />
                                 </button>
                                 <p className={s.product__quantities}>{item.quantity} шт.</p>
                                 <div className={s.minus}>
-                                <button className={s.quantityButton} onClick={()=>handleMinusQuantityChange(item)}>
-                                <img className={s.quantityButtonImg} src={minus} alt="-" />
+                                <button className={s.quantityButton} onClick={() => handlePlusQuantityChange(item)}>
+                                  <img className={s.quantityButtonImg} src={plus} alt="+" />
                                 </button>
                                 </div>
                         </div>

@@ -227,13 +227,13 @@ const Merch = () => {
       <div className={s.product__counter}>
         <p className={s.quantityText}>Количество:</p>
         <div className={s.counter}>
-          <button className={s.quantityButton} onClick={handlePlusQuantityChange}>
-            <img src={plus} alt="+" />
+          <button className={s.quantityButton} onClick={handleMinusQuantityChange}>
+            <img src={minus} alt="-" />
           </button>
           <p className={s.product__quantities}>{quantity} шт.</p>
           <div className={s.minus}>
-            <button className={s.quantityButton} onClick={handleMinusQuantityChange}>
-              <img src={minus} alt="-" />
+            <button className={s.quantityButton} onClick={handlePlusQuantityChange}>
+              <img src={plus} alt="+" />
             </button>
           </div>
         </div>

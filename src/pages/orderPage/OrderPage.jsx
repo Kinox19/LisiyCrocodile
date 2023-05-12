@@ -129,9 +129,15 @@ const OrderPage = () => {
     
       const renderError = (field) => {
         if (!field.valid && field.value.length > 0) {
-          return <img className={s.errorSign} src={error} alt="error" />;
+          return  <img className={s.errorSign} src={error} alt="error" />;
+        } return null
+      };
+
+      const renderBorder = (field) => {
+        if (field.valid && field.value.length > 0) {
+          return { border: '1px solid #BEFF00' };
         }
-        return null;
+        return {};
       };
 
 
@@ -208,6 +214,7 @@ const OrderPage = () => {
                           required
                           placeholder="ФИО:"
                           onBlur={handleDouble}
+                          style={renderBorder(name)}
                         />
                         {renderError(name)}
                       </div>
@@ -219,6 +226,7 @@ const OrderPage = () => {
                         required
                         placeholder="Электронная почта:"
                         onBlur={handleDouble}
+                        style={renderBorder(email)}
                       />
                       {renderError(email)}
                       </div>
@@ -230,6 +238,7 @@ const OrderPage = () => {
                           required
                           placeholder="Контактный телефон:"
                           onBlur={handleDouble}
+                          style={renderBorder(phone)}
                         />
                         {renderError(phone)}
                       </div>
@@ -241,6 +250,7 @@ const OrderPage = () => {
                           required
                           placeholder="Страна:"
                           onBlur={handleDouble}
+                          style={renderBorder(country)}
                         />
                         {renderError(country)}
                       </div>
@@ -252,6 +262,7 @@ const OrderPage = () => {
                           required
                           placeholder="Город:"
                           onBlur={handleDouble}
+                          style={renderBorder(city)}
                         />
                         {renderError(city)}
                       </div>
@@ -263,6 +274,7 @@ const OrderPage = () => {
                           required
                           placeholder="Адрес доставки:"
                           onBlur={handleDouble}
+                          style={renderBorder(address)}
                         />
                         {renderError(address)}
                       </div>

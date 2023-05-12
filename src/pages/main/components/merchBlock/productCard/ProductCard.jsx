@@ -21,16 +21,20 @@ const ProductCard = ({ product, selectProduct }) => {
             <h3 className={s.title}>{product.title}</h3>
             <p className={s.brand}>{product.brand}</p>
             <button className={s.button}>
+              <svg className={s.buttonSvg} width="24" height="29" viewBox="0 0 24 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path className={s.path} d="M0.876591 10.0079H23.1234V25.0005C23.1234 26.7255 21.725 28.1239 20 28.1239H4C2.27499 28.1239 0.876591 26.7255 0.876591 25.0005V10.0079Z" fill="#BEFF00" stroke="#BEFF00" stroke-width="1.75318"/>
+                <path d="M6.0305 13.9581C6.0305 9.09884 5.21639 1 12 1" stroke="#BEFF00" stroke-width="1.75318"/>
+                <path d="M17.9695 13.9581C17.9695 9.09884 18.7836 1 12 1" stroke="#BEFF00" stroke-width="1.75318"/>
+              </svg>
 
-
-              <svg className={s.buttonSvg}  viewBox="0 0 24 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+              {/* <svg className={s.buttonSvg}  viewBox="0 0 24 28" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <mask id="path-1-inside-1_1501_1748" fill="white">
                 <path d="M0 9.043C0 8.53951 0.408161 8.13135 0.911654 8.13135H23.0883C23.5918 8.13135 24 8.53951 24 9.043V23.8069C24 26.123 22.1225 28.0005 19.8064 28.0005H4.19361C1.87754 28.0005 0 26.123 0 23.8069V9.043Z"/>
                 </mask>
                   <path className={s.path} d="M0 9.043C0 8.53951 0.408161 8.13135 0.911654 8.13135H23.0883C23.5918 8.13135 24 8.53951 24 9.043V23.8069C24 26.123 22.1225 28.0005 19.8064 28.0005H4.19361C1.87754 28.0005 0 26.123 0 23.8069V9.043Z" fill="#BEFF00" stroke="#BEFF00" stroke-width="3.50636" mask="url(#path-1-inside-1_1501_1748)"/>
                   <path d="M6.0305 13C6.0305 8.5 5.21639 1 12 1" stroke="#BEFF00" stroke-width="1.75318"/>
                   <path d="M17.9695 13C17.9695 8.5 18.7836 1 12 1" stroke="#BEFF00" stroke-width="1.75318"/>
-                </svg>
+                </svg> */}
               Купить
             </button>
           </div>

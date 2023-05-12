@@ -139,8 +139,8 @@
         top: 0;
         right: -108px;
         z-index: -1;
-        max-width: 1280px;
-        min-height: 785px;
+        width: 1280px;
+        height: 785px;
     }
     .picBackMob{
         display: none;
@@ -204,8 +204,8 @@
         top: 0;
         right: -65px;
         z-index: -1;
-        max-width: 768px;
-        min-height: 460px;
+        width: 768px;
+        height: 460px;
     }
 
     .picBackMob{
@@ -259,7 +259,7 @@
     }
 
     .qr__container{
-        margin-top: 250px;
+        margin-top: 260px;
 
         display: flex;
         flex-direction: column;
@@ -301,7 +301,7 @@
         z-index: -1;
         top:-30px;
         width: 100%;
-        height: 728px;
+        height: 738px;
     }
 
     .qr__svg{

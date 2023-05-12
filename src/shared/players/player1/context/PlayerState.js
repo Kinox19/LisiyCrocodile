@@ -44,6 +44,13 @@ const PlayerState = (props) => {
     }
   }
 
+  const startSong = () => {
+    // SetCurrent(0);
+    togglePlaying(true);
+
+  }
+
+
   // End of Song
   const handleEnd = () => {
     if (state.currentSong === state.songslist.length - 1) {
@@ -67,6 +74,7 @@ const PlayerState = (props) => {
         togglePlaying,
         handleEnd,
         songsSet,
+        startSong
       }}
     >
       {props.children}

@@ -2,10 +2,11 @@ import React, { useContext } from 'react'
 import playerContext from '../context/playerContext'
 import s from './Playlist.module.scss'
 import { useNavigate } from 'react-router-dom'
+import { useRef } from 'react'
 
 function Playlist() {
   const navigate = useNavigate();
-  const { SetCurrent, currentSong, songslist, playing } = useContext(playerContext)
+  const { SetCurrent, currentSong, songslist, playing} = useContext(playerContext)
 
   const handleAlbumChangeNext = () => {
     navigate('/muz2');

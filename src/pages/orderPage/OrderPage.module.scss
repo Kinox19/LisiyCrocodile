@@ -37,6 +37,7 @@
 }
 
 .input{
+    box-sizing: border-box;
     width: 626px;
     height: 54px;
 
@@ -58,9 +59,9 @@
 
 
 
-.input:valid {
-    border: 2px solid #BEFF00;
-  }
+// .input:valid {
+//     border: 2px solid #BEFF00;
+//   }
 
 // .input:invalid{
 //     border: 2px solid #E20000;

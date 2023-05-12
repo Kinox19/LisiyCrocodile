@@ -270,14 +270,15 @@
     }
 
     .point__accent{
-        font-size: 11px;
-        line-height: 13px;
+        font-size: 14px;
+        line-height: 17px;
     }
 
     .footer__logo{
         margin-left: 29px;
         margin-right: 0;
         gap: 0px;
+        align-self: self-start;
     }
 
     .logo{

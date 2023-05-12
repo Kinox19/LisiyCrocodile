@@ -105,7 +105,7 @@
 }
 
 .button:hover mask {
-    fill: rgba(0, 0, 0, 1);
+    fill: black;
     transition: 0.3s;
     -webkit-transition: 0.3s;
     -moz-transition: 0.3s;
@@ -121,6 +121,15 @@
     -ms-transition: 0.3s;
     -o-transition: 0.3s;
 }
+
+// .button:hover .path mask{
+//     fill: rgba(0, 0, 0, 1);
+//     transition: 0.3s;
+//     -webkit-transition: 0.3s;
+//     -moz-transition: 0.3s;
+//     -ms-transition: 0.3s;
+//     -o-transition: 0.3s;
+// }
 
 .product__link{
     text-decoration: none;

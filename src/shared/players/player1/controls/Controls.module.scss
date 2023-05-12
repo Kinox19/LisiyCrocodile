@@ -20,7 +20,12 @@
     justify-content: space-between;
 
     max-width: 1596px;
+    // justify-self: center;
     margin: 0 auto;
+}
+
+.current__trackArtist{
+    margin-top: 10px;
 }
 
 .player__info{
@@ -28,7 +33,7 @@
     flex-direction: row;
     flex-wrap: nowrap;
     align-items: start;
-    width: 426px;
+    width: 428px;
     gap: 35px;
 
     margin-top: 9px;
@@ -66,7 +71,8 @@
     flex-direction: column;
     gap: 20px;
     align-items: center;
-    margin-left: -230px;
+    margin-left: 30px;
+    margin-right: 280px;
 }
 
 .player__controlsUp{
@@ -340,6 +346,10 @@ input[type=range]{
         max-width: 1064px;
     }
 
+    .current__trackArtist{
+        margin-top: 7px;
+    }
+
     .player__info{
         width: 276px;
         gap: 25px;
@@ -347,7 +357,8 @@ input[type=range]{
     }
 
     .current__image{
-        border: 0.5px solid #81886E;
+        box-sizing: border-box;
+        border: 1px solid #81886E;
         width: 53px;
         height: 53px;
     }
@@ -364,7 +375,8 @@ input[type=range]{
     
     .player__controls{
         gap: 12px;
-        margin-left: -100px;
+        margin-left: 0;
+        margin-right: 140px;
     }
     
     .player__controlsUp{
@@ -483,6 +495,11 @@ input[type=range]{
         z-index: 0;
     }
 
+    .current__trackArtist{
+        margin-top: 4px;
+    }
+
+
     .player__wrapper{
         max-width: 638px;
     }
@@ -517,7 +534,8 @@ input[type=range]{
     
     .player__controls{
         gap: 8px;
-        margin-left: -170px;
+        margin-left: 0;
+        margin-right: 110px;
     }
     
     .player__controlsUp{
