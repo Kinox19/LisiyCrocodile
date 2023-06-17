@@ -1,5 +1,3 @@
-
-
 .main{
     display: flex;
     align-items: center;
@@ -68,16 +66,16 @@
 // }
 
 ::-webkit-input-placeholder { /* WebKit browsers */
-    color:#81886E;
+    color:#F0FFC5;
  }
  :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
-    color:#81886E;
+    color:#F0FFC5;
  }
  ::-moz-placeholder { /* Mozilla Firefox 19+ */
-    color:#81886E;
+    color:#F0FFC5;
  }
  :-ms-input-placeholder { /* Internet Explorer 10+ */
-    color:#81886E;
+    color:#F0FFC5;
  }
 
 .input:focus{
@@ -240,7 +238,7 @@
     font-weight: 400;
     line-height: 24px;
     text-align: left;
-    color: rgba(129, 136, 110, 1);
+    color: #F0FFC5;
 }
 
 .finalPrice{
