@@ -37,10 +37,10 @@ const products = [
                 color: 'Green',
                 value: 'rgba(190, 255, 0, 1)',
             },
-            {
-                color: 'Pink',
-                value: 'rgba(255, 100, 90, 1)',
-            },
+            // {
+            //     color: 'Pink',
+            //     value: 'rgba(255, 100, 90, 1)',
+            // },
 
         ],
         image: [
@@ -89,10 +89,10 @@ const products = [
                 color: 'Green',
                 value: 'rgba(190, 255, 0, 1)',
             },
-            {
-                color: 'Pink',
-                value: 'rgba(255, 100, 90, 1)',
-            },
+            // {
+            //     color: 'Pink',
+            //     value: 'rgba(255, 100, 90, 1)',
+            // },
         ],
         sizes: ['S', 'M', 'L', 'XL', 'XXL'],
         image: [
@@ -141,10 +141,10 @@ const products = [
                 color: 'Green',
                 value: 'rgba(190, 255, 0, 1)',
             },
-            {
-                color: 'Pink',
-                value: 'rgba(255, 100, 90, 1)',
-            },
+            // {
+            //     color: 'Pink',
+            //     value: 'rgba(255, 100, 90, 1)',
+            // },
         ],
         sizes: ['S', 'M', 'L', 'XL', 'XXL'],
         image: [
@@ -234,10 +234,10 @@ const products = [
                 color: 'Green',
                 value: 'rgba(190, 255, 0, 1)',
             },
-            {
-                color: 'Pink',
-                value: 'rgba(255, 100, 90, 1)',
-            },
+            // {
+            //     color: 'Pink',
+            //     value: 'rgba(255, 100, 90, 1)',
+            // },
         ],
         image: [
             "https://i.ibb.co/T2Tcf07/shopper-black.png",
@@ -285,10 +285,10 @@ const products = [
                 color: 'Green',
                 value: 'rgba(190, 255, 0, 1)',
             },
-            {
-                color: 'Pink',
-                value: 'rgba(255, 100, 90, 1)',
-            },
+            // {
+            //     color: 'Pink',
+            //     value: 'rgba(255, 100, 90, 1)',
+            // },
         ],
         image: [
             "https://i.ibb.co/mNgxsWx/cup-black.png",

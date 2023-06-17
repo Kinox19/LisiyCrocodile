@@ -69,7 +69,7 @@ function Playlist() {
                 </svg>
               )}
                 </button>
-                <img src='https://i.ibb.co/x6LVGD5/cover-stroy-Demo.png' className={s.track__cover} onClick={() => {SetCurrent(i)}} alt='' />
+                <img src='https://i.ibb.co/6mFKzkT/cover-313.png' className={s.track__cover} onClick={() => {SetCurrent(i)}} alt='' />
                 <div className={s.track__textInfo} onClick={() => {SetCurrent(i)}}>
                   <p className={s.track__name}>{song.title}</p>
                   <p className={s.track__artist}>{song.artist}</p>

@@ -56,7 +56,7 @@ function Controls() {
     <div className={s.main}>
       <div className={s.player__wrapper}>
       <div className={s.player__info}>
-        <img className={s.current__image} src='https://i.ibb.co/x6LVGD5/cover-stroy-Demo.png'  alt='' />
+        <img className={s.current__image} src='https://i.ibb.co/6mFKzkT/cover-313.png'  alt='' />
         <div className={s.current__trackArtist}>
           <p className={s.current__track}>{songslist[currentSong].title}</p>
           <p className={s.current__artist}>{songslist[currentSong].artist}</p>
@@ -159,7 +159,7 @@ function Controls() {
       />
     <div className={s.player__controlsMob}>
       <div className={s.player__controlsUpMob}>
-        <img className={s.current__imageMob} src='https://i.ibb.co/x6LVGD5/cover-stroy-Demo.png'  alt='' />
+        <img className={s.current__imageMob} src='https://i.ibb.co/6mFKzkT/cover-313.png'  alt='' />
         <div className={s.track__controlsMob}>
         <button className={s.buttonChangeMob} onClick={prevSong}>
           <svg className={s.buttonChangeSvgMob} viewBox="0 0 23 26" fill="none" xmlns="http://www.w3.org/2000/svg">
