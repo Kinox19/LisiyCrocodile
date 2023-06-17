@@ -9,6 +9,10 @@
     z-index: 101;
 }
 
+.player__wrapperMob{
+    display: none;
+}
+
 .player__wrapper{
     display: flex;
     flex-direction: row;
@@ -16,7 +20,12 @@
     justify-content: space-between;
 
     max-width: 1596px;
+    // justify-self: center;
     margin: 0 auto;
+}
+
+.current__trackArtist{
+    margin-top: 10px;
 }
 
 .player__info{
@@ -62,7 +71,8 @@
     flex-direction: column;
     gap: 20px;
     align-items: center;
-    margin-left: -230px;
+    margin-left: 30px;
+    margin-right: 280px;
 }
 
 .player__controlsUp{
@@ -143,6 +153,16 @@ input[type=range]{
     align-self: self-start;
 }
 
+.volume__button{
+    display: flex;
+    align-items: center;
+}
+
+.volumeSvg{
+    width: 31px;
+    height: 24px;
+}
+
 .volumeSvg:hover .pathToFill{
     fill: #BEFF00;
     transition: .3s ease-in-out;
@@ -200,6 +220,11 @@ input[type=range]{
     height: 35px;
 }
 
+.buttonChangeSvg{
+    width: 23px;
+    height: 26px;
+}
+
 .buttonChange:hover svg{
     transition: .1s ease-in-out;
     -webkit-transition: .1s ease-in-out;
@@ -250,6 +275,11 @@ input[type=range]{
     -moz-transition: .3s ease-in-out;
     -ms-transition: .3s ease-in-out;
     -o-transition: .3s ease-in-out;
+}
+
+.svgInButton{
+    width: 76px;
+    height: 76px;
 }
 
 
@@ -305,3 +335,465 @@ input[type=range]{
     display: none;
 }
 
+
+
+@media screen and (max-width: 1280px){
+    .main{
+        padding: 15px 0;
+    }
+
+    .player__wrapper{
+        max-width: 1064px;
+    }
+
+    .current__trackArtist{
+        margin-top: 7px;
+    }
+
+    .player__info{
+        width: 276px;
+        gap: 25px;
+        margin-top: 8px;
+    }
+
+    .current__image{
+        box-sizing: border-box;
+        border: 1px solid #81886E;
+        width: 53px;
+        height: 53px;
+    }
+
+    .current__track{
+        font-size: 14px;
+        line-height: 17px;
+    }
+
+    .current__artist{
+        font-size: 11px;
+        line-height: 13px;
+    }
+    
+    .player__controls{
+        gap: 12px;
+        margin-left: 0;
+        margin-right: 140px;
+    }
+    
+    .player__controlsUp{
+        gap: 25px;
+    }
+    
+    .player__controlsDown{
+        gap: 9px;
+    }
+
+    .player__playBar{
+        width: 348px;
+    }
+
+    .player__trackTime{
+        font-size: 11px;
+        line-height: 13px;
+        width: 30px;
+    }
+
+    .player__controlsVolume{
+        gap: 9px;
+    }
+
+
+
+    .player__trackVolume{
+        width: 100px;
+    }
+
+    .buttonChange{
+        width: 24px;
+        height: 24px;
+    }
+
+    .buttonChangeSvg{
+        width: 16px;
+        height: 18px;
+    }
+
+    .buttonChange:hover svg{
+        width: 24px;
+        height: 24px;
+    }
+
+    .button{
+        background-color: transparent;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        transition: .3s ease-in-out;
+        -webkit-transition: .3s ease-in-out;
+        -moz-transition: .3s ease-in-out;
+        -ms-transition: .3s ease-in-out;
+        -o-transition: .3s ease-in-out;
+    }
+
+    .svgInButton{
+        width: 48px;
+        height: 48px;
+    }
+
+    .volumeSvg{
+        width: 19px;
+        height: 15px;
+    }
+    
+    .button:hover .svgInButton{
+        fill: rgba(190, 255, 0, 1);
+        transition: .3s ease-in-out;
+        -webkit-transition: .3s ease-in-out;
+        -moz-transition: .3s ease-in-out;
+        -ms-transition: .3s ease-in-out;
+        -o-transition: .3s ease-in-out;
+    }
+    
+    .button:hover .svgInButton .fillOnHover{
+        fill: #000;
+        transition: .3s ease-in-out;
+        -webkit-transition: .3s ease-in-out;
+        -moz-transition: .3s ease-in-out;
+        -ms-transition: .3s ease-in-out;
+        -o-transition: .3s ease-in-out;
+    }
+    
+    .buttonPlay{
+        background-color: transparent;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        transition: .3s ease-in-out;
+        -webkit-transition: .3s ease-in-out;
+        -moz-transition: .3s ease-in-out;
+        -ms-transition: .3s ease-in-out;
+        -o-transition: .3s ease-in-out;
+    }
+
+    .buttonPause{
+        background-color: transparent;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        transition: .3s ease-in-out;
+        -webkit-transition: .3s ease-in-out;
+        -moz-transition: .3s ease-in-out;
+        -ms-transition: .3s ease-in-out;
+        -o-transition: .3s ease-in-out;
+    }
+    
+}
+
+@media screen and (max-width: 1024px){
+    .main{
+        padding: 12px 0;
+
+        z-index: 0;
+    }
+
+    .current__trackArtist{
+        margin-top: 4px;
+    }
+
+
+    .player__wrapper{
+        max-width: 638px;
+    }
+
+    .player__info{
+        width: 276px;
+        gap: 20px;
+        margin-top: 6px;
+    }
+
+    .current__image{
+        border: 0.5px solid #81886E;
+        width: 32px;
+        height: 32px;
+        border-radius: 2px;
+        -webkit-border-radius: 2px;
+        -moz-border-radius: 2px;
+        -ms-border-radius: 2px;
+        -o-border-radius: 2px;
+}
+
+    .current__track{
+        font-size: 8px;
+        line-height: 10px;
+        margin-bottom: 4px;
+    }
+
+    .current__artist{
+        font-size: 8px;
+        line-height: 10px;
+    }
+    
+    .player__controls{
+        gap: 8px;
+        margin-left: 0;
+        margin-right: 110px;
+    }
+    
+    .player__controlsUp{
+        gap: 20px;
+    }
+    
+    .player__controlsDown{
+        gap: 7px;
+    }
+
+    .player__playBar{
+        width: 198px;
+    }
+
+    .player__trackTime{
+        font-size: 8px;
+        line-height: 10px;
+        width: 20px;
+    }
+
+    .player__controlsVolume{
+        gap: 5px;
+    }
+
+    .player__trackVolume{
+        width: 60px;
+    }
+
+    .buttonChange{
+        width: 15px;
+        height: 17px;
+    }
+
+    .buttonChangeSvg{
+        width: 10px;
+        height: 12px;
+    }
+
+    .buttonChange:hover svg{
+        width: 15px;
+        height: 17px;
+    }
+
+    .button{
+        background-color: transparent;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        transition: .3s ease-in-out;
+        -webkit-transition: .3s ease-in-out;
+        -moz-transition: .3s ease-in-out;
+        -ms-transition: .3s ease-in-out;
+        -o-transition: .3s ease-in-out;
+    }
+
+    .svgInButton{
+        width: 30px;
+        height: 30px;
+    }
+
+    .volumeSvg{
+        width: 13px;
+        height: 10px;
+    }
+    
+    .button:hover .svgInButton{
+        fill: rgba(190, 255, 0, 1);
+        transition: .3s ease-in-out;
+        -webkit-transition: .3s ease-in-out;
+        -moz-transition: .3s ease-in-out;
+        -ms-transition: .3s ease-in-out;
+        -o-transition: .3s ease-in-out;
+    }
+    
+    .button:hover .svgInButton .fillOnHover{
+        fill: #000;
+        transition: .3s ease-in-out;
+        -webkit-transition: .3s ease-in-out;
+        -moz-transition: .3s ease-in-out;
+        -ms-transition: .3s ease-in-out;
+        -o-transition: .3s ease-in-out;
+    }
+    
+    .buttonPlay{
+        background-color: transparent;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        transition: .3s ease-in-out;
+        -webkit-transition: .3s ease-in-out;
+        -moz-transition: .3s ease-in-out;
+        -ms-transition: .3s ease-in-out;
+        -o-transition: .3s ease-in-out;
+    }
+
+    .buttonPause{
+        background-color: transparent;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        transition: .3s ease-in-out;
+        -webkit-transition: .3s ease-in-out;
+        -moz-transition: .3s ease-in-out;
+        -ms-transition: .3s ease-in-out;
+        -o-transition: .3s ease-in-out;
+    }
+    
+}
+
+
+@media screen and (max-width: 400px){
+    .main{
+        box-sizing: border-box;
+        padding: 10px 16px;
+        width: 100%;
+    }
+
+    .player__wrapper{
+        display: none;
+    }
+
+    .player__wrapperMob{
+        display: flex;
+        flex-direction: column;
+        gap: 13px;
+    }
+    
+    .player__infoMob{
+        width: 300px;
+        align-self: center;
+    }
+
+    .current__trackArtistMob{
+        display: flex;
+        flex-direction: row;
+
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 11px;
+        line-height: 13px;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+
+        color: #F0FFC5;
+
+    }
+
+    .player__controlsMob{
+        display: flex;
+        flex-direction: column;
+        gap: 13px;
+    }
+
+    .player__controlsUpMob{
+        display: flex;
+        flex-direction: row;
+
+        justify-content: center;
+    }
+
+    .current__imageMob{
+        width: 45px;
+        height: 45px;
+        border: 1px solid rgba(129, 136, 110, 1);
+        border-radius: 3px;
+        -webkit-border-radius: 3px;
+        -moz-border-radius: 3px;
+        -ms-border-radius: 3px;
+        -o-border-radius: 3px;
+
+        margin-right: auto;
+    }
+
+    .track__controlsMob{
+        display: flex;
+        flex-direction: row;
+        gap: 31px;
+        align-items: center;
+        align-self: flex-end;
+        height: 38px;
+        margin-right: 8%;
+    }
+
+    .buttonChangeMob{
+        width: 14px;
+        height: 17px;
+    }
+
+    .buttonMob{
+        width: 38px;
+        height: 38px;
+    }
+
+    .svgInButton{
+        width: 38px;
+        height: 38px;
+    }
+
+    .downloadMob{
+        margin-left: auto;
+        align-self: flex-end;
+    }
+
+    .player__controlsDownMob{
+        display: flex;
+        flex-direction: row;
+        gap: 15px;
+        align-items: center;
+    }
+
+    .player__trackTimeMob{
+        font-family: Inter;
+        font-size: 11px;
+        font-weight: 400;
+        line-height: 13px;
+        text-align: left;
+        color: rgba(129, 136, 110, 1);
+    }
+
+    .player__playBarMob{
+        width: 283px;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        border-radius: 100px;
+        -webkit-border-radius: 100px;
+        -moz-border-radius: 100px;
+        -ms-border-radius: 100px;
+        -o-border-radius: 100px;
+    }
+
+    .player__playBarMob::-webkit-slider-runnable-track{
+        border-radius: 5px;
+        height: 5px;
+        background-color: rgba(58, 58, 58, 1);
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        -ms-border-radius: 5px;
+        -o-border-radius: 5px;
+        overflow: hidden;
+        cursor: pointer;
+    }
+
+    .player__playBarMob::-webkit-slider-thumb {
+        background: rgba(190, 255, 0, 1);
+        border-radius: 100px;
+        cursor: pointer;
+        width: 13px;
+        height: 13px;
+        -webkit-appearance: none;
+        margin-top: -4px;
+        -webkit-border-radius: 100px;
+        -moz-border-radius: 100px;
+        -ms-border-radius: 100px;
+        -o-border-radius: 100px;
+        box-shadow: -522px 0px 0px 522px rgba(190, 255, 0, 1);
+
+    }
+}
