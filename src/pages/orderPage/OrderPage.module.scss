@@ -46,7 +46,7 @@
     font-weight: 400;
     font-size: 20px;
     line-height: 24px;
-    color: #BEFF00;
+    color: #F0FFC5;
 
     background: #000000;
     border: 1px solid #3A3A3A;
@@ -377,6 +377,7 @@
 
     .input:valid {
         border: 1px solid #BEFF00;
+        color: #BEFF00;
       }
 
     // .input:invalid{
@@ -755,6 +756,7 @@
 
     .input:valid {
         border: 1px solid #BEFF00;
+        color: #BEFF00;
       }
 
     .form__heading{

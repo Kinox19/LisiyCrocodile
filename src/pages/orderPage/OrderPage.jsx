@@ -22,7 +22,6 @@ const OrderPage = () => {
  
     const handleChange = useCallback((e) => {
       const { name, value } = e.target;
-      console.log(`Updating ${name} to ${value}`);
       setFormValues(prevState => ({
         ...prevState,
         [name]: value,
@@ -234,7 +233,7 @@ const OrderPage = () => {
                         <input
                           className={s.input}
                           name="phone"
-                          type="tel"
+                          type="number"
                           required
                           placeholder="Контактный телефон:"
                           onBlur={handleDouble}

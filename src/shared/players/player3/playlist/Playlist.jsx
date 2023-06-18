@@ -32,6 +32,7 @@ function Playlist() {
             </div>
             <div className={s.twoTexts}>
               <p className={s.description}>2020 – проба пера в области звукорежиссуры.<br></br>Для данной композиции впервые записаны 2 ритм-гитары,<br></br>что активно используется в творчестве и по сей день.</p>
+              <p className={s.description_mob}>2020 – проба пера<br/> в области звукорежиссуры.<br></br>Для данной композиции<br/> впервые записаны 2 ритм-гитары,<br></br>что активно используется<br/> в творчестве и по сей день.</p>
               <p className={s.button__text}>к следующему альбому</p>
             </div>
             {/* <button className={s.button__play} onClick={() => {SetCurrent([0])}}>

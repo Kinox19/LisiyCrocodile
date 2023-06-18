@@ -145,7 +145,7 @@
     font-weight: 300;
     line-height: 48px;
     text-align: left;
-    color: rgba(129, 136, 110, 1);
+    color: #BEFF00;
 }
 
 .title{
@@ -170,6 +170,10 @@
     max-width: 788px;
 
     color: #F0FFC5;
+}
+
+.description_mob{
+    display: none;
 }
 
 .button__play{
@@ -727,6 +731,16 @@
         font-size: 17px;
         line-height: 21px;
         max-width: 300px;
+        display: none;
+    }
+
+    .description_mob{
+        font-family: Inter;
+        display: block;
+        font-size: 17px;
+        line-height: 21px;
+        max-width: 300px;
+        color: #F0FFC5;
     }
 
     .button__play{
