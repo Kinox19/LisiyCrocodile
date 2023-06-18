@@ -252,7 +252,7 @@ const OrderPage = () => {
                           style={renderBorder(country)}
                         />
                         {renderError(country)}
-                      </div>
+                      </div> 
                       <div className={s.test}>
                         <input
                           className={s.input}
